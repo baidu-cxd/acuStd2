@@ -1,0 +1,94 @@
+@require './config'
+
+.custom-block
+  p
+    font-size 14px
+  .custom-block-title
+    font-weight 600
+    margin-bottom -0.4rem
+  &.tip, &.warning, &.danger
+    padding .1rem 1.5rem
+    border-left-width 3px
+    border-left-style solid
+    margin 1rem 0
+  &.tip
+    background-color $lightBlue
+    border-color $stdBlue
+  &.warning
+    background-color rgba(255,229,100,.3)
+    border-color darken(#ffe564, 35%)
+    color darken(#ffe564, 70%)
+    .custom-block-title
+      color darken(#ffe564, 50%)
+    a
+      color $textColor
+  &.danger
+    background-color #ffe6e6
+    border-color darken(red, 20%)
+    color darken(red, 70%)
+    .custom-block-title
+      color darken(red, 40%)
+    a
+      color $textColor
+  
+
+//顶部导航
+
+
+.table-of-contents
+  ul, ol
+  margin 20px 0
+  border-left-width 3px
+  border-left-style solid
+  padding 0 30px
+  border-color #e6e6e6
+  li
+    margin 0px
+    transition .25s color ease-out
+    color #999999
+    &:hover
+      color $stdBlue
+  a
+    color #333333
+    transition .25s color ease-out
+
+
+//颜色模板
+
+.colorBox
+  padding 20px;
+  margin 20px 0;
+  overflow hidden;
+  position relative;
+  transition  .4s all ease-in-out
+  &:hover
+    transform scale(1.015,1.05);
+    z-index 100;
+    transition  .1s all ease-in-out;
+  p
+    line-height 20px;
+    font-size 13px;
+    color #fff;
+    float right;
+    margin 0;
+    opacity .8;
+    &:first-child
+      float left;
+      line-height 20px;
+      font-size 16px;
+      color #fff;
+      opacity 1;
+
+.colorBox.light
+  p
+    color #333
+    opacity .9;
+
+.wrp 
+  margin 20px 0;
+  .colorBox
+    height 20px;
+    margin 0px 0;
+    overflow hidden;
+    padding 15px;
+

@@ -1,0 +1,19 @@
+{
+  "name": "acustd",
+  "version": "2.0.0",
+  "devDependencies": {
+    "vuepress": "^0.8.4"
+  },
+  "dependencies": {
+    "markdown-it": "^8.4.1",
+    "markdown-it-abbr": "^1.0.4",
+    "markdown-it-container": "^2.0.0",
+    "markdown-it-footnote": "^3.0.1"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "gitpush": "bash deploy.sh",
+    "test": "npx vuepress dev docs"
+  }
+}

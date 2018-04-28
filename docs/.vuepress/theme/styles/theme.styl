@@ -1,0 +1,206 @@
+@require './config'
+@require './nprogress'
+@require './code'
+@require './custom-blocks'
+@require './arrow'
+
+html, body
+  padding 0
+  margin 0
+
+body
+  font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  font-size 14px
+  color $textColor
+
+.page
+  padding-left $sidebarWidth
+  padding-top $headerHeight
+
+.navbar
+  position fixed
+  z-index 20
+  top 0
+  left 0
+  right 0
+  height $headerHeight
+  background-color #fff
+  box-sizing border-box
+  border-bottom 1px solid $borderColor
+
+.sidebar-mask
+  position fixed
+  z-index 9
+  top 0
+  left 0
+  width 100vw
+  height 100vh
+  display none
+
+.sidebar
+  font-size 14px
+  background-color #fff
+  width $sidebarWidth
+  position fixed
+  z-index 10
+  margin 0
+  top $navbarHeight
+  left 0
+  bottom 0
+  box-sizing border-box
+  border-right 1px solid $borderColor
+  overflow-y auto
+
+.content:not(.custom)
+  max-width $contentWidth
+  margin 0 auto
+  padding 20px 20px
+  > *:first-child
+    margin-top $navbarHeight
+  a:hover
+    text-decoration none
+  p.demo
+    padding 1rem 1.5rem
+    border 1px solid #ddd
+    border-radius 4px
+  img
+    max-width 100%
+
+.content.custom
+  padding 0
+  margin 0
+
+a
+  font-weight normal
+  color $stdBlue
+  text-decoration none
+  &:hover 
+    color $stdBlue
+
+
+kbd
+  background #eee
+  border solid 0.15rem #ddd
+  border-bottom solid 0.25rem #ddd
+  border-radius 0.15rem
+  padding 0 0.15em
+
+blockquote
+  color #999
+  border-left 3px solid #dfe2e5
+  margin 20px 0
+  padding-left 1rem
+
+ul, ol
+  padding-left 1.2em
+  a
+    color $textGray
+    transition .1s color ease-in
+
+strong
+  font-weight 600
+
+h1, h2, h3, h4, h5, h6
+  font-weight 600
+  line-height 1.25
+  .content:not(.custom) > &
+    &:first-child
+      + p, + pre, + .custom-block
+        margin-top 20px
+  &:hover .header-anchor
+    opacity: 1
+
+h1
+  font-size 36px
+  line-height 56px 
+  margin-top 60px
+    a.header-anchor 
+      line-height 56px 
+
+h2
+  margin-top 60px
+  margin-bottom 20px
+  font-size 22px
+  padding-bottom 10px
+  border-bottom 1px solid $borderColor
+
+h3
+  font-size 18px
+  line-height 36px
+
+a.header-anchor
+  font-size 1em
+  float left
+  margin-left -0.87em
+  padding-right 0.23em
+  opacity 0
+  color #cccccc
+  &:hover
+    color #108cee
+    cursor pointer
+
+mark
+  background-color transparent
+  color $markColor
+  margin 0 4px
+
+.content p code
+  background-color #cae5f7
+  color #3377a0
+  padding 4px 4px
+  display inline
+  margin 0 4px
+
+code, kbd
+  font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+
+p, ul, ol
+  line-height 26px
+  li
+    margin 10px
+
+p
+  a
+    margin 0 4px
+
+hr
+  border 0
+  border-top 1px solid $borderColor
+
+table
+  border-collapse collapse
+  margin 1rem 0
+
+tr
+  border-top 1px solid #dfe2e5
+  &:nth-child(2n)
+    background-color #f6f8fa
+
+th, td
+  border 1px solid #dfe2e5
+  padding .6em 1em
+
+.custom-layout
+  padding-top $navbarHeight
+
+.theme-container
+  &.sidebar-open
+    .sidebar-mask
+      display: block
+  &.no-navbar
+    .content:not(.custom)
+      h1, h2, h3, h4, h5, h6
+        margin-top 1.5rem
+        padding-top 0
+
+
+@media (min-width: ($MQMobile + 1px))
+  .theme-container.no-sidebar
+    .sidebar
+      display none
+    .page
+      padding-left 0
+
+@require './mobile.styl'
