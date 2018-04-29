@@ -96,8 +96,9 @@ blockquote
 ul, ol
   padding-left 1.2em
   a
-    color $textGray
     transition .1s color ease-in
+  code
+    
 
 strong
   font-weight 600
@@ -146,12 +147,13 @@ mark
   color $markColor
   margin 0 4px
 
-.content p code
+.content p code,.content li code
   background-color #cae5f7
   color #3377a0
   padding 4px 4px
   display inline
   margin 0 4px
+  font-size 12px
 
 code, kbd
   font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace

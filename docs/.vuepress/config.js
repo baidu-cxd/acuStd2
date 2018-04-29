@@ -82,6 +82,7 @@ module.exports = {
       config: md => {
         // 使用更多的 markdown-it 插件!
         md.use(require('markdown-it-footnote')),
+        // 色块生成器
         md.use(require('markdown-it-container'), 'color', {
           validate: function(params) {
             return params.trim().match(/^color\s+(.*)$/);
@@ -96,6 +97,7 @@ module.exports = {
             }
           }
         });
+        // 色块生成器-浅色
         md.use(require('markdown-it-container'), 'color-l', {
           validate: function(params) {
             return params.trim().match(/^color-l\s+(.*)$/);
