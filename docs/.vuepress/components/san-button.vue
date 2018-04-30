@@ -1,6 +1,6 @@
 
 <template>
-  <div></div>
+  <div class="san-xui"></div>
 </template>
 
 <script>

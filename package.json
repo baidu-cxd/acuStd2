@@ -9,8 +9,10 @@
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-container": "^2.0.0",
     "markdown-it-footnote": "^3.0.1",
+    "node-sass": "^4.9.0",
     "san": "^3.5.7",
-    "san-xui": "^0.2.0"
+    "san-xui": "^0.2.0",
+    "sass-loader": "^7.0.1"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

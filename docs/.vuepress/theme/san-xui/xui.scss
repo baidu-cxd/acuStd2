@@ -30,7 +30,8 @@
  * @file iconfont.less
  * @author mudio(job.mudio@gmail.com)
  */
- .icon-spin.iconfont {
+.san-xui {
+  .icon-spin.iconfont {
     display: inline-block;
     -webkit-animation: icon-spin 2s infinite linear;
     animation: icon-spin 2s infinite linear;
@@ -5904,3 +5905,4 @@
     top: 50px;
     border-top: 1px solid #ECEFF8;
   }
+}
