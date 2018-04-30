@@ -8,7 +8,9 @@
     "markdown-it": "^8.4.1",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-container": "^2.0.0",
-    "markdown-it-footnote": "^3.0.1"
+    "markdown-it-footnote": "^3.0.1",
+    "san": "^3.5.7",
+    "san-xui": "^0.2.0"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

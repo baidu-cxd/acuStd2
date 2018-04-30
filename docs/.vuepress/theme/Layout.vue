@@ -173,5 +173,9 @@ function updateMetaTags (meta, current) {
 }
 </script>
 
+<!-- 不要改变下面几个样式文件的引用顺序 -->
+<style src="./san-xui/iconfont.css"></style>
+<style src="./san-xui/xui.css"></style>
 <style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="./styles/theme.styl" lang="stylus"></style>
+

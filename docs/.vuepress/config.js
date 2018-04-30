@@ -3,9 +3,7 @@
  * @author dz
  */
 
-
 //页面顶部导航写在这里
-
 var navData = [
   { text: '首页', link: '/' },
   { text: 'console 端规范', link: '/console/' },
@@ -36,14 +34,21 @@ var sidebarData = {
       title: '设计原则',
       collapsable: true,
       children: [
-        'one',      /* /console/one.md */
+        'one'      /* /console/one.md */
       ]
     },
     {
       title: '风格',
       collapsable: true,
       children: [
-        'color',      /* /console/color.md */
+        'color'      /* /console/color.md */
+      ]
+    },
+    {
+      title: '组件',
+      collapsable: true,
+      children: [
+        'components/button'      /* /console/components/button.md */
       ]
     }
   ],
@@ -53,7 +58,7 @@ var sidebarData = {
     'one',   /* /portal/one */
     'two'    /* /portal/two */
   ],
-  
+
   '/appendix/': [
     '',            /* /appendix/ */
     'howToUsemd',  /* /appendix/howToUsemd.md */
@@ -86,12 +91,12 @@ module.exports = {
         md.use(require('markdown-it-container'), 'color', {
           validate: function(params) {
             return params.trim().match(/^color\s+(.*)$/);
-          },  
+          },
           render: function (tokens, idx) {
-            var m = tokens[idx].info.trim().match(/^color\s+(.*)$/);   
+            var m = tokens[idx].info.trim().match(/^color\s+(.*)$/);
             if (tokens[idx].nesting === 1) {
               return '<div class="colorBox" style="background-color:' +
-              md.utils.escapeHtml(m[1]) + '"><p>' + md.utils.escapeHtml(m[1]) + '</p>\n';    
+              md.utils.escapeHtml(m[1]) + '"><p>' + md.utils.escapeHtml(m[1]) + '</p>\n';
             } else {
               return '</div>\n';
             }
@@ -101,18 +106,18 @@ module.exports = {
         md.use(require('markdown-it-container'), 'color-l', {
           validate: function(params) {
             return params.trim().match(/^color-l\s+(.*)$/);
-          },  
+          },
           render: function (tokens, idx) {
-            var m = tokens[idx].info.trim().match(/^color-l\s+(.*)$/);   
+            var m = tokens[idx].info.trim().match(/^color-l\s+(.*)$/);
             if (tokens[idx].nesting === 1) {
               return '<div class="colorBox light" style="background-color:' +
-              md.utils.escapeHtml(m[1]) + '"><p>' + md.utils.escapeHtml(m[1]) + '</p>\n';    
+              md.utils.escapeHtml(m[1]) + '"><p>' + md.utils.escapeHtml(m[1]) + '</p>\n';
             } else {
               return '</div>\n';
             }
           }
         });
-        md.use(require('markdown-it-abbr'))
+        md.use(require('markdown-it-abbr'));
       }
     }
 }
