@@ -63,6 +63,7 @@ var sidebarData = {
     '',            /* /appendix/ */
     'howToUsemd',  /* /appendix/howToUsemd.md */
     'howToUsemd2', /* /appendix/howToUsemd2.md */
+    'howToMoveMd', /* /appendix/howToMoveMd.md */
   ],
 
 
