@@ -13,11 +13,27 @@ body
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   font-size 14px
-  color $textColor
+  color $textColorDark
+
+.theme-container
+  background-color #f5f5f5f5
+  position absolute 
+  top 0
+  left 0
+  right 0
+
+.page-wrp
+  background-color #fff
+  max-width 880px
+  box-shadow 0 4px 16px 0 #00000010
+  margin auto 
+  padding 80px 0
 
 .page
-  padding-left $sidebarWidth
-  padding-top $headerHeight
+  margin-left $sidebarWidth +40px
+  margin-right 40px
+  margin-top $headerHeight + 40px
+  margin-bottom 80px
 
 .navbar
   position fixed
@@ -46,21 +62,20 @@ body
   position fixed
   z-index 10
   margin 0
-  top $navbarHeight
+  top 60px
   left 0
   bottom 0
   box-sizing border-box
   border-right 1px solid $borderColor
   overflow-y auto
+  
 
 .content:not(.custom)
   max-width $contentWidth
   margin 0 auto
-  padding 20px 20px
-  > *:first-child
-    margin-top $navbarHeight
+  padding 0 80px
   a:hover
-    text-decoration none
+    text-decoration underline
   p.demo
     padding 1rem 1.5rem
     border 1px solid #ddd
@@ -77,7 +92,7 @@ a
   color $stdBlue
   text-decoration none
   &:hover
-    color $stdBlue
+    color lighten($stdBlue, 10%)
 
 
 kbd
@@ -93,30 +108,39 @@ blockquote
   margin 20px 0
   padding-left 1rem
 
+p
+  line-height 26px
+  margin 10px 0
+  color $textColorMain
+  li
+    margin 10px
+
+
 ul, ol
-  padding-left 1.2em
+  padding-left 14px
+  margin 20px 0
+  color $textColorMain
+  li
+    line-height 26px
+    padding-left 5px
+    margin 5px 0
   a
     transition .1s color ease-in
 
 strong
   font-weight 600
 
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6, strong
   font-weight 600
-  line-height 1.25
-  .content:not(.custom) > &
-    &:first-child
-      + p, + pre, + .custom-block
-        margin-top 20px
+  color $textColorDark
   &:hover .header-anchor
     opacity: 1
 
 h1
+  display block
+  margin 0 0px 40px 0
   font-size 36px
   line-height 56px
-  margin-top 60px
-    a.header-anchor
-      line-height 56px
 
 h2
   margin-top 60px
@@ -130,6 +154,7 @@ h3
   line-height 36px
 
 a.header-anchor
+  display inline
   font-size 1em
   float left
   margin-left -0.87em
@@ -146,24 +171,15 @@ mark
   margin 0 4px
 
 .content p code,.content li code
-  background-color #a9c0d030
-  color #3377a0
-  padding 4px 4px
+  background-color #0000000d
+  color #666666
+  padding 4px 6px
   display inline
-  margin 0 4px
   font-size 12px
 
 code, kbd
   font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
 
-p, ul, ol
-  line-height 26px
-  li
-    margin 10px
-
-p
-  a
-    margin 0 4px
 
 hr
   border 0
@@ -183,7 +199,7 @@ th, td
   padding .6em 1em
 
 .custom-layout
-  padding-top $navbarHeight
+  padding-top $headerHeight
 
 .theme-container
   &.sidebar-open

@@ -42,25 +42,25 @@ export default {
 @import './styles/config.styl'
 
 .navbar
-  padding 0.7rem 1.5rem
-  line-height $navbarHeight - 1.4rem
   position relative
   a, span, img
     display inline-block
   .logo
-    height $navbarHeight - 1.4rem
-    min-width $navbarHeight - 1.4rem
+    height $headerHeight - 1.4rem
+    min-width $headerHeight - 1.4rem
     margin-right 0.8rem
     vertical-align top
   .site-name
-    font-size 1.3rem
+    font-size 20px
+    line-height 60px
+    margin-left 20px
     font-weight 600
-    color $textColor
+    color $textColorDark
     position relative
   .links
     position absolute
     right 1.5rem
-    top 0.7rem
+    top 0
     a
       font-size 14px
       font-weight normal

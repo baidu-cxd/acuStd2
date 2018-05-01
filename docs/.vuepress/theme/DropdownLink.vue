@@ -144,7 +144,6 @@ export default {
       max-height calc(100vh - 2.7rem)
       overflow-y auto
       position absolute
-      top 100%
       right 0
       background-color #fff
       padding 0.6rem 0

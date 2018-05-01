@@ -1,25 +1,27 @@
 <template>
   <div class="page">
-    <Content :custom="false"/>
-    <div class="content edit-link" v-if="editLink">
-      <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
-      <OutboundLink/>
+    <div class="page-wrp">
+      <Content :custom="false"/>
+      <div class="content edit-link" v-if="editLink">
+        <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
+        <OutboundLink/>
+      </div>
+      <div class="content page-nav" v-if="prev || next">
+        <p class="inner">
+          <span v-if="prev" class="prev">
+            ← <router-link v-if="prev" class="prev" :to="prev.path">
+              {{ prev.title || prev.path }}
+            </router-link>
+          </span>
+          <span v-if="next" class="next">
+            <router-link v-if="next" :to="next.path">
+              {{ next.title || next.path }}
+            </router-link> →
+          </span>
+        </p>
+      </div>
+      <slot name="bottom"/>
     </div>
-    <div class="content page-nav" v-if="prev || next">
-      <p class="inner">
-        <span v-if="prev" class="prev">
-          ← <router-link v-if="prev" class="prev" :to="prev.path">
-            {{ prev.title || prev.path }}
-          </router-link>
-        </span>
-        <span v-if="next" class="next">
-          <router-link v-if="next" :to="next.path">
-            {{ next.title || next.path }}
-          </router-link> →
-        </span>
-      </p>
-    </div>
-    <slot name="bottom"/>
   </div>
 </template>
 
@@ -124,17 +126,18 @@ function find (page, items, offset) {
 .edit-link.content
   padding-top 0 !important
   a
-    color lighten($textColor, 25%)
+    color lighten($textColorDark, 25%)
     margin-right 0.25rem
 
-.page-nav.content
-  padding-top 1rem !important
-  padding-bottom 0 !important
+.page-nav.content:not(.custom)
+  padding-top 60px
   .inner
-    min-height 2rem
-    margin-top 0 !important
+    display block
+    overflow hidden
+    margin-top 0
     border-top 1px solid $borderColor
-    padding-top 1rem
+    padding-top 30px
   .next
     float right
+    line-height 26px
 </style>

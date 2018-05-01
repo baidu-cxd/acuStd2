@@ -76,7 +76,7 @@ export default {
       .algolia-docsearch-suggestion--title
         font-weight 600
         margin-bottom 0
-        color $textColor
+        color $textColorDark
       .algolia-docsearch-suggestion--subcategory-column
         vertical-align top
         padding 5px 7px 5px 5px
@@ -90,7 +90,7 @@ export default {
       border-color $borderColor
     .ds-cursor .algolia-docsearch-suggestion--content
       background-color #e7edf3 !important
-      color $textColor
+      color $textColorDark
 
 @media (min-width: $MQMobile)
   .algolia-search-wrapper

@@ -77,11 +77,14 @@ function resolveOpenGroupIndex (route, items) {
     padding 0
     margin 0
     list-style-type none
+    li
+      padding 0
+      margin 0
   a
     display inline-block
   .nav-links
     display none
-    border-bottom 1px solid $borderColor
+    border-top 1px solid $borderColor
     padding 0.5rem 0 0.75rem 0
     a
       font-weight 600
@@ -91,7 +94,7 @@ function resolveOpenGroupIndex (route, items) {
       font-size 1.1em
       padding 0.5rem 0 0.5rem 1.5rem
   .sidebar-links
-    padding 1.5rem 0
+    padding 20px 0
 
 @media (max-width: $MQMobile)
   .sidebar
