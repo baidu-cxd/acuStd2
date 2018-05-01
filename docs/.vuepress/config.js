@@ -48,7 +48,8 @@ var sidebarData = {
       title: '组件',
       collapsable: true,
       children: [
-        'components/button'      /* /console/components/button.md */
+        'components/button',      /* /console/components/button.md */
+        'components/textbox'      /* /console/components/textbox.md */
       ]
     }
   ],
