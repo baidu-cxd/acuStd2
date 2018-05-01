@@ -56,6 +56,6 @@ sidebarDepth: 0
 
 <san-button :disabled="true" :text="'禁用'" />
 
-<san-button :icon="'plus'" :skin="'warning'" :text="'添加'" />
+<san-button :icon="'plus'" :skin="'warning'" :text="'添加'" :toast="'点击了添加按钮'"/>
 
-<san-button :skin="'stringfy'" :size="'large'" :text="'大的'" />
+<san-button :skin="'stringfy'" :size="'large'" :text="'大的'" :toast="'点击了大按钮'" />
