@@ -188,10 +188,11 @@ export default {
     width 0
     border-color transparent
     position relative
-    left 1rem
+    top 20px
+    left 20px
     &:focus
       left 0
-      width 10rem
+      width 120px
 
 @media (max-width: $MQMobile)
   .search-box
