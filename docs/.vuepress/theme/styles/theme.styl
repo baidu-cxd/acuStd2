@@ -107,6 +107,7 @@ blockquote
   border-left 3px solid #dfe2e5
   margin 20px 0
   padding-left 1rem
+  font-size 14px
 
 p
   line-height 26px
@@ -119,13 +120,15 @@ p
 
 
 ul, ol
-  padding-left 14px
+  padding-left 16px
   margin 20px 0
   color $textColorMain
   li
     line-height 26px
     padding-left 5px
     margin 5px 0
+    ul
+      margin 5px 0
   a
     transition .1s color ease-in
 
@@ -170,7 +173,6 @@ a.header-anchor
 mark
   background-color transparent
   color $markColor
-  margin 0 4px
 
 .content p code,.content li code
   background-color #0000000d
@@ -186,6 +188,29 @@ code, kbd
 hr
   border 0
   border-top 1px solid $borderColor
+  &.footnotes-sep
+    margin-top 60px
+    margin-bottom 40px
+
+.footnotes
+  margin-bottom -40px
+  position relative
+  background-color #f5f5f5ee
+  font-size 13px
+  padding 20px
+  ol,li,p 
+    margin 0
+    line-height 26px
+  &:before
+    content "脚注："
+    opacity .5
+    color $textColorLight
+    display block
+    font-size 13px
+    height 26px
+    line-height 26px
+    margin 0 0 0px 0
+
 
 table
   border-collapse collapse

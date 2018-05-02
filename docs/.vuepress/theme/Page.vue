@@ -130,13 +130,14 @@ function find (page, items, offset) {
     margin-right 0.25rem
 
 .page-nav.content:not(.custom)
-  padding-top 60px
+  padding-top 80px
   .inner
     display block
     overflow hidden
     margin-top 0
+    margin-bottom 0
     border-top 1px solid $borderColor
-    padding-top 30px
+    padding-top 50px
   .next
     float right
     line-height 26px
