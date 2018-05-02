@@ -108,8 +108,10 @@ module.exports = {
           render: function (tokens, idx) {
             var m = tokens[idx].info.trim().match(/^color\s+(.*)$/);
             if (tokens[idx].nesting === 1) {
-              return '<div class="colorBox" style="background-color:' +
-              md.utils.escapeHtml(m[1]) + '"><p>' + md.utils.escapeHtml(m[1]) + '</p>\n';
+              var colorTrans = md.utils.escapeHtml(m[1]);
+              return '<div onclick="alert(\'已复制色号到粘贴板\')" class="colorBox" style="background-color:' +
+              colorTrans + '" data-clipboard-text="' + colorTrans
+              + '"><p>' + colorTrans + '</p>\n';
             } else {
               return '</div>\n';
             }
@@ -123,8 +125,10 @@ module.exports = {
           render: function (tokens, idx) {
             var m = tokens[idx].info.trim().match(/^color-l\s+(.*)$/);
             if (tokens[idx].nesting === 1) {
-              return '<div class="colorBox light" style="background-color:' +
-              md.utils.escapeHtml(m[1]) + '"><p>' + md.utils.escapeHtml(m[1]) + '</p>\n';
+              var colorTrans = md.utils.escapeHtml(m[1]);
+              return '<div onclick="alert(\'已复制色号到粘贴板\')" class="colorBox light" style="background-color:' +
+              colorTrans + '" data-clipboard-text="' + colorTrans
+              + '"><p>' + colorTrans + '</p>\n';
             } else {
               return '</div>\n';
             }
