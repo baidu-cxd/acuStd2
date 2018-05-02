@@ -55,9 +55,13 @@ var sidebarData = {
   ],
 
   '/portal/': [
-    '',      /* /portal/ */
-    'one',   /* /portal/one */
-    'two'    /* /portal/two */
+    {
+      title: '基础风格',
+      collapsable: false,
+      children: [
+        'style/img',      /* /portal/style/img.md */
+      ]
+    },
   ],
 
   '/appendix/': [
@@ -85,7 +89,7 @@ module.exports = {
     },
     markdown: {
       // markdown-it-toc 的选项
-      toc: { includeLevel: [2, 3, 4] },
+      toc: { includeLevel: [2] },
       config: md => {
         // 使用更多的 markdown-it 插件!
         md.use(require('markdown-it-footnote')),

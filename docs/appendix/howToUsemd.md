@@ -17,10 +17,11 @@ sidebarDepth: 0
 
 ## 头文件规定
 
-在 Markdom 文档的开始，请用以下语法规定文档的名称
+在 Markdom 文档的开始，请用以下语法规定文档的名称，创建者的信息是网站上不可见的，主要用于便于管理：
 
     ---
     title: 页面的标题
+    author: 创建者
     sidebarDepth: 0
     ---
 
@@ -29,6 +30,7 @@ sidebarDepth: 0
 
     ---
     title: Md 文档编写说明（初级）
+    author: Yihan
     sidebarDepth: 0
     ---
 
