@@ -5,6 +5,7 @@
     "vuepress": "^0.8.4"
   },
   "dependencies": {
+    "clipboard": "^2.0.1",
     "markdown-it": "^8.4.1",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-container": "^2.0.0",
