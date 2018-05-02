@@ -394,7 +394,7 @@ console.log(foo(5));
 
 ::: tip 注意
 
-`div.wrp#`后的内容（也就是上面例子中的`blue`）需要和`<div class="wrp" id="blue">` 中的`id`保持一致
+`div.wrp#` 后的内容（也就是上面例子中的 `blue` ）需要和 `<div class="wrp" id="blue">` 中的 `id` 保持一致
 
 :::
 
