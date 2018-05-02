@@ -188,10 +188,10 @@ export default {
     width 0
     border-color transparent
     position relative
-    top 20px
+    top 12px
     left 20px
     &:focus
-      left 0
+      left 0px
       width 120px
 
 @media (max-width: $MQMobile)

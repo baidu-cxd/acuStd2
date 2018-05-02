@@ -21,6 +21,11 @@ $mobileSidebarWidth = $sidebarWidth * 0.82
     transition transform .2s ease
   .page
     padding-left 0
+    margin-left 0
+    margin-right 0
+    margin-top 60px
+    .page-wrp
+      padding-top 20px
   .theme-container.sidebar-open
     .sidebar
       transform translateX(0)
@@ -28,10 +33,18 @@ $mobileSidebarWidth = $sidebarWidth * 0.82
 // narrow mobile
 @media (max-width: $MQMobileNarrow)
   h1
-    font-size 1.9rem
+    font-size 32px
+    margin 0 0 10px 0
+  h2
+    font-size 22px
+    margin 20 0 10px 0
+  h3
+    font-size 18px
+    margin 20 0 10px 0
   .content:not(.custom)
-    padding 1.5rem
+    padding 0 20px 
   .content
     pre, pre[class*="language-"]
       margin 0.85rem -1.5rem
       border-radius 0
+  

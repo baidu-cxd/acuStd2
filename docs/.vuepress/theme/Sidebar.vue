@@ -90,8 +90,8 @@ function resolveOpenGroupIndex (route, items) {
       font-weight 600
     .nav-item, .repo-link
       display block
-      line-height 1.25rem
-      font-size 1.1em
+      line-height 1rem
+      font-size 1em
       padding 0.5rem 0 0.5rem 1.5rem
   .sidebar-links
     padding 20px 0
@@ -100,6 +100,13 @@ function resolveOpenGroupIndex (route, items) {
   .sidebar
     .nav-links
       display block
+      .nav-item
+        min-height 20px
+        padding 10px 20px;
+        a
+          line-height 20px
+          font-size 16px
     .sidebar-links
-      padding 1rem 0
+      padding 20px 0
+      border-top 1px solid $borderColor
 </style>

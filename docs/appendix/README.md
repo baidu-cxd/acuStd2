@@ -17,7 +17,7 @@ sidebarDepth: 0
 2. 有非常专业和细致的使用文档，便于开发
 3. 接入 [Markdown-it](https://github.com/markdown-it/markdown-it) 比之前使用的 [Marked](https://github.com/markedjs/marked) 插件功能更加强大,可以让文档更易读
 4. 允许混合使用 `.md` 和 `.html` 文件构建页面，便于承载一些非常规内容
-5. 允许在 `.md` 文档中引入 `.vue` 的组件文件，可以在文档中添加一些可交互样式的案例
+5. 允许在 Markdown 文档中引入 `.vue` 的组件文件，可以在文档中添加一些可交互样式的案例
 6. 采用 SSR[^1] 方式，对搜索引擎友好
 
 [^1]: SSR (Server Side Render) ，即服务器端渲染    

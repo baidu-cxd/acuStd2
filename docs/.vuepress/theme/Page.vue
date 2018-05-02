@@ -141,4 +141,10 @@ function find (page, items, offset) {
   .next
     float right
     line-height 26px
+
+@media (max-width: $MQMobileNarrow)
+  .page-nav.content:not(.custom)
+    padding-top 40px
+    .inner
+      padding-top 20px
 </style>
