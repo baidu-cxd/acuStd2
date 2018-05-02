@@ -41,7 +41,7 @@ var sidebarData = {
       title: '风格',
       collapsable: true,
       children: [
-        'color'      /* /console/color.md */
+        'style/color'      /* /console/style/color.md */
       ]
     },
     {

@@ -16,11 +16,11 @@ sidebarDepth: 0
 主色即品牌色，整体页面的风格调性。使用场景主要体现在导航及页面的关键点，重要使用控件、重要信息高亮等明确着重表达的位置。
 
 ::: color #19233c
-专用黑
+黑色主色
 :::
 
 ::: color #108cee
-专用蓝
+蓝色主色
 :::
 
 
@@ -37,7 +37,7 @@ sidebarDepth: 0
 :::
 
 ::: color-l #eaf6fe
-次级操作以及按钮辅助
+次级操作以及按钮
 :::
 
 ::: color-l #e2e5ec
@@ -45,11 +45,11 @@ sidebarDepth: 0
 :::
 
 ::: color-l #eceff8
-边框线
+边框线／强按钮禁用
 :::
 
 ::: color-l #f6f7fb 
-浅背景色或弱按钮禁用颜色
+浅背景色／弱按钮禁用颜色
 :::
 
 
@@ -62,31 +62,107 @@ sidebarDepth: 0
 <div class="wrp" id="blue">
 
 ::: color #0776dd   
-辅助色
+强调加强
 :::
 
 ::: color #108cee  
-辅助色
+链接/强按钮/说明色
 :::
 
 ::: color #35a2f8  
-辅助色
+链接/强按钮 hover 用色
 :::
 
 ::: color #6dbefd  
-辅助色
+展示/其他特殊情况
 :::
 
 ::: color #8fcdfd 
-辅助色
+展示/其他特殊情况
 :::
 
 ::: color-l #c6e6fc
-辅助色
+弱按钮 hover 及次操作
 :::
 
 ::: color-l #eaf6fe  
-辅助色
+弱按钮及次操作
+:::
+
+
+</div>
+
+
+<div class="wrp" id="green">
+
+::: color #5fb333 
+成功色
+:::
+
+::: color #80c85b
+展示/其他特殊情况
+:::
+
+::: color #a5da89
+展示/其他特殊情况
+:::
+
+::: color-l #d1f3c0
+展示/其他特殊情况
+:::
+
+::: color-l #f1fdeb
+底色/展示用色
+:::
+
+
+</div>
+
+<div class="wrp" id="red">
+
+::: color #ea2e2e
+失败色
+:::
+
+::: color #f56464
+展示/其他特殊情况
+:::
+
+::: color #f28b8b
+展示/其他特殊情况
+:::
+
+::: color-l #fbdbdb
+展示用色
+:::
+
+::: color-l #fff5f5
+底色/展示用色
+:::
+
+
+</div>
+
+<div class="wrp" id="orange">
+
+::: color #f39000
+警告色
+:::
+
+::: color #f7a73f
+展示/其他特殊情况
+:::
+
+::: color #fbca8c
+展示/其他特殊情况
+:::
+
+::: color-l #fde7cc
+展示/其他特殊情况
+:::
+
+::: color-l #fcf7f1
+底色/展示用色
 :::
 
 
@@ -96,14 +172,30 @@ sidebarDepth: 0
 
 
 
-
-
-
 ## 文字色
 
 页面一般常用规范字体颜色，链接颜色。主要为标题、文本内容、链接等。
 
-![图片](http://baiduyun-guideline.bj.bcebos.com/console/style/color/04_2x.png)
+::: color #333333
+标题/重要文本色
+:::
+
+::: color #666666
+普通文本色
+:::
+
+::: color #999999
+禁用/弱文本颜色
+:::
+
+::: color #108cee
+链接/高亮文本
+:::
+
+::: color #8d99b0
+侧边导航标题
+:::
+
 
 ## 视觉层次
 
@@ -111,15 +203,12 @@ sidebarDepth: 0
 
 ![图片](http://baiduyun-guideline.bj.bcebos.com/console/style/color/05_2x.png)
 
-## 代码参考
-
-    暂无
 
 
 
 
 
-<!-- div -->
+<!-- 页面样式配置文件，如不懂 css 代码请勿更改 -->
 
 <style>
     /*蓝色颜色列表配置项*/
