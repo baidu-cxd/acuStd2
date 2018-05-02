@@ -5,13 +5,13 @@ sidebarDepth: 0
 
 # Md 文档迁移流程
 
-为了方便 UE 同学从原系统中迁移`.md`文档，把流程进行了梳理，请按照以下流程进行：
+为了方便 UE 同学从原系统中迁移 Markdown 文档，把流程进行了梳理，请按照以下流程进行：
 
-## Step1：在 Agroup 上创建新的 Makedown 文件
+## Step1：在 Agroup 上创建新的 Markdown 文件
 
 进入 Agroup 系统，在目录 `群组文件 > 百度云设计规范 > 百度云 md 规范文档 v2.0 > console` 下的合适位置创建一个新的文档，<mark>建议使用英文命名</mark>
 
-## Step2：在Makedown文档内添加头信息
+## Step2：在Markdown文档内添加头信息
 
 打开刚才创建的文档，在 <mark>文档的第一行</mark> 添加以下内容，创建者的信息是网站上不可见的，主要用于便于管理：
 
