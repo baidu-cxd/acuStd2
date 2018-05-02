@@ -4,28 +4,29 @@
 </template>
 
 <script>
-import san from 'san';
-import {Button, Toast} from 'san-xui';
-
 export default {
   props: ['skin', 'size', 'icon', 'disabled', 'text', 'toast'],
   mounted() {
-    let {skin, size, icon, disabled, text, toast} = this;
-    const App = san.defineComponent({
-      template: `<template>
-        <ui-button skin="${skin}" size="${size}" icon="${icon}" disabled="{{${disabled}}}" on-click="onBtnClick">${text}</ui-button>
-      </template>`,
-      components: {
-        'ui-button': Button
-      },
-      onBtnClick() {
-        if (toast) {
-          Toast.success(toast);
-        }
+    Promise.all([import('san'), import('san-xui')]).then(
+      ([san, {Button, Toast}]) => {
+        let {skin, size, icon, disabled, text, toast} = this;
+        const App = san.defineComponent({
+          template: `<template>
+            <ui-button skin="${skin}" size="${size}" icon="${icon}" disabled="{{${disabled}}}" on-click="onBtnClick">${text}</ui-button>
+          </template>`,
+          components: {
+            'ui-button': Button
+          },
+          onBtnClick() {
+            if (toast) {
+              Toast.success(toast);
+            }
+          }
+        });
+        const app = new App();
+        app.attach(this.$el);
       }
-    });
-    const app = new App();
-    app.attach(this.$el);
+    );
   }
 }
 </script>
