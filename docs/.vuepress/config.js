@@ -6,14 +6,26 @@
 //页面顶部导航写在这里
 var navData = [
   { text: '首页', link: '/' },
-  { text: 'console 端规范', link: '/console/' },
-  { text: 'portal 端规范', link: '/portal/' },
   {
-    text: '相关资料',
+    text: 'portal 端资料',
     items: [
-      { text: '使用文档', items: [{text: '规范系统说明', link: '/appendix/'}] },
-      { text: '资源下载', items: [{text: 'sketch 控件库', link: '/resource/sketch'}] },
-
+      {text: 'portal 端组件查询', link: '/portal/'},
+      {text: 'portal 端规范文档', link: '/portal/style/img'},
+      {text: '资源下载', link: '/portal/resource'}
+    ]
+  },
+  {
+    text: 'console 端资料',
+    items: [
+      {text: 'console 组件查询', link: '/console/symbol.html'},
+      {text: 'console 端规范文档', link: '/console/'},
+      {text: '资源下载', link: '/portal/resource'}
+    ]
+  },
+  {
+    text: '其他',
+    items: [
+      { text: '使用说明', link: '/appendix/'},
     ]
   }
 ];
@@ -106,9 +118,9 @@ module.exports = {
             return params.trim().match(/^color\s+(.*)$/);
           },
           render: function (tokens, idx) {
-            var m = tokens[idx].info.trim().match(/^color\s+(.*)$/);
+            const m = tokens[idx].info.trim().match(/^color\s+(.*)$/);
             if (tokens[idx].nesting === 1) {
-              var colorTrans = md.utils.escapeHtml(m[1]);
+              const colorTrans = md.utils.escapeHtml(m[1]);
               return '<div onclick="alert(\'已复制色号到粘贴板\')" class="colorBox" style="background-color:' +
               colorTrans + '" data-clipboard-text="' + colorTrans
               + '"><p>' + colorTrans + '</p>\n';
@@ -123,9 +135,9 @@ module.exports = {
             return params.trim().match(/^color-l\s+(.*)$/);
           },
           render: function (tokens, idx) {
-            var m = tokens[idx].info.trim().match(/^color-l\s+(.*)$/);
+            const m = tokens[idx].info.trim().match(/^color-l\s+(.*)$/);
             if (tokens[idx].nesting === 1) {
-              var colorTrans = md.utils.escapeHtml(m[1]);
+              const colorTrans = md.utils.escapeHtml(m[1]);
               return '<div onclick="alert(\'已复制色号到粘贴板\')" class="colorBox light" style="background-color:' +
               colorTrans + '" data-clipboard-text="' + colorTrans
               + '"><p>' + colorTrans + '</p>\n';

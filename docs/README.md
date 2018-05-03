@@ -4,7 +4,7 @@ home: true
 actionText: 开始写作 →
 actionLink: /appendix/
 features:
-- title: portal
+- title: console
   details: 施工中
 - title: console
   details: 施工中
