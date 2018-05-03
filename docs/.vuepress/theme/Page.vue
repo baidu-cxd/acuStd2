@@ -29,6 +29,9 @@
 import OutboundLink from './OutboundLink.vue'
 import { resolvePage, normalize, outboundRE, endingSlashRE } from './util'
 
+//点击复制功能
+import("clipboard");
+
 export default {
   components: { OutboundLink },
   props: ['sidebarItems'],
