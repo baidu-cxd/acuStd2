@@ -9,7 +9,7 @@ var navData = [
   {
     text: 'portal 端资料',
     items: [
-      {text: 'portal 端组件查询', link: '/portal/'},
+      {text: 'portal 端组件查询', link: '/portal/section'},
       {text: 'portal 端规范文档', link: '/portal/style/img'},
       {text: '资源下载', link: '/portal/resource'}
     ]
