@@ -7,6 +7,8 @@
 html, body
   padding 0
   margin 0
+  height 100%
+  overflow-y scroll
 
 body
   font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
@@ -217,19 +219,31 @@ hr
 
 table
   border-collapse collapse
-  margin 1rem 0
+  margin 20px 0
+  width 100%
 
 tr
   border-top 1px solid #dfe2e5
   &:nth-child(2n)
-    background-color #f6f8fa
+    background-color #ffff
 
 th, td
   border 1px solid #dfe2e5
-  padding .6em 1em
+  color $textColorMain
+
+th 
+  line-height 66px
+  text-align center
+  background-color #fbfbfb
+  color $textColorDark
+
+td
+  line-height 60px
+  min-width 80px
+  padding 0 20px
 
 .custom-layout
-  padding-top $headerHeight
+  padding-top 0
 
 .theme-container
   &.sidebar-open

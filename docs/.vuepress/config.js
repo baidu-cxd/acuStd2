@@ -79,6 +79,9 @@ var sidebarData = {
       collapsable: false,
       children: [
         'style/img',      /* /portal/style/img.md */
+        'style/font',      /* /portal/style/font.md */
+        'style/color',      /* /portal/style/color.md */
+        'style/space',      /* /portal/style/space.md */
       ]
     },
   ],
@@ -121,7 +124,7 @@ module.exports = {
             const m = tokens[idx].info.trim().match(/^color\s+(.*)$/);
             if (tokens[idx].nesting === 1) {
               const colorTrans = md.utils.escapeHtml(m[1]);
-              return '<div onclick="alert(\'已复制色号到粘贴板\')" class="colorBox" style="background-color:' +
+              return '<div onclick="alert(\'已复制色号到粘贴板\')" class="colorBox" style="background:' +
               colorTrans + '" data-clipboard-text="' + colorTrans
               + '"><p>' + colorTrans + '</p>\n';
             } else {
@@ -138,7 +141,7 @@ module.exports = {
             const m = tokens[idx].info.trim().match(/^color-l\s+(.*)$/);
             if (tokens[idx].nesting === 1) {
               const colorTrans = md.utils.escapeHtml(m[1]);
-              return '<div onclick="alert(\'已复制色号到粘贴板\')" class="colorBox light" style="background-color:' +
+              return '<div onclick="alert(\'已复制色号到粘贴板\')" class="colorBox light" style="background:' +
               colorTrans + '" data-clipboard-text="' + colorTrans
               + '"><p>' + colorTrans + '</p>\n';
             } else {

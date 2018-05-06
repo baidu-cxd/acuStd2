@@ -1,5 +1,17 @@
 <template>
-<div class="viewer">
+<div class="viewer" :style="viewer.sro">
+<div :class="gernerateModuleClass()">
+  <div class="moheader">
+    <div class="system">
+      <p>百度云组件浏览器</p>
+      <span v-on:click="closeModulePage()">退出</span>
+    </div>
+    <h1>组件名：{{section.name}}</h1>
+    <p>{{section.text}}</p>
+    <p class="tips">{{section.tips}}</p>
+  </div>
+  <img :src="section.src" alt="">
+</div>
   <div class="banner" v-if="kindOfpage.list && kindOfpage.list.length">
     <h1>百度云 Portal 页面板块</h1>
     <ul>
@@ -18,7 +30,7 @@
     </div>
     <div :class="gernerateClass(item,'kind')" v-for="item in frontmatterdata.cmsblocks">
       <div :class="gernerateClass(item,'tag')">
-        <img :src="item.src" alt="">
+        <img :src="item.src" alt="" v-on:click="showModulePage(item)">
       </div>
     </div>
   </div>
@@ -31,7 +43,7 @@
 $imgwidth = 420px
 
 .viewer
-  margin auto
+  margin 0 auto 
   overflow hidden
   padding-bottom 100px
   ul
@@ -39,6 +51,7 @@ $imgwidth = 420px
       list-style none 
       box-sizing border-box   
   .banner
+    margin-top 60px;
     width 100%
     height 200px
     padding 0
@@ -159,11 +172,75 @@ $imgwidth = 420px
     .imgtag.col-3
       display block
 
+//模态框
 
+.module 
+  position fixed;
+  width 100%
+  height 100%
+  background-color #f5f5f5
+  z-index 9999
+  display none
+  overflow-y scroll
+  &.show
+    display block
+  .moheader 
+    width 100%
+    min-height 150px
+    padding-bottom 20px
+    background-color  #f5f5f5
+    border-bottom 1px solid $borderColor
+    h1 
+      font-size 18px
+      font-weight 400
+      color #333333
+      line-height 36px
+      margin 20px 0 0 120px
+      width 800px
+      display block
+    p
+      font-size 14px
+      font-weight 400
+      color #999999
+      line-height 26px
+      margin 0px 0 0 120px
+      width 800px
+      display block
+      &.tips 
+        color #666
+    .system
+      width 100%
+      height 40px
+      background-color #333333
+      border-bottom 1px solid #222222
+      p 
+        color #fff
+        display block 
+        padding 0
+        margin 0 20px
+        line-height 40px
+        font-size 12px
+        float left
+      span 
+        font-size 12px
+        color #fff
+        float right
+        margin 0 20px
+        line-height 40px
+        &:hover 
+          cursor pointer
+  img 
+    width 1920px
+    position absolute
+    left 50%
+    transform translateX(-50%)
+    display block
 </style>
 
 <script>
-  export default {
+
+
+export default {
   data(){
    return {
     kindOfpage: {
@@ -175,7 +252,18 @@ $imgwidth = 420px
         {"name":"全部","className":"all"},
         {"name":"卡片","className":"card"},
         {"name":"三项","className":"col-3"},
-      ]}
+        {"name":"相关产品","className":"about"},
+      ]},
+    section: {
+      name: "页面名称",
+      src : "none",
+      text : "none",
+      show : "none",
+      tips : "一些注意事项",
+    },
+    viewer: {
+      sro: "height:auto;",
+    },
     }
   },
   computed: {
@@ -205,7 +293,21 @@ $imgwidth = 420px
     },
     gernerateClassCms : function(i,j){
       return "cmsblocks " + i + " " + j
-    }
+    },
+    gernerateModuleClass(){
+      return "module" + " " + this.section.show
+    },
+    showModulePage : function(i) {
+      this.$set(this.section,"show","show");
+      this.$set(this.section,"name",i.name);
+      this.$set(this.section,"src",i.src);
+      this.$set(this.section,"text",i.text);
+      this.$set(this.viewer,"sro","height:300px;");
+    },
+    closeModulePage : function() {
+      this.$set(this.section,"show","none");
+      this.$set(this.viewer,"sro","height:auto");
+    },
   }
 }
 </script>
