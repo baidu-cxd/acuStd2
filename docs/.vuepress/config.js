@@ -54,6 +54,7 @@ var sidebarData = {
       collapsable: true,
       children: [
         'style/color'      /* /console/style/color.md */
+        
       ]
     },
     {
@@ -61,6 +62,13 @@ var sidebarData = {
       collapsable: true,
       children: [
         'widget/button',      /* /console/widget/Button.md */
+        'widget/collection',      /* /console/widget/collection.md */
+        'widget/input',      /* /console/widget/input.md */
+        'widget/link',      /* /console/widget/link.md */
+        'widget/list',      /* /console/widget/list.md */
+        'widget/loading',      /* /console/widget/loading.md */
+        'widget/pagination',      /* /console/widget/pagination.md */
+        'widget/slider',      /* /console/widget/slider.md */
       ]
     },
     {
