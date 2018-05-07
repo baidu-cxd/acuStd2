@@ -344,11 +344,9 @@ export default {
       this.$set(this.section,"name",i.name);
       this.$set(this.section,"src",i.src);
       this.$set(this.section,"text",i.text);
-      this.$set(this.$parent.container,"scroll","overflow:visible");
     },
     closeModulePage : function() {
       this.$set(this.section,"show","none");
-      this.$set(this.$parent.container,"scroll","overflow:visible;");
     },
   }
 }

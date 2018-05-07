@@ -4,6 +4,7 @@
 @require './custom-blocks'
 @require './arrow'
 
+
 html, body
   padding 0
   margin 0
@@ -248,12 +249,25 @@ td
 .theme-container
   &.sidebar-open
     .sidebar-mask
-      display: block
+      display block
   &.no-navbar
     .content:not(.custom)
       h1, h2, h3, h4, h5, h6
         margin-top 1.5rem
         padding-top 0
+
+/* webkit, opera, IE9 */
+　　
+::selection 
+  background #0f1012
+  color #fff
+　
+/* mozilla firefox */
+　　
+::-moz-selection
+  background #0f1012
+  color #fff
+
 
 
 @media (min-width: ($MQMobile + 1px))

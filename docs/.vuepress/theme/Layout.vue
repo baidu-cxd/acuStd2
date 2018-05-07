@@ -2,8 +2,7 @@
   <div class="theme-container"
     :class="pageClasses"
     @touchstart="onTouchStart"
-    @touchend="onTouchEnd"
-    :style="container.scroll">
+    @touchend="onTouchEnd">
     <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
     <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
     <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
@@ -38,9 +37,6 @@ export default {
   data () {
     return {
       isSidebarOpen: false,
-      container:{
-        scroll:"overflow:visible;"
-      }
     }
   },
   computed: {
