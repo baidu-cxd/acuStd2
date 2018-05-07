@@ -72,7 +72,7 @@ sidebarDepth: 0
 
 </div>
 
-# 点缀色
+## 点缀色
 
 为了完善页面的设计需求，在一些特殊情况下，小面积出现的点缀色，和主色搭配使用，丰富页面的设计效果，起到强调突显重要信息内容的作用。
 
@@ -80,7 +80,7 @@ sidebarDepth: 0
 价格、折扣、促销等高提示性信息颜色
 :::
 
-# 文本色
+## 文本色
 
 页面一般常用规范字体颜色。主要为栏目标题、文本内容等。
 
@@ -96,7 +96,7 @@ sidebarDepth: 0
 轻文本色
 :::
 
-# 其他颜色
+## 其他颜色
 
 页面中某一些特定辅助修饰的浅灰色。主要为卡片、表格描边，板块背景色等
 
@@ -112,15 +112,19 @@ sidebarDepth: 0
 表头颜色
 :::
 
-# 视觉层次
+## 视觉层次
 
-将品牌色 (#108cee) 赋予在 <mark>重要信息或关键主动点</mark> 上，利用大量留白和大面积中性色区分各个板块，去除多余的视觉干扰，以最简洁的页面元素搭配排版，从而最大限度提高用户阅读浏览效率。
+主色 <label class="color" id="color-108cee">#108cee</label> 赋予在 <mark>重要信息或关键主动点</mark> 上，利用大量留白和大面积中性色区分各个板块，去除多余的视觉干扰，以最简洁的页面元素搭配排版，从而最大限度提高用户阅读浏览效率。
 
+![视觉层次](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Fcolor%2Fcolor_1.png)
 
 <style>
 #gra-1 .colorBox{
   background: -webkit-linear-gradient(left,#3C3C4D,#0F1012);
 }
 
+#color-108cee:before{
+  background:#108cee;
+}
 
 </style>

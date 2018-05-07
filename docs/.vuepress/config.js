@@ -157,6 +157,23 @@ module.exports = {
             }
           }
         });
+        // 色块生成器-行内
+        md.use(require('markdown-it-container'), 'color-p', {
+          validate: function(params) {
+            return params.trim().match(/^color-l\s+(.*)$/);
+          },
+          render: function (tokens, idx) {
+            const m = tokens[idx].info.trim().match(/^color-l\s+(.*)$/);
+            if (tokens[idx].nesting === 1) {
+              const colorTrans = md.utils.escapeHtml(m[1]);
+              return '<div onclick="alert(\'已复制色号到粘贴板\')" class="colorInLine" style="background:' +
+              colorTrans + '" data-clipboard-text="' + colorTrans
+              + '"><p>' + colorTrans + '</p>\n';
+            } else {
+              return '</div>\n';
+            }
+          }
+        });        
         md.use(require('markdown-it-abbr'));
       }
     }

@@ -13,7 +13,7 @@ sidebarDepth: 0
 ## 字体规范
 
 
-页面的实际实现效果则根据不同的平台和用户系统中的字体情况进行匹配：
+页面的实际实现效果根据不同的平台和用户系统中的字体情况进行匹配：
 
 
 <table>
@@ -75,6 +75,12 @@ font-family: -apple-system, BlinkMacSystemFont,"SF Pro SC","SF Pro Text","Helvet
 | H4           | 16px       | 30px |模块内部的标题 |
 | p            | 14px       | 26px |正文 |
 | p.small      | 12px       | 24px |备注说明文字 |
+
+**备选文字大小：**
+
+><mark>H1.small</mark> : 36px; 行高：58px<br>
+<mark>H2.small</mark> : 24px; 行高：42px<br>
+用于上述规范无法涵盖的特殊情况，<mark>一般不建议使用</mark>
 
 ## 列表
 
