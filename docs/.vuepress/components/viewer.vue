@@ -1,10 +1,9 @@
 <template>
 <div class="viewer">
-<div :class="gernerateModuleClass()">
+<div :class="gernerateModuleClass()" id="module">
   <div class="moheader">
     <div class="system" >
-      <p>组件浏览器</p>
-      <span v-on:click="closeModulePage()">退出</span>
+      <span v-on:click="closeModulePage()"></span>
     </div>
     <h1>组件名：{{section.name}}</h1>
     <p>{{section.text}}</p>
@@ -183,20 +182,22 @@ $imgwidth = 420px
   background-color #f5f5f5
   z-index 9999
   display block 
-  overflow-y scroll
+  overflow-y hidden
   overflow-x hidden
   top 100%
-  transition .5s top ease-out
+  transition 0.3s top $slowFast
   &.show
     display block
-    transition .5s top ease-in-out
+    transition 0.3s top  $fastSlow
     top 60px
   .moheader 
     width 100%
-    min-height 150px
+    min-height 100px
     padding-bottom 20px
     background-color  #f5f5f5
     border-bottom 1px solid $borderColor
+    position relative
+    overflow hidden
     h1 
       font-size 18px
       font-weight 400
@@ -216,32 +217,42 @@ $imgwidth = 420px
       &.tips 
         color #666
     .system
-      width 100%
-      height 40px
-      background-color #333333
-      border-bottom 1px solid #222222
-      p 
-        color #fff
-        display block 
-        padding 0
-        margin 0 20px
-        line-height 40px
-        font-size 12px
-        float left
+      width 32px
+      height 32px
+      position absolute;
+      right 40px
+      top 30px
       span 
-        font-size 12px
-        color #fff
-        float right
-        margin 0 20px
-        line-height 40px
+        position relative
+        display block
+        width 32px
+        height 32px
+        opacity .5
+        transition .3s opacity linear 
         &:hover 
           cursor pointer
+          transition .3s opacity linear 
+          opacity 1
+        &:before,&:after
+          content ""
+          display block 
+          width 22px
+          height 2px
+          position absolute
+          left 50%
+          top 50%
+          background-color #999999
+        &:before
+          transform translate(-50%,-50%)rotate(45deg)
+        &:after
+          transform translate(-50%,-50%)rotate(-45deg)
   img 
     width 1920px
     position absolute
     left 50%
     transform translateX(-50%)
     display block
+    margin-bottom 200px
 </style>
 
 <script>
@@ -274,6 +285,35 @@ export default {
     }
   },
   mounted () {
+    var boDiv = document.getElementById("module");
+      if(boDiv == undefined){
+        return;
+      }
+      var isFirefox=navigator.userAgent.indexOf("Firefox") 
+      if(isFirefox>0){  
+        boDiv.addEventListener('DOMMouseScroll', function(event) {  //火狐
+          var evt = window.event || arguments[0]
+          if (evt.detail <= -3) { 
+            boDiv.scrollTop=boDiv.scrollTop-10
+          } else if (evt.detail >= 3) {
+            boDiv.scrollTop=boDiv.scrollTop+10
+          }
+          evt.stopPropagation();
+          evt.preventDefault();
+        }, false); 
+      }else{
+        boDiv.addEventListener("mousewheel",function(event) {
+          var evt = window.event || arguments[0]
+
+          evt.returnValue = false   //屏蔽body滚动事件  
+
+          if (evt.wheelDelta <= -120) { 
+            boDiv.scrollTop=boDiv.scrollTop+40
+          } else if (evt.wheelDelta >= 120) {
+            boDiv.scrollTop=boDiv.scrollTop-40
+          }
+        })
+      }  
   },
   methods: {
     gernerateClass :function(item,j){
@@ -304,11 +344,11 @@ export default {
       this.$set(this.section,"name",i.name);
       this.$set(this.section,"src",i.src);
       this.$set(this.section,"text",i.text);
-      this.$set(this.container,"scroll","overflow:hidden;");
+      this.$set(this.$parent.container,"scroll","overflow:visible");
     },
     closeModulePage : function() {
       this.$set(this.section,"show","none");
-      this.$set(this.container,"scroll","height:auto");
+      this.$set(this.$parent.container,"scroll","overflow:visible;");
     },
   }
 }

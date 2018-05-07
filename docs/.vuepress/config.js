@@ -1,13 +1,13 @@
 /**
  * @file config.js
- * @author dz
+ * @author wangyihan05@baidu.com
  */
 
 //页面顶部导航写在这里
 var navData = [
   { text: '首页', link: '/' },
   {
-    text: 'portal 端资料',
+    text: 'portal 端规范',
     items: [
       {text: 'portal 端组件查询', link: '/portal/section'},
       {text: 'portal 端规范文档', link: '/portal/style/img'},
@@ -16,11 +16,7 @@ var navData = [
   },
   {
     text: 'console 端资料',
-    items: [
-      {text: 'console 组件查询', link: '/console/symbol.html'},
-      {text: 'console 端规范文档', link: '/console/'},
-      {text: '资源下载', link: '/portal/resource'}
-    ]
+    link: '/console/',
   },
   {
     text: '其他',
@@ -90,6 +86,8 @@ var sidebarData = {
         'style/font',      /* /portal/style/font.md */
         'style/color',      /* /portal/style/color.md */
         'style/space',      /* /portal/style/space.md */
+        'style/icon',      /* /portal/style/icon.md */
+        'style/shadow',      /* /portal/style/shadow.md */
       ]
     },
   ],
