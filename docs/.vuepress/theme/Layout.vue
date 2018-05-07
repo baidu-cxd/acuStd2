@@ -2,7 +2,8 @@
   <div class="theme-container"
     :class="pageClasses"
     @touchstart="onTouchStart"
-    @touchend="onTouchEnd">
+    @touchend="onTouchEnd"
+    :style="container.scroll">
     <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
     <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
     <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
@@ -31,13 +32,17 @@ import { pathToComponentName } from '@app/util'
 import { resolveSidebarItems } from './util'
 
 export default {
+  props:{
+  },
   components: { Home, Page, Sidebar, Navbar },
   data () {
     return {
-      isSidebarOpen: false
+      isSidebarOpen: false,
+      container:{
+        scroll:"overflow:visible;"
+      }
     }
   },
-
   computed: {
     shouldShowNavbar () {
       const { themeConfig } = this.$site

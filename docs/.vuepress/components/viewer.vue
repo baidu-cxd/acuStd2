@@ -1,9 +1,9 @@
 <template>
-<div class="viewer" :style="viewer.sro">
+<div class="viewer">
 <div :class="gernerateModuleClass()">
   <div class="moheader">
-    <div class="system">
-      <p>百度云组件浏览器</p>
+    <div class="system" >
+      <p>组件浏览器</p>
       <span v-on:click="closeModulePage()">退出</span>
     </div>
     <h1>组件名：{{section.name}}</h1>
@@ -30,7 +30,7 @@
     </div>
     <div :class="gernerateClass(item,'kind')" v-for="item in frontmatterdata.cmsblocks">
       <div :class="gernerateClass(item,'tag')">
-        <img :src="item.src" alt="" v-on:click="showModulePage(item)">
+        <img :src="item.src" alt="" v-on:click="showModulePage(item)"> 
       </div>
     </div>
   </div>
@@ -46,6 +46,8 @@ $imgwidth = 420px
   margin 0 auto 
   overflow hidden
   padding-bottom 100px
+  width 100%
+  height 100%
   ul
     li
       list-style none 
@@ -180,10 +182,15 @@ $imgwidth = 420px
   height 100%
   background-color #f5f5f5
   z-index 9999
-  display none
+  display block 
   overflow-y scroll
+  overflow-x hidden
+  top 100%
+  transition .5s top ease-out
   &.show
     display block
+    transition .5s top ease-in-out
+    top 60px
   .moheader 
     width 100%
     min-height 150px
@@ -238,8 +245,6 @@ $imgwidth = 420px
 </style>
 
 <script>
-
-
 export default {
   data(){
    return {
@@ -260,9 +265,6 @@ export default {
       text : "none",
       show : "none",
       tips : "一些注意事项",
-    },
-    viewer: {
-      sro: "height:auto;",
     },
     }
   },
@@ -302,11 +304,11 @@ export default {
       this.$set(this.section,"name",i.name);
       this.$set(this.section,"src",i.src);
       this.$set(this.section,"text",i.text);
-      this.$set(this.viewer,"sro","height:300px;");
+      this.$set(this.container,"scroll","overflow:hidden;");
     },
     closeModulePage : function() {
       this.$set(this.section,"show","none");
-      this.$set(this.viewer,"sro","height:auto");
+      this.$set(this.container,"scroll","height:auto");
     },
   }
 }
