@@ -1,8 +1,9 @@
-<template>
+  <template>
   <div class="theme-container"
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
+    <Modal/>
     <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
     <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
     <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
@@ -27,13 +28,14 @@ import Home from './Home.vue'
 import Navbar from './Navbar.vue'
 import Page from './Page.vue'
 import Sidebar from './Sidebar.vue'
+import Modal from './Modal.vue'
 import { pathToComponentName } from '@app/util'
 import { resolveSidebarItems } from './util'
 
 export default {
   props:{
   },
-  components: { Home, Page, Sidebar, Navbar },
+  components: { Home, Page, Sidebar, Navbar ,Modal},
   data () {
     return {
       isSidebarOpen: false,
