@@ -3,7 +3,7 @@
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
-    <Modal/>
+    <Modal @show-modal="showModal"/>
     <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
     <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
     <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
@@ -133,6 +133,9 @@ export default {
   },
 
   methods: {
+    showModal(){
+      alert();
+    },
     toggleSidebar (to) {
       this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
     },

@@ -14,7 +14,7 @@
   <div class="banner" v-if="kindOfpage.list && kindOfpage.list.length">
     <h1>百度云 Portal 页面板块</h1>
     <ul>
-      <li v-for="i in kindOfpage.list" :id="i.className" v-on:click="kindChose(i)" 
+      <li v-for="i in kindOfpage.list" :id="i.className" @click="kindChose(i)" 
       :class="kindOfpage.chose == i.className ? 'active' : ' '">
       {{i.name}}</li>
     </ul>
@@ -22,14 +22,14 @@
   <div :class="gernerateClassCms(kindOfpage.chose,kindOfsection.chose)" v-if="frontmatterdata.cmsblocks && frontmatterdata.cmsblocks.length">
     <div class="select">
       <ul>
-        <li v-for="i in kindOfsection.list" :id="i.className" v-on:click="sectionKindChose(i)" 
+        <li v-for="i in kindOfsection.list" :id="i.className" @click="sectionKindChose(i)" 
         :class="kindOfsection.chose == i.className ? 'active' : ' '">
         {{i.name}}</li>
       </ul>
     </div>
     <div :class="gernerateClass(item,'kind')" v-for="item in frontmatterdata.cmsblocks">
       <div :class="gernerateClass(item,'tag')">
-        <img :src="item.src" alt="" v-on:click="showModulePage(item)"> 
+        <img :src="item.src" alt="" @click="$emit('show-modal')"> 
       </div>
     </div>
   </div>
@@ -143,7 +143,7 @@ $imgwidth = 420px
         &:hover
           transform scale(1.02)
           box-shadow 0 10px 10px 0 #00000010
-          z-index 100
+          z-index 99
           cursor pointer
       img
         display block

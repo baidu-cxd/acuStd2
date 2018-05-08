@@ -102,9 +102,6 @@
       closeModal(){
         this.$set(this.modal,"isshow","none");
       },
-      showModal: function(){
-        this.$set(this.modal,"isshow","show");
-      }
     }
   }
 
