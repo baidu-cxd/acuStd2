@@ -43,7 +43,9 @@ export default {
         isshow: 'hidden',
         title:'From:百度云设计规范',
         text:'文案',  
-        img:'none',        
+        img:'none',
+        type:'img',
+        component:'none',        
       }
     }
   },
@@ -143,6 +145,9 @@ export default {
       this.$set(this.section,"isshow",sectionto.isshow);
       this.$set(this.section,"title",sectionto.name);
       this.$set(this.section,"img",sectionto.img);
+      this.$set(this.section,"type",sectionto.type);
+      this.$set(this.section,"component",sectionto.component);
+      this.$set(this.section,"text",sectionto.text);
     },
     toggleSidebar (to) {
       this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen

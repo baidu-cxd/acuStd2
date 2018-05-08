@@ -185,6 +185,8 @@ export default {
       img : "none",
       isshow : "none",
       text : "none",
+      type:"img",
+      component:"none",
     },
     }
   },
@@ -221,6 +223,8 @@ export default {
       this.$set(this.section,"name",i.name);
       this.$set(this.section,"img",i.img);
       this.$set(this.section,"text",i.text);
+      this.$set(this.section,"type",i.type);
+      this.$set(this.section,"component",i.component);
       this.$emit('show-modal-section',this.section);
     },
   }
