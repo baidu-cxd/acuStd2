@@ -136,13 +136,6 @@ export default {
     toggleSidebar (to) {
       this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
     },
-    // 模态框
-    showModal(){
-      alert("success!");
-    },
-    closeModal(){
-      console.log("success!");
-    },
     // side swipe
     onTouchStart (e) {
       this.touchStart = {
