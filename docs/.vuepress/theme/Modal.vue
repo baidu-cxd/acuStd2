@@ -4,7 +4,7 @@
     <div class="modal-std-windows">
       <p class="title">{{modal.title}}</p>
       <p class="inner">{{modal.text}}</p>
-      <span class="std-button" v-on:click="closeModal()">确认</span>
+      <span class="std-button" @click="closeModal()">确认</span>
     </div>
   </div>
 </template>
