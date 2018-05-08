@@ -73,21 +73,24 @@
       background-color lighten($stdBlue,10%)
 
 
-
-
 </style>
-
 <script>
-
   export default {
+    props: {
+      modal:{
+        type: Object,
+        default: function () {
+          return{
+            isshow: 'show',
+            bg:'.8',
+            title:'From:百度云设计规范',
+            text:'弹窗文本',   
+          }
+        },    
+      }
+    },
     data(){
       return {
-        modal:{
-          isshow:'show',
-          bg:'.8',
-          title:'From:百度云设计规范',
-          text:'弹窗文本',
-        }
       }
     },
     computed:{
@@ -96,7 +99,7 @@
       }
     },
     methods:{
-      closeModal: function(){
+      closeModal(){
         this.$set(this.modal,"isshow","none");
       },
       showModal: function(){
