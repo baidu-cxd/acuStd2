@@ -142,6 +142,7 @@ export default {
     showModalSection(sectionto){
       this.$set(this.section,"isshow",sectionto.isshow);
       this.$set(this.section,"title",sectionto.name);
+      this.$set(this.section,"img",sectionto.img);
     },
     toggleSidebar (to) {
       this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen

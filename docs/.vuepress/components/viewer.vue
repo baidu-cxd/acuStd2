@@ -18,7 +18,7 @@
     </div>
     <div :class="gernerateClass(item,'kind')" v-for="item in frontmatterdata.cmsblocks">
       <div :class="gernerateClass(item,'tag')">
-        <img :src="item.src" alt="" @click="showModulePage(item)"> 
+        <img :src="item.img" alt="" @click="showModulePage(item)"> 
       </div>
     </div>
   </div>
@@ -219,7 +219,7 @@ export default {
     showModulePage : function(i) {
       this.$set(this.section,"isshow","show");
       this.$set(this.section,"name",i.name);
-      this.$set(this.section,"img",i.src);
+      this.$set(this.section,"img",i.img);
       this.$set(this.section,"text",i.text);
       this.$emit('show-modal-section',this.section);
     },
