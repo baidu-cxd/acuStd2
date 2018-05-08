@@ -1,16 +1,5 @@
 <template>
 <div class="viewer">
-<div :class="gernerateModuleClass()" id="module">
-  <div class="moheader">
-    <div class="system" >
-      <span v-on:click="closeModulePage()"></span>
-    </div>
-    <h1>组件名：{{section.name}}</h1>
-    <p>{{section.text}}</p>
-    <p class="tips">{{section.tips}}</p>
-  </div>
-  <img :src="section.src" alt="">
-</div>
   <div class="banner" v-if="kindOfpage.list && kindOfpage.list.length">
     <h1>百度云 Portal 页面板块</h1>
     <ul>
@@ -29,7 +18,7 @@
     </div>
     <div :class="gernerateClass(item,'kind')" v-for="item in frontmatterdata.cmsblocks">
       <div :class="gernerateClass(item,'tag')">
-        <img :src="item.src" alt="" @click="$emit('show-modal')"> 
+        <img :src="item.src" alt="" @click="showModulePage(item)"> 
       </div>
     </div>
   </div>
@@ -173,86 +162,7 @@ $imgwidth = 420px
     .imgtag.col-3
       display block
 
-//模态框
 
-.module 
-  position fixed;
-  width 100%
-  height 100%
-  background-color #f5f5f5
-  z-index 9999
-  display block 
-  overflow-y hidden
-  overflow-x hidden
-  top 100%
-  transition 0.3s top $slowFast
-  &.show
-    display block
-    transition 0.3s top  $fastSlow
-    top 60px
-  .moheader 
-    width 100%
-    min-height 100px
-    padding-bottom 20px
-    background-color  #f5f5f5
-    border-bottom 1px solid $borderColor
-    position relative
-    overflow hidden
-    h1 
-      font-size 18px
-      font-weight 400
-      color #333333
-      line-height 36px
-      margin 20px 0 0 120px
-      width 800px
-      display block
-    p
-      font-size 14px
-      font-weight 400
-      color #999999
-      line-height 26px
-      margin 0px 0 0 120px
-      width 800px
-      display block
-      &.tips 
-        color #666
-    .system
-      width 32px
-      height 32px
-      position absolute;
-      right 40px
-      top 30px
-      span 
-        position relative
-        display block
-        width 32px
-        height 32px
-        opacity .5
-        transition .3s opacity linear 
-        &:hover 
-          cursor pointer
-          transition .3s opacity linear 
-          opacity 1
-        &:before,&:after
-          content ""
-          display block 
-          width 22px
-          height 2px
-          position absolute
-          left 50%
-          top 50%
-          background-color #999999
-        &:before
-          transform translate(-50%,-50%)rotate(45deg)
-        &:after
-          transform translate(-50%,-50%)rotate(-45deg)
-  img 
-    width 1920px
-    position absolute
-    left 50%
-    transform translateX(-50%)
-    display block
-    margin-bottom 200px
 </style>
 
 <script>
@@ -272,10 +182,9 @@ export default {
       ]},
     section: {
       name: "页面名称",
-      src : "none",
+      img : "none",
+      isshow : "none",
       text : "none",
-      show : "none",
-      tips : "一些注意事项",
     },
     }
   },
@@ -285,35 +194,6 @@ export default {
     }
   },
   mounted () {
-    var boDiv = document.getElementById("module");
-      if(boDiv == undefined){
-        return;
-      }
-      var isFirefox=navigator.userAgent.indexOf("Firefox") 
-      if(isFirefox>0){  
-        boDiv.addEventListener('DOMMouseScroll', function(event) {  //火狐
-          var evt = window.event || arguments[0]
-          if (evt.detail <= -3) { 
-            boDiv.scrollTop=boDiv.scrollTop-10
-          } else if (evt.detail >= 3) {
-            boDiv.scrollTop=boDiv.scrollTop+10
-          }
-          evt.stopPropagation();
-          evt.preventDefault();
-        }, false); 
-      }else{
-        boDiv.addEventListener("mousewheel",function(event) {
-          var evt = window.event || arguments[0]
-
-          evt.returnValue = false   //屏蔽body滚动事件  
-
-          if (evt.wheelDelta <= -120) { 
-            boDiv.scrollTop=boDiv.scrollTop+40
-          } else if (evt.wheelDelta >= 120) {
-            boDiv.scrollTop=boDiv.scrollTop-40
-          }
-        })
-      }  
   },
   methods: {
     gernerateClass :function(item,j){
@@ -336,17 +216,12 @@ export default {
     gernerateClassCms : function(i,j){
       return "cmsblocks " + i + " " + j
     },
-    gernerateModuleClass(){
-      return "module" + " " + this.section.show
-    },
     showModulePage : function(i) {
-      this.$set(this.section,"show","show");
+      this.$set(this.section,"isshow","show");
       this.$set(this.section,"name",i.name);
-      this.$set(this.section,"src",i.src);
+      this.$set(this.section,"img",i.src);
       this.$set(this.section,"text",i.text);
-    },
-    closeModulePage : function() {
-      this.$set(this.section,"show","none");
+      this.$emit('show-modal-section',this.section);
     },
   }
 }

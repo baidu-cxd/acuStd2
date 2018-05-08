@@ -1,5 +1,5 @@
 <template>
-  <div class="modal" :class="modal.isshow">
+  <div class="modal-section" :class="modal.isshow">
     <div class="modal-bg" :style="modalbg"></div>
     <div class="modal-std-windows">
       <p class="title">{{modal.title}}</p>
@@ -12,7 +12,7 @@
 <style lang="stylus">
 @import '../theme/styles/config.styl'
 
-.modal
+.modal-section
   z-index 101
   width 100%
   height 100%
@@ -23,7 +23,6 @@
   &.show
     display block
 .modal-bg
-    opacity .8 
     background $darkBlack
     content ""
     display block 
@@ -82,20 +81,23 @@
         default: function () {
           return{
             isshow: 'show',
-            bg:'.8',
             title:'From:百度云设计规范',
-            text:'弹窗文本',   
+            text:'弹窗文本', 
+            img:'none',  
           }
         },    
       }
     },
     data(){
       return {
+        self:{
+          bg : '.5',
+        }
       }
     },
     computed:{
       modalbg: function(){
-        return "opacity:" + this.modal.bg
+        return "opacity:" + this.self.bg
       }
     },
     methods:{

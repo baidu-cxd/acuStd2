@@ -3,7 +3,7 @@
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
-    <Modal/>
+    <ModalSection :modal="section"/>
     <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
     <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
     <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
@@ -11,7 +11,7 @@
       <slot name="sidebar-bottom" slot="bottom"/>
     </Sidebar>
     <div class="custom-layout" v-if="$page.frontmatter.layout">
-      <component :is="$page.frontmatter.layout" @show-modal="showModal"/>
+      <component :is="$page.frontmatter.layout" @show-modal-section="showModalSection"/>
     </div>
     <Home v-else-if="$page.frontmatter.home"/>
     <Page v-else :sidebar-items="sidebarItems">
@@ -28,17 +28,23 @@ import Home from './Home.vue'
 import Navbar from './Navbar.vue'
 import Page from './Page.vue'
 import Sidebar from './Sidebar.vue'
-import Modal from './Modal.vue'
+import ModalSection from './ModalSection.vue'
 import { pathToComponentName } from '@app/util'
 import { resolveSidebarItems } from './util'
 
 export default {
   props:{
   },
-  components: { Home, Page, Sidebar, Navbar ,Modal},
+  components: { Home, Page, Sidebar, Navbar ,ModalSection},
   data () {
     return {
       isSidebarOpen: false,
+      section : {
+        isshow: 'hidden',
+        title:'From:百度云设计规范',
+        text:'文案',  
+        img:'none',        
+      }
     }
   },
   computed: {
@@ -133,8 +139,9 @@ export default {
   },
 
   methods: {
-    showModal(){
-      alert();
+    showModalSection(sectionto){
+      this.$set(this.section,"isshow",sectionto.isshow);
+      this.$set(this.section,"title",sectionto.name);
     },
     toggleSidebar (to) {
       this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
