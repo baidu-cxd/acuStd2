@@ -3,7 +3,7 @@
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
-    <Modal @show-modal="showModal"/>
+    <Modal/>
     <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
     <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
     <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
@@ -11,7 +11,7 @@
       <slot name="sidebar-bottom" slot="bottom"/>
     </Sidebar>
     <div class="custom-layout" v-if="$page.frontmatter.layout">
-      <component :is="$page.frontmatter.layout"/>
+      <component :is="$page.frontmatter.layout" @show-modal="showModal"/>
     </div>
     <Home v-else-if="$page.frontmatter.home"/>
     <Page v-else :sidebar-items="sidebarItems">
