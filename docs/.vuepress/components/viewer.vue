@@ -16,9 +16,13 @@
         {{i.name}}</li>
       </ul>
     </div>
+  <div class="list-wrp">
     <div :class="gernerateClass(item,'kind')" v-for="item in frontmatterdata.cmsblocks">
-      <div :class="gernerateClass(item,'tag')">
-        <img :src="item.img" alt="" @click="showModulePage(item)"> 
+      <div class="height-wrp">
+        <div :class="gernerateClass(item,'tag')">
+          <img :src="item.img" alt="" @click="showModulePage(item)"> 
+        </div>
+        </div>
       </div>
     </div>
   </div>
@@ -30,12 +34,14 @@
 
 $imgwidth = 420px
 
+.viewer .height-wrp
+  height 200px
+
 .viewer
   margin 0 auto 
   overflow hidden
   padding-bottom 100px
   width 100%
-  height 100%
   ul
     li
       list-style none 
@@ -119,16 +125,15 @@ $imgwidth = 420px
             border 1px solid transparent
     .imgcard
       display none
-      height auto
       float left
-      margin 0 10px 
+      margin 0  
       .imgtag
         transition 0.2s all ease-in-out
         position relative
         overflow hidden 
         width  $imgwidth
         display none
-        margin 10px 0px 
+        margin 10px 
         &:hover
           transform scale(1.02)
           box-shadow 0 10px 10px 0 #00000010
@@ -161,6 +166,16 @@ $imgwidth = 420px
   .cmsblocks.col-3
     .imgtag.col-3
       display block
+  .cmsblocks.col-2
+    .imgtag.col-2
+      display block  
+  .cmsblocks.icon
+    .imgtag.icon
+      display block
+  .cmsblocks.dark
+    .imgtag.dark
+      display block
+
 
 
 </style>
@@ -178,7 +193,10 @@ export default {
         {"name":"全部","className":"all"},
         {"name":"卡片","className":"card"},
         {"name":"三项","className":"col-3"},
-        {"name":"相关产品","className":"about"},
+        {"name":"四项","className":"col-4"},
+        {"name":"二项","className":"col-2"},
+        {"name":"图标","className":"icon"},
+        {"name":"深色","className":"dark"},
       ]},
     section: {
       name: "页面名称",

@@ -25,6 +25,7 @@
 .modal-section
   .modal-std-windows
     .img-wrp
+      border-top 1px solid #ededed
       width 1920px
       position absolute
       left 50%
@@ -42,7 +43,7 @@
   .modal-std-windows
     .textwrp
       max-width 1180px
-      margin 20px auto 0
+      margin 40px auto 0
       border-bottom 0px solid $borderColor
       min-height 52px
 
