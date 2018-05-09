@@ -34,9 +34,6 @@
 
 $imgwidth = 420px
 
-.viewer .height-wrp
-  height 220px
-
 .viewer
   margin 0 auto 
   overflow hidden
@@ -63,7 +60,7 @@ $imgwidth = 420px
       text-align center;
     ul
       overflow hidden
-      width 240px
+      width 360px
       margin 20px auto 
       li
         &:first-child 

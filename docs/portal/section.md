@@ -1,6 +1,6 @@
 ---
 title: portal 规范样式汇总
-layout: viewer
+layout: Viewer
 sidebar: false
 
 
