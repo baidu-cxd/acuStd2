@@ -1,9 +1,10 @@
-  <template>
+<template>
+<div class="vue-body">
+    <ModalSection :modal="section"/>
   <div class="theme-container"
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
-    <ModalSection :modal="section"/>
     <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
     <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
     <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
@@ -19,6 +20,7 @@
       <slot name="page-bottom" slot="bottom"/>
     </Page>
   </div>
+</div>
 </template>
 
 <script>

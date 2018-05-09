@@ -11,7 +11,6 @@ cmsblocks:
   component: SectionCardThree
   img      : http://baiduyun-guideline.bj.bcebos.com/portal%2FCMSsection%2Fcol-3-card
   text     : 三项卡片主要用于产品优势等属性
-  tips     : 一些注意事项
   kind     : product solution
   tag      : col-3 dark card
 
@@ -20,7 +19,6 @@ cmsblocks:
   component: none
   img      : http://baiduyun-guideline.bj.bcebos.com/portal%2FCMSsection%2Fcol-3-card
   text     : 板块的基本介绍
-  tips     : 一些注意事项
   kind     : product
   tag      : col-4 dark card
 
@@ -29,7 +27,6 @@ cmsblocks:
   component: none
   img      : http://baiduyun-guideline.bj.bcebos.com/portal%2FCMSsection%2Fcol-3-card
   text     : 板块的基本介绍
-  tips     : 一些注意事项
   kind     : product
   tag      : col-5 dark
 
@@ -38,7 +35,6 @@ cmsblocks:
   component: none
   img      : http://baiduyun-guideline.bj.bcebos.com/portal%2FCMSsection%2Fcol-3-card
   text     : 三项卡片主要用于产品优势等属性
-  tips     : 一些注意事项
   kind     : product
   tag      : col-3 dark
 
@@ -47,7 +43,6 @@ cmsblocks:
   component: none
   img      : http://baiduyun-guideline.bj.bcebos.com/portal%2FCMSsection%2Fcol-3-card
   text     : 板块的基本介绍
-  tips     : 一些注意事项
   kind     : product
   tag      : col-4 dark
 
@@ -56,7 +51,6 @@ cmsblocks:
   component: none
   img      : http://baiduyun-guideline.bj.bcebos.com/portal%2FCMSsection%2Fcol-3-card
   text     : 板块的基本介绍
-  tips     : 一些注意事项
   kind     : solution
   tag      : col-5 dark
 
@@ -65,7 +59,6 @@ cmsblocks:
   component: none
   img      : http://baiduyun-guideline.bj.bcebos.com/portal%2FCMSsection%2Fcol-3-card
   text     : 注意
-  tips     : 一些注意事项
   kind     : product solution
   tag      : card 
 
