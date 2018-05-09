@@ -35,7 +35,7 @@
 $imgwidth = 420px
 
 .viewer .height-wrp
-  height 200px
+  height 220px
 
 .viewer
   margin 0 auto 
@@ -166,6 +166,9 @@ $imgwidth = 420px
   .cmsblocks.col-3
     .imgtag.col-3
       display block
+  .cmsblocks.col-4
+    .imgtag.col-4
+      display block
   .cmsblocks.col-2
     .imgtag.col-2
       display block  
@@ -175,7 +178,25 @@ $imgwidth = 420px
   .cmsblocks.dark
     .imgtag.dark
       display block
+  .cmsblocks.feature
+    .imgtag.feature
+      display block
 
+  .cmsblocks.img
+    .imgtag.img
+      display block
+
+  .cmsblocks.list
+    .imgtag.list
+      display block
+  
+  .cmsblocks.tab
+    .imgtag.tab
+      display block
+
+  .cmsblocks.purpose
+    .imgtag.purpose
+      display block
 
 
 </style>
@@ -192,11 +213,16 @@ export default {
       list:[
         {"name":"全部","className":"all"},
         {"name":"卡片","className":"card"},
+        {"name":"特性罗列","className":"feature"},
+        {"name":"列表","className":"list"},   
+        {"name":"切换","className":"tab"},       
+        {"name":"二项","className":"col-2"},
         {"name":"三项","className":"col-3"},
         {"name":"四项","className":"col-4"},
-        {"name":"二项","className":"col-2"},
         {"name":"图标","className":"icon"},
+        {"name":"图片","className":"img"},
         {"name":"深色","className":"dark"},
+        {"name":"专用组件","className":"purpose"},
       ]},
     section: {
       name: "页面名称",
