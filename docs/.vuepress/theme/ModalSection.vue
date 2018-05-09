@@ -6,12 +6,14 @@
         <p class="title">{{modal.title}}</p>
         <span class="std-button" @click="closeModal()">关闭</span>
       </div>
-      <div class="textwrp"><p class="inner">{{modal.text}}</p></div>
-      <div class="img-wrp" :style="isImg">
-        <img :src="modal.img" alt="">
-      </div>
-      <div class="component-wrp"  v-if="modal.type == 'component'"  :style="isComponent">
-        <component :is="modal.component"/>
+      <div class="content-wrp">
+        <div class="textwrp"><p class="inner">{{modal.text}}</p></div>
+        <div class="img-wrp" :style="isImg">
+          <img :src="modal.img" alt="">
+        </div>
+        <div class="component-wrp"  v-if="modal.type == 'component'"  :style="isComponent">
+          <component :is="modal.component"/>
+        </div>        
       </div>
     </div>
   </div>
@@ -33,7 +35,7 @@
         width 100%
     .component-wrp
       width 100%
-      margin 0
+      margin 0 0 200px 0
      
 
 .modal-section
@@ -79,8 +81,7 @@
     opacity 0
     transition .05s opacity $fastSlow  .05s //缩放完成后开始消失
   .modal-std-windows
-    overflow-x hidden
-    overflow-y scroll
+    overflow hidden
     background-color #fff
     box-shadow 0 2px 10px 0 #00000030
     position absolute
@@ -91,6 +92,15 @@
     transition .2s all $fastSlow  //退出 .2s完成缩放
     transform translateY(100px) scale(.96)
     opacity 0
+    .content-wrp
+      margin-top 80px
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      overflow-x hidden 
+      overflow-y scroll
   .modal-header
     width 100%
     height 80px
