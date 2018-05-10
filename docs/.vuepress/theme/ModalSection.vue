@@ -1,18 +1,18 @@
 <template>
-  <div class="modal-section" :class="modal.isshow">
+  <div class="modal-section" :class="isShow">
     <div class="modal-bg"></div>
     <div class="modal-std-windows">
       <div class="modal-header">
-        <p class="title">{{modal.title}}</p>
+        <p class="title">{{sectionData.title}}</p>
         <span class="std-button" @click="closeModal()">关闭</span>
       </div>
       <div class="content-wrp">
-        <div class="textwrp"><p class="inner">{{modal.text}}</p></div>
+        <div class="textwrp"><p class="inner">{{sectionData.text}}</p></div>
         <div class="img-wrp" :style="isImg">
-          <img :src="modal.img" alt="">
+          <img :src="sectionData.img" alt="">
         </div>
-        <div class="component-wrp"  v-if="modal.type == 'component'"  :style="isComponent">
-          <component :is="modal.component"/>
+        <div class="component-wrp"  v-if="sectionData.type == 'component'"  :style="isComponent">
+          <component :is="sectionData.component"/>
         </div>        
       </div>
     </div>
@@ -145,16 +145,21 @@
 <script>
   export default {
     props: {
-      modal:{
+      isShow:{
+        type: String,
+        default:function(){
+          return 'show'  // show:展开 ; hidden:隐藏
+        }
+      }, 
+      sectionData:{
         type: Object,
         default: function () {
           return{
-            isshow: 'hidden',
-            title:'From:百度云设计规范',
-            text:'弹窗文本', 
-            img:'none', 
-            type:'img', 
-            component:'none',
+            title:'标题',//板块的标题
+            text:'弹窗文本', //板块介绍文本
+            img:'none', //配图
+            type:'img', //img:显示图片 component：显示自定义组件
+            component:'none',//自定义组件名称
           }
         },    
       }
@@ -168,7 +173,7 @@
     },
     computed:{
       isImg(){
-        if (this.modal.type == "img"){
+        if (this.sectionData.type == "img"){
           return "display:block"
         }
         else{
@@ -176,7 +181,7 @@
         }
       },
       isComponent(){
-        if (this.modal.type == "component"){
+        if (this.sectionData.type == "component"){
           return "display:block"
         }
         else{
@@ -186,7 +191,7 @@
     },
     methods:{
       closeModal(){
-        this.$set(this.modal,"isshow","hidden");
+         this.$emit('update:isShow','hidden')
       },
     }
   }

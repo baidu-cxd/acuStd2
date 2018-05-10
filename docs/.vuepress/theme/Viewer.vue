@@ -1,5 +1,7 @@
 <template>
 <div class="viewer">
+  <!-- 页面板块模块框的位置 -->
+  <ModalSection :isShow.sync="isShow" :sectionData="sectionData"/>
   <div class="banner" v-if="kindOfpage.list && kindOfpage.list.length">
     <h1>百度云 Portal 页面板块</h1>
     <ul>
@@ -199,12 +201,14 @@ $imgwidth = 420px
 </style>
 
 <script>
+import ModalSection from './ModalSection.vue'
 export default {
+  components:{ModalSection},
   data(){
    return {
     kindOfpage: {
-      chose: "product",
-      list:[{"name":"产品页","className":"product"},{"name":"解决方案","className":"solution"}]} ,
+      chose: "product solution",
+      list:[{"name":"全部","className":"product solution"},{"name":"产品页","className":"product"},{"name":"解决方案","className":"solution"}]} ,
     kindOfsection:{
       chose: "all",
       list:[
@@ -221,11 +225,11 @@ export default {
         {"name":"深色","className":"dark"},
         {"name":"专用组件","className":"purpose"},
       ]},
-    section: {
-      name: "页面名称",
+    isShow: "hidden",
+    sectionData: {
+      title: "页面名称",
       img : "none",
-      isshow : "none",
-      text : "none",
+      text : "介绍",
       type:"img",
       component:"none",
     },
@@ -260,13 +264,12 @@ export default {
       return "cmsblocks " + i + " " + j
     },
     showModulePage : function(i) {
-      this.$set(this.section,"isshow","show");
-      this.$set(this.section,"name",i.name);
-      this.$set(this.section,"img",i.img);
-      this.$set(this.section,"text",i.text);
-      this.$set(this.section,"type",i.type);
-      this.$set(this.section,"component",i.component);
-      this.$emit('show-modal-section',this.section);
+      this.$set(this.sectionData,"title",i.name);
+      this.$set(this.sectionData,"img",i.img);
+      this.$set(this.sectionData,"text",i.text);
+      this.$set(this.sectionData,"type",i.type);
+      this.$set(this.sectionData,"component",i.component);
+      this.isShow ="show";
     },
   }
 }

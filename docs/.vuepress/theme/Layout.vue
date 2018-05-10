@@ -1,18 +1,19 @@
 <template>
 <div class="vue-body">
-    <ModalSection :modal="section"/>
   <div class="theme-container"
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
+    <!-- 侧边的位置 -->
     <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
     <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
     <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
       <slot name="sidebar-top" slot="top"/>
       <slot name="sidebar-bottom" slot="bottom"/>
     </Sidebar>
+    <!-- 自定义组件 -->
     <div class="custom-layout" v-if="$page.frontmatter.layout">
-      <component :is="$page.frontmatter.layout" @show-modal-section="showModalSection"/>
+      <component :is="$page.frontmatter.layout"/>
     </div>
     <Home v-else-if="$page.frontmatter.home"/>
     <Page v-else :sidebar-items="sidebarItems">
@@ -30,7 +31,6 @@ import Home from './Home.vue'
 import Navbar from './Navbar.vue'
 import Page from './Page.vue'
 import Sidebar from './Sidebar.vue'
-import ModalSection from './ModalSection.vue'
 import Viewer from './Viewer.vue'
 import { pathToComponentName } from '@app/util'
 import { resolveSidebarItems } from './util'
@@ -38,21 +38,16 @@ import { resolveSidebarItems } from './util'
 export default {
   props:{
   },
-  components: { Home, Page, Sidebar, Navbar ,ModalSection,Viewer},
+  components: { Home, Page, Sidebar, Navbar ,Viewer},
   data () {
     return {
       isSidebarOpen: false,
-      section : {
-        isshow: 'hidden',
-        title:'From:百度云设计规范',
-        text:'文案',  
-        img:'none',
-        type:'img',
-        component:'none',        
-      }
     }
   },
   computed: {
+    section(dataIn){
+      return dataIn.section
+    },
     shouldShowNavbar () {
       const { themeConfig } = this.$site
       const { frontmatter } = this.$page
@@ -145,12 +140,7 @@ export default {
 
   methods: {
     showModalSection(sectionto){
-      this.$set(this.section,"isshow",sectionto.isshow);
-      this.$set(this.section,"title",sectionto.name);
-      this.$set(this.section,"img",sectionto.img);
-      this.$set(this.section,"type",sectionto.type);
-      this.$set(this.section,"component",sectionto.component);
-      this.$set(this.section,"text",sectionto.text);
+      this.$set(this.isShow,sectionto.isShow);
     },
     toggleSidebar (to) {
       this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
