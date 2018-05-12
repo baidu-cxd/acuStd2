@@ -42,7 +42,11 @@ var sidebarData = {
       title: '设计原则',
       collapsable: true,
       children: [
-        'one'      /* /console/one.md */
+        'principle/Feedback_mechanism' ,     /* /principle/Feedback_mechanism.md */
+        'principle/Consistency' ,            /* /principle/Consistency.md */
+        'principle/Proximity' ,              /* /principle/Proximity.md */
+        'principle/Simplicity' ,             /* /principle/Simplicity.md */
+        'principle/Wayfinding' ,             /* /principle/Wayfinding.md */
       ]
     },
     {
@@ -88,6 +92,13 @@ var sidebarData = {
         'style/space',      /* /portal/style/space.md */
         'style/icon',      /* /portal/style/icon.md */
         'style/shadow',      /* /portal/style/shadow.md */
+      ]
+    },
+    {
+      title: '营销',
+      collapsable: false,
+      children: [
+        'marketing/style',      /* /portal/marketing/style.md */
       ]
     },
   ],
