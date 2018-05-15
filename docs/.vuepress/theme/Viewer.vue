@@ -20,10 +20,8 @@
     </div>
   <div class="list-wrp">
     <div :class="gernerateClass(item,'kind')" v-for="item in frontmatterdata.cmsblocks">
-      <div class="height-wrp">
         <div :class="gernerateClass(item,'tag')">
           <img :src="item.img" alt="" @click="showModulePage(item)"> 
-        </div>
         </div>
       </div>
     </div>
@@ -35,6 +33,7 @@
 @import '../theme/styles/config.styl'
 
 $imgwidth = 420px
+$imgheight = 220px
 
 .viewer
   margin 0 auto 
@@ -131,6 +130,10 @@ $imgwidth = 420px
         position relative
         overflow hidden 
         width  $imgwidth
+        height $imgheight
+        background-color #fff
+        &.dark
+          background-color #282828
         display none
         margin 10px 
         &:hover
@@ -144,8 +147,9 @@ $imgwidth = 420px
         position relative
         left -0.1 * ($imgwidth)
         transition 0.2s all ease-in-out
-        &:hover
-          transform scale(1.05)
+        position absolute
+        top 50%
+        transform translateY(-50%)
 
 //筛选控制器
 
