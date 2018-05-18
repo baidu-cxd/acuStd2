@@ -83,6 +83,20 @@ var sidebarData = {
 
   '/portal/': [
     {
+      title: '概述',
+      collapsable: false,
+      children: [
+        'summarize/summarize',      /* /portal/summarize/summarize.md */
+      ]
+    },
+    {
+      title: '布局',
+      collapsable: false,
+      children: [
+        'layout/Grid Layout',      /* /portal/layout/Grid Layout.md */
+      ]
+    },
+    {
       title: '基础风格',
       collapsable: false,
       children: [
@@ -92,6 +106,27 @@ var sidebarData = {
         'style/space',      /* /portal/style/space.md */
         'style/icon',      /* /portal/style/icon.md */
         'style/shadow',      /* /portal/style/shadow.md */
+      ]
+    },
+    {
+      title: '组件',
+      collapsable: false,
+      children: [
+        'component/Tag',      /* /portal/component/button.md */
+      ]
+    },
+    {
+      title: '导航',
+      collapsable: false,
+      children: [
+        'navgation/Tag',      /* /portal/navgation/Tag.md */
+      ]
+    },
+    {
+      title: '页面',
+      collapsable: false,
+      children: [
+        'page/homebanner',      /* /portal/page/homebanner.md */
       ]
     },
     {
@@ -121,7 +156,7 @@ var sidebarData = {
 module.exports = {
     title: '百度云设计规范',
     description: '百度云设计规范',
-    base:'/acuStd2/',
+    base:'/',
     themeConfig: {
       nav: navData,
       sidebar: sidebarData

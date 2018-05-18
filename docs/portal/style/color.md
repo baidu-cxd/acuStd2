@@ -33,9 +33,9 @@ sidebarDepth: 0
 
 **渐变拓展色：**
 
-<div class="wrp" id="gra-1">
+<div class="wrp" id="gra-0">
 
-::: color gradient(#1EC5E7,#0A65FF)
+::: color gradient(left,#1EC5E7,#0A65FF)
 主色对应渐变色
 :::
 
@@ -118,6 +118,10 @@ sidebarDepth: 0
 ![视觉层次](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Fcolor%2Fcolor_1.png)
 
 <style>
+#gra-0 .colorBox{
+  background: -webkit-linear-gradient(left,#1EC5E7,#0A65FF);
+}
+
 #gra-1 .colorBox{
   background: -webkit-linear-gradient(left,#3C3C4D,#0F1012);
 }

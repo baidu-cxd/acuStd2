@@ -1,4 +1,4 @@
-﻿---
+---
 title: 图片
 author: 牛璐
 sidebarDepth: 0
@@ -33,7 +33,7 @@ sidebarDepth: 0
 实物实景图片主要出现在官网首页和解决方案页，常用来描述某一重点场景。图片应该选用科技和商务风格的图片，为了保持整体调性一致，界面中的所有图片都应该在色相、饱和度和亮度上进行统一处理，蒙板效果即将图片蒙上一层带透明度的黑色蒙板，降低对文字信息的干扰。
 
 
-![底图风格](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Fimg%2F%E5%BA%95%E5%9B%BE%E9%A3%8E%E6%A0%BC.png)
+![底图风格](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Fimg%2F%E5%AE%9E%E6%99%AF.png)
 
 
 ### 几何图形
@@ -42,7 +42,7 @@ sidebarDepth: 0
 几何图形，即从实物中抽象出的各种图形，一般都是由点、线、面等基本几何图形组成的。无穷尽的丰富变化使几何图案本身拥有无穷魅力，也能增加页面丰富度，提升产品调性。
 
 
-![几何图形](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Fimg%2F%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2.png)
+![几何图形](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Fimg%2F%E5%87%A0%E4%BD%95.png)
 
 
 ## 构图建议
@@ -54,7 +54,7 @@ sidebarDepth: 0
 在图片上面加上一段文字向用户介绍页面的内容，如果排版采用居中样式则图片画面需比较干净，饱和度不高，不会集中在中间位置干扰文字信息，使画面有品质感。具体尺寸详见官网首页和解决方案页。具体尺寸详见 [官网首页](/portal/？？？/mainpage.html) 和 [解决方案页](/portal/？？？/mainpage.html) 。
 
 
-![居中排版](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Fimg%2F%E6%8E%92%E7%89%88.png)
+![居中排版](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Fimg%2F%E5%B1%85%E4%B8%AD.png)
 
 
 ## 图片输出
