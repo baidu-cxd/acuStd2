@@ -33,8 +33,7 @@
 </template>
 
 <style lang="stylus">
-@import '../theme/styles/config.styl'
-@import '/styles/clean.styl'
+@import '../theme/styles/config.styl' 
 
 h2
   font-size 30px

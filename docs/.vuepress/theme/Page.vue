@@ -1,6 +1,6 @@
 <template>
-  <div class="page">
-    <div class="page-wrp">
+  <div class="article">
+    <div class="article-wrp">
       <Content :custom="false"/>
       <div class="content edit-link" v-if="editLink">
         <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
@@ -124,7 +124,7 @@ function find (page, items, offset) {
 
 <style lang="stylus">
 @import './styles/config.styl'
-
+@import './styles/article.styl'
 
 .edit-link.content
   padding-top 0 !important

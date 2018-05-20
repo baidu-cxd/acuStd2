@@ -112,14 +112,14 @@ var sidebarData = {
       title: '组件',
       collapsable: false,
       children: [
-        'component/Tag',      /* /portal/component/button.md */
+        'component/button',      /* /portal/component/button.md */
       ]
     },
     {
       title: '导航',
       collapsable: false,
       children: [
-        'navgation/Tag',      /* /portal/navgation/Tag.md */
+        'navgation/tag',      /* /portal/navgation/tag.md */
       ]
     },
     {
