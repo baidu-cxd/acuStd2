@@ -35,7 +35,59 @@
 <style lang="stylus">
 @import '../theme/styles/config.styl'
 @import '/styles/clean.styl'
-@import '/styles/base.styl'
+
+h2
+  font-size 30px
+  line-height 52px
+  color #333333
+  font-weight 400
+
+h3
+  font-size 18px
+  line-height 36px
+  color #333333
+  font-weight 400
+
+p 
+  font-size 14px
+  line-height 26px
+  color #666666
+
+.modal-section
+  .section-viewer
+    .card.col-3
+      opacity 0
+      &:first-child
+        margin-left 0
+      width 380px
+      min-height 200px
+      box-sizing border-box
+      border 1px solid #e6e6e6
+      background-color #fff
+      padding 30px
+      float left 
+      margin-left 20px
+      transition .15s all ease-in
+      position relative
+      &:hover
+        transform scale(1.03) 
+        transition .15s all ease-in
+.modal-section.show
+  .section-viewer
+    .card.col-3
+      animation move-in .6s .3s forwards cubic-bezier(0.165, 0.84, 0.44, 1)
+
+
+//animate
+
+
+
+@keyframes move-in{
+    from {top:120px; opacity :0;}
+    to {top:0px; opacity :1;}
+}
+
+
 
 .modal-section.show
   .title-box  

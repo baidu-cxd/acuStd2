@@ -127,6 +127,7 @@ var sidebarData = {
       collapsable: false,
       children: [
         'page/homebanner',      /* /portal/page/homebanner.md */
+        'page/solution',      /* /portal/page/solution.md */
       ]
     },
     {
