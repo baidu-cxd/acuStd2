@@ -1,3 +1,6 @@
+<!-- 
+author: Dz (wangyihan05@baidu.com)
+-->
 <template>
 <div class="viewer">
   <!-- 页面板块模块框的位置 -->

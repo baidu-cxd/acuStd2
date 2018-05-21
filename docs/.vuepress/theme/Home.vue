@@ -1,14 +1,19 @@
 <template>
   <div class="home">
-    <div class="hero">
-      <img v-if="data.heroImage" :src="$withBase(data.heroImage)" alt="hero">
-      <h1>{{ data.heroText || $title || 'Hello' }}</h1>
-      <p class="description">
-        {{ data.tagline || $description || 'Welcome to your VuePress site' }}
-      </p>
-      <p class="action" v-if="data.actionText && data.actionLink">
-        <NavLink class="action-button" :item="actionLink"/>
-      </p>
+    <div class="main-section">
+      <img v-if="data.mainImage" :src="$withBase(data.mainImage)" alt="main" id = "main-img">
+      <div class="wrp">
+        <h1 class="title">{{ data.mainText || $title || 'Hello' }}</h1>
+        <p class="description">
+        {{ data.subtitle || $description || 'Welcome to your VuePress site' }}
+        </p>
+        <p class="action" v-if="data.actionTextFirst && data.actionLinkFirst">
+        <NavLink class="action-button  first-child" :item="actionLinkFirst"/>
+        </p>
+        <p class="action" v-if="data.actionTextSecond && data.actionLinkSecond">
+        <NavLink class="action-button" :item="actionLinkSecond"/>
+        </p>
+      </div>
     </div>
     <div class="features" v-if="data.features && data.features.length">
       <div class="feature" v-for="feature in data.features">
@@ -32,10 +37,16 @@ export default {
     data () {
       return this.$page.frontmatter
     },
-    actionLink () {
+    actionLinkFirst () {
       return {
-        link: this.data.actionLink,
-        text: this.data.actionText
+        link: this.data.actionLinkFirst,
+        text: this.data.actionTextFirst
+      }
+    },
+    actionLinkSecond () {
+      return {
+        link: this.data.actionLinkSecond,
+        text: this.data.actionTextSecond
       }
     }
   }
@@ -46,36 +57,54 @@ export default {
 @import './styles/config.styl'
 
 .home
-  padding $headerHeight 2rem 0
-  max-width 960px
+  height 100%
+  width 100%
   margin 0px auto
-  .hero
-    text-align center
+  position fixed
+  overflow hidden
+  .main-section
+    overflow hidden
+    width 100%
+    background-color #fff
     img
-      max-height 280px
+      float right
+      right 0
+      width 80%
       display block
-      margin 3rem auto 1.5rem
-    h1
-      font-size 3rem
-    h1, .description, .action
-      margin 1.8rem auto
+    .wrp
+      width 80%
+      position absolute
+      max-width 1366px
+      top 0
+      left 50%
+      transform translateX(-50%)
+    .title
+      font-size 100px
+      margin 300px 0 30px 0
     .description
-      max-width 35rem
-      font-size 1.6rem
+      font-size 30px
       line-height 1.3
       color lighten($textColorDark, 40%)
+    .action
+      display inline
     .action-button
       display inline-block
-      font-size 1.2rem
+      text-align center
+      font-size 24px
+      height 64px
       color #fff
+      margin 120px 30px 0 0
       background-color $stdBlue
       padding 0.8rem 1.6rem
-      border-radius 4px
+      border-radius 0
+      width 220px
       transition background-color .1s ease
       box-sizing border-box
       border-bottom 1px solid darken($stdBlue, 10%)
       &:hover
         background-color lighten($stdBlue, 10%)
+    .first-child
+      background-color $darkBlack
   .features
     border-top 1px solid $borderColor
     padding 1.2rem 0
@@ -115,7 +144,7 @@ export default {
   .home
     padding-left 1.5rem
     padding-right 1.5rem
-    .hero
+    .main-section
       img
         max-height 210px
         margin 2rem auto 1.2rem
