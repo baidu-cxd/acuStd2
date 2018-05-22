@@ -33,9 +33,9 @@ var sidebarData = {
   '/console/': [
     {
       title: '概述',
-      collapsable: false,
+      collapsable: true,
       children: [
-        '',      /* /console/ */
+        'outline/Outline',      /* /outline/Outline.md */
       ]
     },
     {
@@ -72,6 +72,22 @@ var sidebarData = {
       ]
     },
     {
+      title: '校验',
+      collapsable: true,
+      children: [
+        'check/Check'      /* /console/style/Check.md */
+        
+      ]
+    },
+    {
+      title: '下载',
+      collapsable: true,
+      children: [
+        'download/Download'      /* /console/style/Download.md */
+        
+      ]
+    },
+    {
       title: '组件（前端工程用）',
       collapsable: true,
       children: [
@@ -81,24 +97,30 @@ var sidebarData = {
     }
   ],
 
+
+//portal
+
+
+
   '/portal/': [
     {
       title: '概述',
-      collapsable: false,
+      collapsable: true,
       children: [
         'summarize/summarize',      /* /portal/summarize/summarize.md */
       ]
     },
     {
       title: '布局',
-      collapsable: false,
+      collapsable: true,
       children: [
-        'layout/Grid Layout',      /* /portal/layout/Grid Layout.md */
+        'layout/GridLayout',      /* /portal/layout/GridLayout.md */
+        'layout/composingLayout',   /* /portal/layout/composingLayout.md */
       ]
     },
     {
       title: '基础风格',
-      collapsable: false,
+      collapsable: true,
       children: [
         'style/img',      /* /portal/style/img.md */
         'style/font',      /* /portal/style/font.md */
@@ -110,21 +132,21 @@ var sidebarData = {
     },
     {
       title: '组件',
-      collapsable: false,
+      collapsable: true,
       children: [
         'component/button',      /* /portal/component/button.md */
       ]
     },
     {
       title: '导航',
-      collapsable: false,
+      collapsable: true,
       children: [
-        'navgation/tag',      /* /portal/navgation/tag.md */
+        'navgation/Tag',      /* /portal/navgation/Tag.md */
       ]
     },
     {
       title: '页面',
-      collapsable: false,
+      collapsable: true,
       children: [
         'page/homebanner',      /* /portal/page/homebanner.md */
         'page/solution',      /* /portal/page/solution.md */
@@ -132,7 +154,7 @@ var sidebarData = {
     },
     {
       title: '营销',
-      collapsable: false,
+      collapsable: true,
       children: [
         'marketing/style',      /* /portal/marketing/style.md */
       ]

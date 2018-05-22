@@ -5,9 +5,9 @@ mainImage: http://baiduyun-guideline.bj.bcebos.com/public%2Fmainimg.png
 mainText: CXD
 subtitle: 一个服务于百度云业务的设计体系
 actionTextFirst: portal
-actionLinkFirst: /appendix/
-actionTextSecond: portal
-actionLinkSecond: /appendix/
+actionLinkFirst: /portal/summarize/summarize.md
+actionTextSecond: console
+actionLinkSecond: /console/outline/Outline.html
 features:
 - title: console
   details: 施工中

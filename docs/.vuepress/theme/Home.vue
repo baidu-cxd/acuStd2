@@ -59,6 +59,7 @@ export default {
 .home
   height 100%
   width 100%
+  min-width 1200px
   margin 0px auto
   position fixed
   overflow hidden
@@ -69,7 +70,8 @@ export default {
     img
       float right
       right 0
-      width 80%
+      width 90%
+      max-width 1400px
       display block
     .wrp
       width 80%

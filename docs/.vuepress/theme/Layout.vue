@@ -1,5 +1,4 @@
 <template>
-<div class="vue-body">
   <div class="theme-container"
     :class="pageClasses"
     @touchstart="onTouchStart"
@@ -21,7 +20,6 @@
       <slot name="page-bottom" slot="bottom"/>
     </Page>
   </div>
-</div>
 </template>
 
 <script>
