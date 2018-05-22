@@ -69,6 +69,7 @@ var sidebarData = {
         'widget/loading',      /* /console/widget/loading.md */
         'widget/pagination',      /* /console/widget/pagination.md */
         'widget/slider',      /* /console/widget/slider.md */
+        'widget/Search',      /* /console/widget/Search.md */
       ]
     },
     {
