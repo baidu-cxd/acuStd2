@@ -46,16 +46,15 @@ export default {
   a, span, img
     display inline-block
   .logo
-    height $headerHeight - 1.4rem
-    min-width $headerHeight - 1.4rem
-    margin-right 0.8rem
+    height 20px
+    margin 20px
     vertical-align top
   .site-name
-    font-size 20px
+    font-size 14px
     line-height 60px
-    margin-left 20px
-    font-weight 600
-    color $textColorDark
+    margin-left 0px
+    font-weight 400
+    color $textColorLight
     position relative
   .links
     position absolute

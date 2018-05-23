@@ -139,20 +139,33 @@ export default {
   display inline-block
   position relative
   margin-right 0.5rem
+  &:before
+    position absolute
+    background #fff url(http://baiduyun-guideline.bj.bcebos.com/public%2Fsearch.svg)  no-repeat
+    background-size 100%
+    content ""
+    display block
+    top 11px
+    left 11px
+    width 16px
+    height 16px
+    z-index 2
+    opacity .8
   input
     cursor pointer
-    width 10rem
+    width 36px
+    height 36px
     color lighten($textColorDark, 25%)
     display inline-block
-    border 1px solid darken($borderColor, 10%)
-    border-radius 2rem
+    border 1px solid $borderColor
+    border-radius 20px
+    padding 0
     font-size 0.9rem
     line-height 2rem
-    padding 0 0.5rem 0 2rem
     outline none
     transition all .2s ease
-    background #fff url(./search.svg) 0.6rem 0.5rem no-repeat
-    background-size 1rem
+    position relative
+    z-index 1
     &:focus
       cursor auto
       border-color $accentColor

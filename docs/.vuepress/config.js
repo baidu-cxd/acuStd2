@@ -183,7 +183,8 @@ module.exports = {
     base:'/',
     themeConfig: {
       nav: navData,
-      sidebar: sidebarData
+      sidebar: sidebarData,
+      logo: 'http://baiduyun-guideline.bj.bcebos.com/public%2FCxD.svg',
     },
     markdown: {
       // markdown-it-toc 的选项

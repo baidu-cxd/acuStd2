@@ -15,12 +15,6 @@
         </p>
       </div>
     </div>
-    <div class="features" v-if="data.features && data.features.length">
-      <div class="feature" v-for="feature in data.features">
-        <h2>{{ feature.title }}</h2>
-        <p>{{ feature.details }}</p>
-      </div>
-    </div>
     <Content custom/>
     <div class="footer" v-if="data.footer">
       {{ data.footer }}
@@ -82,52 +76,31 @@ export default {
       transform translateX(-50%)
     .title
       font-size 100px
-      margin 300px 0 30px 0
+      margin 200px 0 30px 0
     .description
       font-size 30px
       line-height 1.3
       color lighten($textColorDark, 40%)
     .action
       display inline
+      &:hover
+        cursor pointer
     .action-button
       display inline-block
       text-align center
       font-size 24px
-      height 64px
+      line-height 24px
       color #fff
-      margin 120px 30px 0 0
-      background-color $stdBlue
-      padding 0.8rem 1.6rem
+      margin 60px 30px 0 0
+      background-color $darkBlack
+      padding 16px 0
       border-radius 0
-      width 220px
+      width 200px
       transition background-color .1s ease
       box-sizing border-box
       border-bottom 1px solid darken($stdBlue, 10%)
       &:hover
         background-color lighten($stdBlue, 10%)
-    .first-child
-      background-color $darkBlack
-  .features
-    border-top 1px solid $borderColor
-    padding 1.2rem 0
-    margin-top 2.5rem
-    display flex
-    flex-wrap wrap
-    align-items flex-start
-    align-content strech
-    justify-content space-between
-  .feature
-    flex-grow 1
-    flex-basis 30%
-    max-width 30%
-    h2
-      font-size 1.4rem
-      font-weight 500
-      border-bottom none
-      padding-bottom 0
-      color lighten($textColorDark, 10%)
-    p
-      color lighten($textColorDark, 25%)
   .footer
     padding 2.5rem
     border-top 1px solid $borderColor
