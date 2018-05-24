@@ -10,7 +10,11 @@ sidebarDepth: 0
 
 [[toc]]
 
-## 字体规范
+## 设计用字体
+
+我们一般使用 **PingFang SC** 字体完成设计稿
+
+## 详细字体规范
 
 
 页面的实际实现效果根据不同的平台和用户系统中的字体情况进行匹配：
@@ -47,11 +51,7 @@ sidebarDepth: 0
     </tr>
 </table>
 
-:::tip 设计师如何选用字体？
 
-虽然实际的字体使用会有不同平台有不同效果，但是设计稿可以使用设计师习惯的方式进行，我们一般使用 **PingFang SC** 字体完成设计稿
-
-:::
 
 ## 前端实现
 
@@ -66,7 +66,7 @@ font-family: -apple-system, BlinkMacSystemFont,"SF Pro SC","SF Pro Text","Helvet
 
 ## 文字大小规范
 
-| 字体 token    | 字体大小  | 对应行高 |使用条件 |
+| 类型    | 字体大小  | 对应行高 |使用条件 |
 | -------------|------------ | -----|-----|
 | Special      | 42 + 6n(px)   | -      |拓展规则 |
 | H1           | 42px       | 64px |首页/产品和解决方案页面的标题 |
@@ -84,19 +84,6 @@ font-family: -apple-system, BlinkMacSystemFont,"SF Pro SC","SF Pro Text","Helvet
 
 ## 列表
 
-**有序列表：**
+列表分为 <mark>有序列表</mark> 和 <mark>无序列表</mark>
 
-1. 有序列表第一项
-
-2. 有序列表第二项
-
-3. 有序列表第三项
-
-**无序列表：**
-
-- 无序列表第一项
-  - 无序列表第一项内的第一项
-  - 无序列表第二项内的第二项
-- 无序列表第二项
-  - 无序列表第二项内的第一项
-  - 无序列表第二项内的第二项
+![列表](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Ffont%2Ful)

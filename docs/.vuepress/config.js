@@ -9,9 +9,8 @@ var navData = [
   {
     text: 'portal 端规范',
     items: [
-      {text: 'portal 端组件查询', link: '/portal/section'},
       {text: 'portal 端规范文档', link: '/portal/style/img'},
-      {text: '资源下载', link: '/portal/resource'}
+      {text: '板块(楼层)查询器', link: '/portal/section'},
     ]
   },
   {
@@ -138,6 +137,14 @@ var sidebarData = {
       ]
     },
     {
+      title: '设计原则',
+      collapsable: true,
+      children: [
+        'summarize/summarize',      /* 概述 */
+        'summarize/Dictionaries',    /* 字典 */
+      ]
+    },
+    {
       title: '布局',
       collapsable: true,
       children: [
@@ -146,7 +153,7 @@ var sidebarData = {
       ]
     },
     {
-      title: '基础风格',
+      title: '风格指南',
       collapsable: true,
       children: [
         'style/img',      /* /portal/style/img.md */
@@ -158,24 +165,28 @@ var sidebarData = {
       ]
     },
     {
-      title: '组件',
-      collapsable: true,
-      children: [
-        'component/button',      /* /portal/component/button.md */
-      ]
-    },
-    {
       title: '导航',
       collapsable: true,
       children: [
         'navgation/Tag',      /* /portal/navgation/Tag.md */
+        'navgation/fastguid',      /* /portal/navgation/fastguid.md */
+      ]
+    },
+    {
+      title: '基础组件',
+      collapsable: true,
+      children: [
+        'component/Base_component',      /* /portal/component/Base_component.md */
+        'component/button',      /* /portal/component/button.md */
+        'component/hyperlink',      /* /portal/component/hyperlink.md */
+        'component/form',      /* /portal/component/form.md */
       ]
     },
     {
       title: '页面',
       collapsable: true,
       children: [
-        'page/homebanner',      /* /portal/page/homebanner.md */
+        'page/home',      /* /portal/page/home.md */
         'page/solution',      /* /portal/page/solution.md */
       ]
     },
@@ -184,6 +195,14 @@ var sidebarData = {
       collapsable: true,
       children: [
         'marketing/style',      /* /portal/marketing/style.md */
+      ]
+    },
+    {
+      title: '其他资料',
+      collapsable: true,
+      children: [
+        'other/Dictionaries',      /* 字典 */
+        'other/Token',      /* 字典 */
       ]
     },
   ],

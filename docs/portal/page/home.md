@@ -1,15 +1,15 @@
 ---
-title:  首页banner规范
+title:  首页
 author:  韩玢
-sidebarDepth: 0
+sidebarDepth: 1
 ---
-# 首页 banner 设计规范
+# 首页
 
 
 [[toc]]
 
 
-## 说明
+## 首页 Banner 综述
 
 
 首页 banner 为官网的视觉核心，对于尺寸及视觉输出要求较高，在保证设计统一的前提下，制定了相应的设计规范

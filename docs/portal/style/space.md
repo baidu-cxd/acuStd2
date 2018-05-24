@@ -25,3 +25,28 @@ sidebarDepth: 0
 | L-4       | 40px      | 板块内标题和内容的间距 |
 | L-5       | 80px      | 板块的内间距 |
 | Special   | 10px * n  | 其它间距需要遵循 10px 倍数规范 |
+
+## 常用间距规则
+
+**在一个页面板块内：**
+- 板块（楼层）的内间距 `padding-top & padding-bottom` 规定为 <mark>80px</mark> 
+- 板块（楼层）标题到其他模块的间距为 <mark>40px</mark>
+- 两个模块的间距为 <mark>20px</mark>
+
+![间距](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Fspace%2Fspace)
+
+**在一个卡片模块内：**
+- 卡片内间距 `padding` 一般为 <mark>30px</mark>
+- 内间距特殊情况下可以为 <mark>40px</mark> ，如顶部是 icon 的情况
+
+![卡片间距](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Fspace%2Fcard)
+
+## 间距的拓展
+
+我们一般使用 <mark>10</mark> 的倍数来进行间距的拓展，也就是说，我们可以使用 10px ,20px , 30px ……
+
+在选择间距的时候，尽可能参照规范文档的说明选取，如果规范无法涵盖的情况，再选择 10 倍的拓展，当拓展依然不能实现需求，最后才考虑使用其它间距
+
+## 文本内容间距
+
+等文档页面改版完成后添加
