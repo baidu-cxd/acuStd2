@@ -42,18 +42,21 @@ var sidebarData = {
       title: '设计原则',
       collapsable: true,
       children: [
-        'principle/Feedback_mechanism' ,     /* /principle/Feedback_mechanism.md */
+        'principle/Wayfinding' ,             /* /principle/Wayfinding.md */
+        'principle/Simplicity' ,             /* /principle/Simplicity.md */
         'principle/Consistency' ,            /* /principle/Consistency.md */
         'principle/Proximity' ,              /* /principle/Proximity.md */
-        'principle/Simplicity' ,             /* /principle/Simplicity.md */
-        'principle/Wayfinding' ,             /* /principle/Wayfinding.md */
+        'principle/Feedback_mechanism' ,     /* /principle/Feedback_mechanism.md */
       ]
     },
     {
       title: '风格',
       collapsable: true,
       children: [
-        'style/color'      /* /console/style/color.md */
+        'style/Color' ,     /* /console/style/Color.md */
+        'style/Typography' ,     /* /console/style/Typography.md */
+        'style/Icons' ,    /* /console/style/Icons.md */
+        'style/Writing' ,     /* /console/style/Writing.md */
         
       ]
     },
@@ -61,22 +64,53 @@ var sidebarData = {
       title: '组件',
       collapsable: true,
       children: [
-        'widget/button',      /* /console/widget/Button.md */
-        'widget/collection',      /* /console/widget/collection.md */
-        'widget/input',      /* /console/widget/input.md */
-        'widget/link',      /* /console/widget/link.md */
-        'widget/list',      /* /console/widget/list.md */
-        'widget/loading',      /* /console/widget/loading.md */
-        'widget/pagination',      /* /console/widget/pagination.md */
-        'widget/slider',      /* /console/widget/slider.md */
+        'widget/Button',      /* /console/widget/Button.md */
+        'widget/List',      /* /console/widget/List.md */
+        'widget/Placeholder',      /* /console/widget/Placeholder.md */
+        'widget/Introduction',      /* /console/widget/Introduction.md */
+        'widget/Chart',      /* /console/widget/Chart.md */
+        'widget/Collection',      /* /console/widget/Collection.md */
+        'widget/Pagination',      /* /console/widget/Pagination.md */
+        'widget/Link',      /* /console/widget/Link.md */
+        'widget/Input',      /* /console/widget/Input.md */
+        'widget/Switch',      /* /console/widget/Switch.md */
+        'widget/Time',      /* /console/widget/Time.md */
+        'widget/Stepper',      /* /console/widget/Stepper.md */
+        'widget/Upload',      /* /console/widget/Upload.md */
+        'widget/Select',      /* /console/widget/Select.md */
+        'widget/Radio',      /* /console/widget/Radio.md */
+        'widget/CheckBox',      /* /console/widget/CheckBox.md */
+        'widget/Dropdown',      /* /console/widget/Dropdown.md */
+        'widget/Slider',      /* /console/widget/Slider.md */
         'widget/Search',      /* /console/widget/Search.md */
+        'widget/Menu',      /* /console/widget/Menu.md */
+        'widget/Tabs',      /* /console/widget/Tabs.md */
+        'widget/Steps',      /* /console/widget/Steps.md */
+        'widget/Loading',      /* /console/widget/Loading.md */
+        'widget/Toast',      /* /console/widget/Toast.md */
+        'widget/Modal',      /* /console/widget/Modal.md */
+        'widget/Drawer',      /* /console/widget/Drawer.md */
+        'widget/Tips',      /* /console/widget/Tips.md */
+        'widget/Badge',      /* /console/widget/Badge.md */
+
+      ]
+    },
+    {
+      title: '反馈',
+      collapsable: true,
+      children: [
+        'feedback/Feedback_review',      /* /console/feedback/Feedback_review.md */
+        'feedback/Message_prompt',      /* /console/feedback/Message_prompt.md */
+        'feedback/Process_feedback',      /* /console/feedback/Process_feedback.md */
+        'feedback/Result_feedback',      /* /console/feedback/Result_feedback.md */
+        
       ]
     },
     {
       title: '校验',
       collapsable: true,
       children: [
-        'check/Check'      /* /console/style/Check.md */
+        'check/Check'      /* /console/check/Check.md */
         
       ]
     },
@@ -88,14 +122,6 @@ var sidebarData = {
         
       ]
     },
-    {
-      title: '组件（前端工程用）',
-      collapsable: true,
-      children: [
-        'components/button',      /* /console/components/Button.md */
-        'components/textbox'      /* /console/components/textbox.md */
-      ]
-    }
   ],
 
 
@@ -108,7 +134,7 @@ var sidebarData = {
       title: '概述',
       collapsable: true,
       children: [
-        'summarize/summarize',      /* /portal/summarize/summarize.md */
+        'summarize/summarize',      /* 概述 */
       ]
     },
     {
@@ -116,7 +142,7 @@ var sidebarData = {
       collapsable: true,
       children: [
         'layout/GridLayout',      /* /portal/layout/GridLayout.md */
-        'layout/composingLayout',   /* /portal/layout/composingLayout.md */
+        'layout/ComposingLayout',   /* /portal/layout/ComposingLayout.md */
       ]
     },
     {

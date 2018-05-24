@@ -1,4 +1,4 @@
-﻿---
+---
 title: 搜索（Search）
 author: wuqianle
 sidebarDepth: 0

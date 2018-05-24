@@ -1,6 +1,6 @@
 ---
 title: 列表（List）
-sidebarDepth: 1
+sidebarDepth: 0
 ---
 
 # 列表（List）

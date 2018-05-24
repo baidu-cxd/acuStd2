@@ -49,7 +49,7 @@ sidebarDepth: 0
 图标的颜色遵循官网的主色，并配以辅助颜色做拓展，尽可能的保持于官网配色相一致。以确保整体页面的视觉统一性。现阶段定义了两种配色，来适配不同的使用环境。
 
 
-![颜色](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Ficon%2F%E5%9B%BE%E6%A0%87%E9%A2%9C%E8%89%B22.png)
+![颜色](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Ficon%2F%E5%9B%BE%E6%A0%87%E9%A2%9C%E8%89%B2.png)
 
 
 ## 视觉修正

@@ -1,4 +1,4 @@
-﻿---
+---
 title:  首页banner规范
 author:  韩玢
 sidebarDepth: 0
@@ -61,7 +61,6 @@ sidebarDepth: 0
 
 图形以线性为主，默认线条4px
 
-![banner 线条4px](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E7%BA%BF%E6%9D%A14px.png)
 
 
 ### 渐变色值/透明度使用
@@ -79,7 +78,7 @@ sidebarDepth: 0
 ### 辅助图形
 辅助图形仅用于饱满视觉区域，不得大面积使用
 
-![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%BE%85%E5%8A%A9%E5%9B%BE%E5%BD%A2.png)
+![banner 辅助图形使用](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%BE%85%E5%8A%A9%E5%9B%BE%E5%BD%A2%E4%BD%BF%E7%94%A8.png)
 
 
 ## 运营类 banner 规范
