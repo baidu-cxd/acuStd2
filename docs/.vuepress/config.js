@@ -141,7 +141,6 @@ var sidebarData = {
       collapsable: true,
       children: [
         'summarize/summarize',      /* 概述 */
-        'summarize/Dictionaries',    /* 字典 */
       ]
     },
     {
