@@ -1,4 +1,4 @@
-<!-- 
+<!--
 author: Dz (wangyihan05@baidu.com)
 -->
 <template>
@@ -8,7 +8,7 @@
   <div class="banner" v-if="kindOfpage.list && kindOfpage.list.length">
     <h1>百度云 Portal 页面板块</h1>
     <ul>
-      <li v-for="i in kindOfpage.list" :id="i.className" @click="kindChose(i)" 
+      <li v-for="i in kindOfpage.list" :id="i.className" @click="kindChose(i)"
       :class="kindOfpage.chose == i.className ? 'active' : ' '">
       {{i.name}}</li>
     </ul>
@@ -16,7 +16,7 @@
   <div :class="gernerateClassCms(kindOfpage.chose,kindOfsection.chose)" v-if="frontmatterdata.cmsblocks && frontmatterdata.cmsblocks.length">
     <div class="select">
       <ul>
-        <li v-for="i in kindOfsection.list" :id="i.className" @click="sectionKindChose(i)" 
+        <li v-for="i in kindOfsection.list" :id="i.className" @click="sectionKindChose(i)"
         :class="kindOfsection.chose == i.className ? 'active' : ' '">
         {{i.name}}</li>
       </ul>
@@ -24,7 +24,7 @@
   <div class="list-wrp">
     <div :class="gernerateClass(item,'kind')" v-for="item in frontmatterdata.cmsblocks">
         <div :class="gernerateClass(item,'tag')">
-          <img :src="item.img" alt="" @click="showModulePage(item)"> 
+          <img :src="item.img" alt="" @click="showModulePage(item)">
         </div>
       </div>
     </div>
@@ -39,14 +39,14 @@ $imgwidth = 420px
 $imgheight = 220px
 
 .viewer
-  margin 0 auto 
+  margin 0 auto
   overflow hidden
   padding-bottom 100px
   width 100%
   ul
     li
-      list-style none 
-      box-sizing border-box   
+      list-style none
+      box-sizing border-box
   .banner
     margin-top 60px;
     width 100%
@@ -65,12 +65,12 @@ $imgheight = 220px
     ul
       overflow hidden
       width 360px
-      margin 20px auto 
+      margin 20px auto
       li
-        &:first-child 
-           margin-left 0px 
-        margin-left -1px 
-        float left 
+        &:first-child
+           margin-left 0px
+        margin-left -1px
+        float left
         width 120px
         text-align center
         padding 0px
@@ -88,7 +88,7 @@ $imgheight = 220px
           font-weight 400
           background-color #ffffff
           border 1px solid transparent
-          z-index 10 
+          z-index 10
   .cmsblocks
     width $imgwidth * 3 + 60px
     margin 40px auto 40px
@@ -102,9 +102,9 @@ $imgheight = 220px
         display block
         overflow hidden
         margin 0 0 0 0
-        li 
+        li
           margin 0
-          display block 
+          display block
           width 88px
           font-size 14px
           background-color transparent
@@ -127,18 +127,18 @@ $imgheight = 220px
     .imgcard
       display none
       float left
-      margin 0  
+      margin 0
       .imgtag
         transition 0.2s all ease-in-out
         position relative
-        overflow hidden 
+        overflow hidden
         width  $imgwidth
         height $imgheight
         background-color #fff
         &.dark
           background-color #282828
         display none
-        margin 10px 
+        margin 10px
         &:hover
           transform scale(1.02)
           box-shadow 0 10px 10px 0 #00000010
@@ -156,7 +156,7 @@ $imgheight = 220px
 
 //筛选控制器
 
-.viewer 
+.viewer
   .cmsblocks.product
     .imgcard.product
       display block
@@ -177,7 +177,7 @@ $imgheight = 220px
       display block
   .cmsblocks.col-2
     .imgtag.col-2
-      display block  
+      display block
   .cmsblocks.icon
     .imgtag.icon
       display block
@@ -195,7 +195,7 @@ $imgheight = 220px
   .cmsblocks.list
     .imgtag.list
       display block
-  
+
   .cmsblocks.tab
     .imgtag.tab
       display block
@@ -209,6 +209,9 @@ $imgheight = 220px
 
 <script>
 import ModalSection from './ModalSection.vue'
+// import _ from 'underscore';
+let _ = require('underscore');
+
 export default {
   components:{ModalSection},
   data(){
@@ -222,8 +225,8 @@ export default {
         {"name":"全部","className":"all"},
         {"name":"卡片","className":"card"},
         {"name":"特性罗列","className":"feature"},
-        {"name":"列表","className":"list"},   
-        {"name":"切换","className":"tab"},       
+        {"name":"列表","className":"list"},
+        {"name":"切换","className":"tab"},
         {"name":"二项","className":"col-2"},
         {"name":"三项","className":"col-3"},
         {"name":"四项","className":"col-4"},
@@ -248,6 +251,13 @@ export default {
     }
   },
   mounted () {
+    let hash = this.$route.hash;
+    if (hash) {
+      let item = _.where(this.frontmatterdata.cmsblocks, {name: decodeURI(hash.substr(1))});
+      if (item.length) {
+        this.showModulePage(item[0]);
+      }
+    }
   },
   methods: {
     gernerateClass :function(item,j){
@@ -258,7 +268,7 @@ export default {
         return "imgtag " + item.tag
       }
       else{
-        return "none " 
+        return "none "
       }
     } ,
     kindChose : function(i){
