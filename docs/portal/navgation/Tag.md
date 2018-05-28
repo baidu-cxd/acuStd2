@@ -1,7 +1,7 @@
 ---
-title:  首页导航
+title:  网站主导航
 author:  韩玢
 sidebarDepth: 0
 ---
 
-# 首页导航
+# 网站主导航

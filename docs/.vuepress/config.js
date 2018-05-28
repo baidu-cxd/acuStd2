@@ -25,7 +25,6 @@ var navData = [
   }
 ];
 
-
 //页面侧边导航写在这里
 
 var sidebarData = {
@@ -137,24 +136,20 @@ var sidebarData = {
       ]
     },
     {
-      title: '设计原则',
+      title: '原则',
       collapsable: true,
       children: [
-        'summarize/summarize',      /* 概述 */
+        'principle/Unified',      /* 统一 */
+        'principle/Intuitive',      /* 直观 */
+        'principle/Artistic',      /* 美观 */
+        'principle/Concise',      /* 简洁 */
       ]
     },
     {
-      title: '布局',
+      title: '风格',
       collapsable: true,
       children: [
-        'layout/GridLayout',      /* /portal/layout/GridLayout.md */
-        'layout/SectionLayout',      /* /portal/layout/GridLayout.md */
-      ]
-    },
-    {
-      title: '风格指南',
-      collapsable: true,
-      children: [
+        'style/GridLayout',      /* /portal/style/GridLayout.md */
         'style/img',      /* /portal/style/img.md */
         'style/font',      /* /portal/style/font.md */
         'style/color',      /* /portal/style/color.md */
@@ -164,7 +159,7 @@ var sidebarData = {
       ]
     },
     {
-      title: '基础组件',
+      title: '组件',
       collapsable: true,
       children: [
         'component/Base_component',      /* /portal/component/Base_component.md */
@@ -179,6 +174,7 @@ var sidebarData = {
       children: [
         'navgation/Tag',      /* /portal/navgation/Tag.md */
         'navgation/fastguid',      /* /portal/navgation/fastguid.md */
+        'navgation/Sidebar',      /* /portal/navgation/fastguid.md */
       ]
     },
     {

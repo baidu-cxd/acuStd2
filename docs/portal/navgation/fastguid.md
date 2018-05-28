@@ -1,7 +1,7 @@
 ---
-title: 快速导航
+title: 页内快速导航
 author: 郑显真
-sidebarDepth: 0
+sidebarDepth: 1
 ---
 
 # 快速导航
@@ -9,16 +9,12 @@ sidebarDepth: 0
 
 页面内快速导航有助于用户快速获取页面章节信息，并通过点击可以快速到达页面内任意章节位置，有效的提升用户浏览体验。快速导航的布局形式分为横向布局和纵向布局，由于百度云官网页面的内容差异性较大，所以在官网的页面中，我们针对不同的页面类型会使用不同的布局类型。
 
-[[toc]]
-
-
-## 两种类型
-
-
 常见的快速导航分为两种类型，一种为横向布局快速导航，一种为纵向快速导航类型
 
-
 ![两种类型](http://baiduyun-guideline.bj.bcebos.com/portal%2Fnavagation%2F%E4%B8%A4%E7%A7%8D%E7%B1%BB%E5%9E%8B.jpg)
+
+[[toc]]
+
 
 
 ## 横向快速导航
@@ -44,7 +40,7 @@ sidebarDepth: 0
 ![样式备注](http://baiduyun-guideline.bj.bcebos.com/portal%2Fnavagation%2F%E6%A0%B7%E5%BC%8F%E5%A4%87%E6%B3%A8.jpg)
 
 
-## 横向快速导航
+## 纵向快速导航
 
 
 纵向导航现阶段预估会在文档页面出现，从组件唯有成熟设计，待补充！！
