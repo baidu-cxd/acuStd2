@@ -1,0 +1,187 @@
+{
+  "/console/": [
+    {
+      "title": "概述",
+      "collapsable": true,
+      "children": [
+        "outline/Outline"    
+      ]
+    },
+    {
+      "title": "设计原则",
+      "collapsable": true,
+      "children": [
+        "principle/Wayfinding" ,             
+        "principle/Simplicity" ,            
+        "principle/Consistency" ,          
+        "principle/Proximity" ,            
+        "principle/Feedback_mechanism"      
+      ]
+    },
+    {
+      "title": "风格",
+      "collapsable": true,
+      "children": [
+        "style/Color" ,     
+        "style/Typography" ,    
+        "style/Icons" ,   
+        "style/Writing" 
+        
+      ]
+    },
+    {
+      "title": "组件",
+      "collapsable": true,
+      "children": [
+        "widget/Button",      
+        "widget/List",     
+        "widget/Placeholder",     
+        "widget/Introduction",      
+        "widget/Chart",      
+        "widget/Collection",     
+        "widget/Pagination",     
+        "widget/Link",      
+        "widget/Input",      
+        "widget/Switch",      
+        "widget/Time",      
+        "widget/Stepper",     
+        "widget/Upload",      
+        "widget/Select",     
+        "widget/Radio",      
+        "widget/CheckBox",     
+        "widget/Dropdown",     
+        "widget/Slider",     
+        "widget/Search",    
+        "widget/Menu",     
+        "widget/Tabs",      
+        "widget/Steps",     
+        "widget/Loading",      
+        "widget/Toast",      
+        "widget/Modal",     
+        "widget/Drawer",      
+        "widget/Tips",      
+        "widget/Badge"      
+
+      ]
+    },
+    {
+      "title": "反馈",
+      "collapsable": true,
+      "children": [
+        "feedback/Feedback_review",      
+        "feedback/Message_prompt",      
+        "feedback/Process_feedback",      
+        "feedback/Result_feedback"
+        
+      ]
+    },
+    {
+      "title": "校验",
+      "collapsable": true,
+      "children": [
+        "check/Check"      
+        
+      ]
+    },
+    {
+      "title": "下载",
+      "collapsable": true,
+      "children": [
+        "download/Download"     
+        
+      ]
+    }
+  ],
+
+
+
+
+  "/portal/": [
+    {
+      "title": "概述",
+      "collapsable": true,
+      "children": [
+        "summarize/Summarize",
+        "summarize/New"
+      ]
+    },
+    {
+      "title": "原则",
+      "collapsable": true,
+      "children": [
+        "principle/Principle",
+        "principle/Unified",  
+        "principle/Intuitive",    
+        "principle/Artistic"
+      ]
+    },
+    {
+      "title": "风格",
+      "collapsable": true,
+      "children": [
+        "style/GridLayout", 
+        "style/Img",    
+        "style/Font",     
+        "style/Color",    
+        "style/Space",     
+        "style/Icon",      
+        "style/Shadow"
+      ]
+    },
+    {
+      "title": "组件",
+      "collapsable": true,
+      "children": [
+        "component/Base_component",   
+        "component/Button",    
+        "component/Hyperlink",
+        "component/Table",     
+        "component/Form",
+        "component/Modal"
+      ]
+    },
+    {
+      "title": "导航",
+      "collapsable": true,
+      "children": [
+        "navgation/Tag",   
+        "navgation/fastguid",    
+        "navgation/Sidebar"
+      ]
+    },
+    {
+      "title": "页面",
+      "collapsable": true,
+      "children": [
+        "page/home",  
+        "page/product",     
+        "page/solution"
+      ]
+    },
+    {
+      "title": "营销",
+      "collapsable": true,
+      "children": [
+        "marketing/style"
+      ]
+    },
+    {
+      "title": "其他资料",
+      "collapsable": true,
+      "children": [
+        "other/Tower",
+        "other/Dictionaries",  
+        "other/Token"
+      ]
+    }
+  ],
+
+  "/appendix/": [       
+    "howToUsemd",  
+    "howToUsemd2", 
+    "howToMoveMd"
+  ],
+
+  "/": [
+  ]
+}

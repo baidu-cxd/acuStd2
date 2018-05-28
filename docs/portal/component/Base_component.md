@@ -12,8 +12,8 @@ sidebarDepth: 0
 #### 基础组件导航：
 
 - [按钮](/portal/component/Button.html)
-- [超链接](/portal/component/Form.html)
+- [表格](/portal/component/Table.html)
 - [表格](/portal/component/Hyper_link.html)
-- [表单](/portal/component/Hyper_link.html)
-- [模态框](/portal/component/Hyper_link.html)
+- [表单](/portal/component/Form.html)
+- [模态框](/portal/component/(Modal.html)
 

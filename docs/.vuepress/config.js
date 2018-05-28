@@ -3,31 +3,13 @@
  * @author wangyihan05@baidu.com
  */
 
-//页面顶部导航写在这里
-var navData = [
-  { text: '首页', link: '/' },
-  {
-    text: 'portal 端规范',
-    items: [
-      {text: 'portal 端规范文档', link: '/portal/style/img'},
-      {text: '板块(楼层)查询器', link: '/portal/section'},
-    ]
-  },
-  {
-    text: 'console 端资料',
-    link: '/console/',
-  },
-  {
-    text: '其他',
-    items: [
-      { text: '使用说明', link: '/appendix/'},
-    ]
-  }
-];
+//页面顶部导航配置文件
+const navData = require('./config/navData.json')
 
-//页面侧边导航写在这里
 
-var sidebarData = {
+//页面侧边导航配置文件
+var sidebarData = require('./config/sidebarData.json')
+var sidebarData1 = {
   '/console/': [
     {
       title: '概述',

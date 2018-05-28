@@ -1,0 +1,20 @@
+[
+    { "text": "首页", "link": "/" },
+    {
+      "text": "portal 端规范",
+      "items": [
+        {"text": "portal 端规范文档", "link": "/portal/style/img"},
+        {"text": "板块(楼层)查询器", "link": "/portal/section"}
+      ]
+    },
+    {
+      "text": "console 端资料",
+      "link": "/console/"
+    },
+    {
+      "text": "其他",
+      "items": [
+        { "text": "使用说明", "link": "/appendix/"}
+      ]
+    }
+]

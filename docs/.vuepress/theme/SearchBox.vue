@@ -187,7 +187,7 @@ export default {
     a
       color lighten($textColorDark, 35%)
       .page-title
-        font-weight 600
+        font-weight 500
       .header
         font-size 0.9em
         margin-left 0.25em

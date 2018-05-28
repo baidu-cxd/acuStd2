@@ -68,13 +68,13 @@ export default {
         margin-top 0
         background $accentColor
         color #fff
-        font-weight 600
+        font-weight 500
         .algolia-docsearch-suggestion--highlight
           background rgba(255, 255, 255, 0.6)
       .algolia-docsearch-suggestion--wrapper
         padding 0
       .algolia-docsearch-suggestion--title
-        font-weight 600
+        font-weight 500
         margin-bottom 0
         color $textColorDark
       .algolia-docsearch-suggestion--subcategory-column

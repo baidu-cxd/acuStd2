@@ -74,7 +74,7 @@ a.sidebar-link
   &:hover
     color $stdBlue
   &.active
-    font-weight 600
+    font-weight 500
     color $stdBlue
     border-left-color $stdBlue
   .sidebar-group &

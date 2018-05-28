@@ -148,8 +148,3 @@ WAP端
 
 ![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2Fwap%20%E8%BF%90%E8%90%A5%E5%AF%BC%E5%87%BA.png)
 
-
-
-
-
-

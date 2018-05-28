@@ -135,7 +135,7 @@
       opacity .8
       font-size 16px
       line-height 80px
-      font-weight 600
+      font-weight 500
       text-align center
     &.inner
       margin-bottom 20px
