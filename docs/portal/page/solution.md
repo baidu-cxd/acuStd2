@@ -1,7 +1,7 @@
 ---
 title:  解决方案页
 author:  wangyihan05@baidu.com
-sidebarDepth: 0
+sidebarDepth: 1
 ---
 
 # 解决方案页
@@ -31,7 +31,7 @@ sidebarDepth: 0
 
 :::
 
-
+## 解决方案顶部板块
 
 
 ## 行为引导板块
@@ -49,8 +49,7 @@ sidebarDepth: 0
 :::
 
 
-
-
+## 内容规范
 
 
 

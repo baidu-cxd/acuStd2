@@ -148,7 +148,7 @@ var sidebarData = {
       collapsable: true,
       children: [
         'layout/GridLayout',      /* /portal/layout/GridLayout.md */
-        'layout/ComposingLayout',   /* /portal/layout/ComposingLayout.md */
+        'layout/SectionLayout',      /* /portal/layout/GridLayout.md */
       ]
     },
     {
@@ -164,14 +164,6 @@ var sidebarData = {
       ]
     },
     {
-      title: '导航',
-      collapsable: true,
-      children: [
-        'navgation/Tag',      /* /portal/navgation/Tag.md */
-        'navgation/fastguid',      /* /portal/navgation/fastguid.md */
-      ]
-    },
-    {
       title: '基础组件',
       collapsable: true,
       children: [
@@ -182,10 +174,19 @@ var sidebarData = {
       ]
     },
     {
+      title: '导航',
+      collapsable: true,
+      children: [
+        'navgation/Tag',      /* /portal/navgation/Tag.md */
+        'navgation/fastguid',      /* /portal/navgation/fastguid.md */
+      ]
+    },
+    {
       title: '页面',
       collapsable: true,
       children: [
         'page/home',      /* /portal/page/home.md */
+        'page/product',      /* /portal/page/solution.md */
         'page/solution',      /* /portal/page/solution.md */
       ]
     },
