@@ -40,6 +40,11 @@
     display block
     font-weight 500
     color $textColorDark
+    &:hover
+      a
+        color #000
+        cursor pointer
+        opacity .1
   h1
     margin 0 0px 40px 0
     font-size 36px
@@ -51,6 +56,16 @@
     margin 40px 0px 10px 0
     font-size 18px
     line-height 36px
+  a.header-anchor
+    display inline
+    font-size 1em
+    float left
+    margin-left -0.87em
+    padding-right 0.23em
+    opacity 0
+    &:hover
+      opacity .2
+
   /* 正文 */
   p
     line-height 26px
@@ -75,12 +90,13 @@
     max-width 100%
     margin 10px 0
   /* 连接 */
-  a
+  p a,li a
     font-weight normal
     color $stdBlue
     text-decoration none
     &:hover
       color lighten($stdBlue, 10%)
+      text-decoration underline
   /* 代码 */
   code, kbd//代码样式
     font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
