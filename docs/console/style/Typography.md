@@ -13,8 +13,12 @@ sidebarDepth: 0
 
 百度云围绕字体字形规整、简洁、美观等，制定了最大限度提高用户阅读体验和使用效率的字体库。整体可根据不同操作系统、不同浏览器调整适配最优字体字形，可始终保持页面良好的易读性和美观性。
 
-	font-family: -apple-system, BlinkMacSystemFont,"SF Pro SC","SF Pro Text","Helvetica Neue",  Helvetica, "PingFang SC","Segoe UI", Roboto, "Hiragino Sans GB", 'Arial','microsoft yahei ui',"Microsoft YaHei",SimSun, sans-serif;
-	-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing: grayscale;
+``` css
+font-family: -apple-system, BlinkMacSystemFont,"SF Pro SC","SF Pro Text","Helvetica Neue",  Helvetica, "PingFang SC","Segoe UI", Roboto, "Hiragino Sans GB", 'Arial','microsoft yahei ui',"Microsoft YaHei",SimSun, sans-serif;
+-webkit-font-smoothing: antialiased; 
+-moz-osx-font-smoothing: grayscale;
+``` 
+
 
 ## 自定义文字标准
 
