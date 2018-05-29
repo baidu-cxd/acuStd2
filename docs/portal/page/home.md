@@ -1,7 +1,7 @@
----
+﻿---
 title:  首页
 author:  韩玢
-sidebarDepth: 1
+sidebarDepth: 2
 ---
 # 首页
 
@@ -18,8 +18,13 @@ sidebarDepth: 1
 
 ## 产品类 banner 规范
 
+### 效果示意
 
-### 设计尺寸
+
+![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E5%9B%BE%E5%BD%A2%E5%8F%82%E8%80%83.png)
+
+
+### 尺寸规范
 
 >banner区域：**1920 × 620**</br>
 安全区域：**1180 × 620**</br>
@@ -53,37 +58,47 @@ sidebarDepth: 1
 
 ### 图形设计规范
 
-
-![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E5%9B%BE%E5%BD%A2%E5%8F%82%E8%80%83.png)
-
-
-### 线条使用
+#### 线条使用
 
 图形以线性为主，默认线条4px
 
 
 
-### 渐变色值/透明度使用
+#### 渐变色值/透明度使用
 
 渐变角度与透明度可以配合图形自行调整
 
 ![banner 渐变使用规范](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E6%B8%90%E5%8F%98%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83.png)
 
 
-### 渐变角度
+#### 渐变角度
 
 可根据图形具体展现形式来任意调整渐变角度
 
 
-### 辅助图形
+#### 辅助图形
 辅助图形仅用于饱满视觉区域，不得大面积使用
 
 ![banner 辅助图形使用](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%BE%85%E5%8A%A9%E5%9B%BE%E5%BD%A2%E4%BD%BF%E7%94%A8.png)
 
 
+### 导出规范
+
+依据图形设计区域尺寸：550 × 360</br>
+只需导出2x 图即：**1100× 720**</br>
+
+![banner 产品图导出](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E4%BA%A7%E5%93%81%E5%9B%BE%E5%AF%BC%E5%87%BA.png)
+
+#### 视觉修正
+
+由于图形设计的重心不同，有些需要我们在导出的时候进行视觉修正，根据文案的长度以及线上 banner 的视觉大小进行微调，可以在图形设计区域内进行一定位置的偏移，以达到线上视觉统一的效果
+
+![banner 视觉修正参考](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%A7%86%E8%A7%89%E4%BF%AE%E6%AD%A3%E5%8F%82%E8%80%83.png)
+
+
 ## 运营类 banner 规范
 
-### 设计尺寸
+### 尺寸规范
 
 >banner区域：**1920 × 620**</br>
 安全区域：**1180 × 620**</br>
@@ -111,25 +126,7 @@ sidebarDepth: 1
 
 为保证运营风格统一，具体设计风格请参考文档[跳转到位置：百度云营销设计风格指南](#md-百度云营销设计风格指南)
 
-
-
-## 导出规范
-
-### 产品类 banner 图形导出
-
-依据图形设计区域尺寸：550 × 360</br>
-只需导出2x 图即：**1100× 720**</br>
-
-![banner 产品图导出](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E4%BA%A7%E5%93%81%E5%9B%BE%E5%AF%BC%E5%87%BA.png)
-
-### 视觉修正
-
-由于图形设计的重心不同，有些需要我们在导出的时候进行视觉修正，根据文案的长度以及线上 banner 的视觉大小进行微调，可以在图形设计区域内进行一定位置的偏移，以达到线上视觉统一的效果
-
-![banner 视觉修正参考](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%A7%86%E8%A7%89%E4%BF%AE%E6%AD%A3%E5%8F%82%E8%80%83.png)
-
-
-### 营销类 banner 图形导出
+### 导出规范
 
 营销类 banner 需要将背景层与文案层分别导出，其中背景层需要导出1x 和2x 图片，文案层只需导出2x 图片即可，wap 端需要单独导出，一共4个输出文件
 
@@ -147,4 +144,9 @@ WAP端
 >wap端设计尺寸：**750 × 600**
 
 ![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2Fwap%20%E8%BF%90%E8%90%A5%E5%AF%BC%E5%87%BA.png)
+
+
+
+
+
 
