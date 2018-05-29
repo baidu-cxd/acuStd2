@@ -124,7 +124,11 @@ sidebarDepth: 2
 为不影响导航区域与营销icon区域的内容清晰，建议在 banner 顶部与底部增加图层蒙版， 具体色值可以根据整体图片的颜色进行调整
 :::
 
-为保证运营风格统一，具体设计风格请参考文档[跳转到位置：百度云营销设计风格指南](#md-百度云营销设计风格指南)
+
+### 风格设计指导
+
+为了保证官网的视觉输出统一，我们设定了风格定义，详情请参考[百度云营销设计风格指南](/portal/marketing/style.html)
+
 
 ### 导出规范
 
@@ -138,7 +142,7 @@ PC端
 文字层导出尺寸（2x）：**3840 × 1240**
 <mark>导出格式：jpg</mark>
 
-![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%BF%90%E8%90%A5%E5%AF%BC%E5%87%BA.png)
+![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%BF%90%E8%90%A5banner%E5%AF%BC%E5%87%BA%E8%A7%84%E8%8C%83.png)
 
 WAP端
 >wap端设计尺寸：**750 × 600**
