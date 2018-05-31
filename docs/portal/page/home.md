@@ -89,11 +89,12 @@ sidebarDepth: 2
 
 ![banner 产品图导出](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E4%BA%A7%E5%93%81%E5%9B%BE%E5%AF%BC%E5%87%BA.png)
 
+
 #### 视觉修正
 
-由于图形设计的重心不同，有些需要我们在导出的时候进行视觉修正，根据文案的长度以及线上 banner 的视觉大小进行微调，可以在图形设计区域内进行一定位置的偏移，以达到线上视觉统一的效果
+为与移动端适配良好适配，导出图形必须保证在设计区域居中，在导出中，可以适当缩小或放大所设计图形以保证与线上其他图形统一
 
-![banner 视觉修正参考](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%A7%86%E8%A7%89%E4%BF%AE%E6%AD%A3%E5%8F%82%E8%80%83.png)
+![banner 视觉修正参考](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%A7%86%E8%A7%89%E4%BF%AE%E6%AD%A3%E5%8F%82%E8%80%83.jpg)
 
 
 ## 运营类 banner 规范
@@ -101,7 +102,7 @@ sidebarDepth: 2
 ### 尺寸规范
 
 >banner区域：**1920 × 620**</br>
-安全区域：**1180 × 620**</br>
+安全区域：**1180 × 440（不包含导航与营销 icon 区域）**</br>
 导航区域：**1180 × 60**</br>
 固定营销区域：**1180 × 120**</br>
 按钮距底部：**220px**</br>
@@ -109,9 +110,14 @@ sidebarDepth: 2
 
 ![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%BF%90%E8%90%A5%E8%AE%BE%E8%AE%A1%E5%8C%BA%E5%9F%9F.png)
 
+::: tip 注意 
+营销区域与导航区域不建议出现遮挡性的图形元素
+:::
+
 #### 线上效果示意
 
 ![banner 运营线上尺寸规范](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%BF%90%E8%90%A5%E7%BA%BF%E4%B8%8A%E5%B0%BA%E5%AF%B8%E8%A7%84%E8%8C%83.png)
+
 
 ::: tip 注意
 运营 banner 可在整体区域（即1920 × 620）范围内进行设计，其中文案+重要元素需要设计在安全区域内（即1180 × 620），标题加按钮区域高度不得超过270px ）
@@ -142,7 +148,7 @@ PC端
 文字层导出尺寸（2x）：**3840 × 1240**
 <mark>导出格式：jpg</mark>
 
-![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%BF%90%E8%90%A5banner%E5%AF%BC%E5%87%BA%E8%A7%84%E8%8C%83.png)
+![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%BF%90%E8%90%A5banner%E5%AF%BC%E5%87%BA%E8%A7%84%E8%8C%83.jpg)
 
 WAP端
 >wap端设计尺寸：**750 × 600**

@@ -101,8 +101,7 @@
       "title": "概述",
       "collapsable": true,
       "children": [
-        "summarize/Summarize",
-        "summarize/New"
+        "summarize/Summarize"
       ]
     },
     {
@@ -178,7 +177,8 @@
       "children": [
         "other/Tower",
         "other/Dictionaries",  
-        "other/Token"
+        "other/Token",
+        "other/New"
       ]
     }
   ],
