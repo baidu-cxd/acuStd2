@@ -166,6 +166,13 @@
       ]
     },
     {
+      "title": "资源下载",
+      "collapsable": true,
+      "children": [
+        "resource/Download"
+      ]
+    },
+    {
       "title": "其他资料",
       "collapsable": true,
       "children": [
