@@ -134,9 +134,7 @@
         "component/Base_component",   
         "component/Button",    
         "component/Hyperlink",
-        "component/Table",     
-        "component/Form",
-        "component/Modal"
+        "component/Table"
       ]
     },
     {
@@ -144,24 +142,23 @@
       "collapsable": true,
       "children": [
         "navgation/Tag",   
-        "navgation/fastguid",    
-        "navgation/Sidebar"
+        "navgation/Fastguid"    
       ]
     },
     {
       "title": "页面",
       "collapsable": true,
       "children": [
-        "page/home",  
-        "page/product",     
-        "page/solution"
+        "page/Home",  
+        "page/Product",     
+        "page/Solution"
       ]
     },
     {
       "title": "营销",
       "collapsable": true,
       "children": [
-        "marketing/style"
+        "marketing/Style"
       ]
     },
     {

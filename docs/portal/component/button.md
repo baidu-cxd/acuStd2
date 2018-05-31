@@ -13,7 +13,7 @@ sidebarDepth: 0
 ## 按钮大小
 
 
-常规按钮大小为38px高度，160px宽。按钮宽度可根据实际应用情况而定，推荐在设计时，应用10倍数去定义按钮宽度
+常规按钮大小为 38px 高度，160px 宽。按钮宽度可根据实际应用情况而定，推荐在设计时，应用 10 倍数去定义按钮宽度
 
 ![banner 按钮大小](http://baiduyun-guideline.bj.bcebos.com/portal%2Fbutton%2F%E6%8C%89%E9%92%AE%E5%A4%A7%E5%B0%8F%402x.jpg)
 

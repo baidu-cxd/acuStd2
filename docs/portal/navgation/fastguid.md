@@ -1,7 +1,7 @@
 ---
 title: 页内快速导航
 author: 郑显真
-sidebarDepth: 1
+sidebarDepth: 0
 ---
 
 # 快速导航
@@ -40,7 +40,3 @@ sidebarDepth: 1
 ![样式备注](http://baiduyun-guideline.bj.bcebos.com/portal%2Fnavagation%2F%E6%A0%B7%E5%BC%8F%E5%A4%87%E6%B3%A8.jpg)
 
 
-## 纵向快速导航
-
-
-文档施工中，近期上线

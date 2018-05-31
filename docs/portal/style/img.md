@@ -21,7 +21,7 @@ sidebarDepth: 0
 图片应该选用分辨率高且表意清晰的图片，保证官网的视觉质量。
 
 
-推荐使用网站 [www.hellorf.com](http://www.hellorf.com/)下载图片。
+推荐使用网站 [www.hellorf.com](http://www.hellorf.com/) 下载图片。
 
 
 ## 图片风格
@@ -51,7 +51,7 @@ sidebarDepth: 0
 ### 居中排版
 
 
-在图片上面加上一段文字向用户介绍页面的内容，如果排版采用居中样式则图片画面需比较干净，饱和度不高，不会集中在中间位置干扰文字信息，使画面有品质感。具体尺寸详见官网首页和解决方案页。具体尺寸详见 [官网首页](/portal/？？？/mainpage.html) 和 [解决方案页](/portal/？？？/mainpage.html) 。
+在图片上面加上一段文字向用户介绍页面的内容，如果排版采用居中样式则图片画面需比较干净，饱和度不高，不会集中在中间位置干扰文字信息，使画面有品质感。具体尺寸详见官网首页和解决方案页。具体尺寸详见 [解决方案页](/portal/page/solution.html) 。
 
 
 ![居中排版](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Fimg%2F%E5%B1%85%E4%B8%AD.png)

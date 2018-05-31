@@ -11,7 +11,7 @@ sidebarDepth: 0
 
 ### 产品页控件库下载
 
-控件库可以帮助你进行页面的快速搭建，页面详情规范请参考文档 [产品页](/portal/page/product.html)
+控件库可以帮助你进行页面的快速搭建，页面详情规范请参考文档 [产品页](/portal/page/Product.html)
 
 <div class="download">
 
@@ -30,7 +30,7 @@ Sketch v47.1 (2.5M)
 
 ### 解决方案页控件库下载
 
-解决方案页控件库可以帮助你进行页面的快速搭建，页面详情规范请参考文档 [解决方案页](/portal/page/solution.html)
+解决方案页控件库可以帮助你进行页面的快速搭建，页面详情规范请参考文档 [解决方案页](/portal/page/Solution.html)
 
 
 <div class="download">

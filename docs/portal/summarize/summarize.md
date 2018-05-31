@@ -17,7 +17,7 @@ sidebarDepth: 0
 
 - **保证统一：** 设计原则保障了统一的设计起点，组件概览保证统一样式
 
-- **提高效率：** 提供 [Sketch控件库](http://baiduyun-guideline.bj.bcebos.com/console/download/百度云UE控件库.7z) 下载, 进行高效的页面搭建
+- **提高效率：** 提供 Sketch 控件库等 [相关资源下载](/portal/resource/Download.html) , 进行高效的页面搭建
 
 - **设计自查：** 通过设计规范定期进行自查，并针对风格的探索以及控件更新
 
@@ -46,7 +46,7 @@ PM 可以通过各个模块的样式了解当前页面可呈现的结构布局�
 
 **2.如何快速进行设计**
 
-下载 [Sketch控件库](http://baiduyun-guideline.bj.bcebos.com/console/download/百度云UE控件库.7z)，选择适合的模块样式，进行页面设计。根据需求查找相对应的规范文档进行设计校验。
+下载 [Sketch控件库](/portal/resource/Download.html)，选择适合的模块样式，进行页面设计。根据需求查找相对应的规范文档进行设计校验。
 
 **3.遇到不懂的问题？**
 

@@ -6,13 +6,13 @@ sidebarDepth: 0
 
 # 文字
 
-为确保百度云 portal 端各页面有统一的视觉效果，对文字的使用规范进行了规定，力求在各个操作系统下都有最佳的文字显示效果。
+为确保百度云 Portal 端各页面有统一的视觉效果，对文字的使用规范进行了规定，力求在各个操作系统下都有最佳的文字显示效果。
 
 [[toc]]
 
 ## 设计用字体
 
-我们一般使用 **PingFang SC** 字体完成设计稿
+我们一般使用 `PingFang SC` 字体完成设计稿
 
 ## 详细字体规范
 
@@ -78,12 +78,12 @@ font-family: -apple-system, BlinkMacSystemFont,"SF Pro SC","SF Pro Text","Helvet
 
 **备选文字大小：**
 
-><mark>H1.small</mark> : 36px; 行高：58px<br>
-<mark>H2.small</mark> : 24px; 行高：42px<br>
+>**H1.small** : 36px; 行高：58px<br>
+**H2.small** : 24px; 行高：42px<br>
 用于上述规范无法涵盖的特殊情况，<mark>一般不建议使用</mark>
 
 ## 列表
 
-列表分为 <mark>有序列表</mark> 和 <mark>无序列表</mark>
+列表分为有序列表和无序列表
 
 ![列表](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Ffont%2Ful)

@@ -14,7 +14,7 @@ sidebarDepth: 0
 
 ### 导航样式
 
-导航默认状态为30%透明度，鼠标经过状态透明度为100%
+导航默认状态为 30% 透明度，鼠标经过状态透明度为 100%
 
 
 ![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Ftab%2F%E5%AF%BC%E8%88%AA%E6%A0%B7%E5%BC%8F.png)

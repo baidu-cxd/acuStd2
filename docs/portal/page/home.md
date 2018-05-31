@@ -133,25 +133,27 @@ sidebarDepth: 2
 
 ### 风格设计指导
 
-为了保证官网的视觉输出统一，我们设定了风格定义，详情请参考[百度云营销设计风格指南](/portal/marketing/style.html)
+为了保证官网的视觉输出统一，我们设定了风格定义，详情请参考 [百度云营销设计风格指南](/portal/marketing/Style.html)
 
 
 ### 导出规范
 
-营销类 banner 需要将背景层与文案层分别导出，其中背景层需要导出1x 和2x 图片，文案层只需导出2x 图片即可，wap 端需要单独导出，一共4个输出文件
+营销类 banner 需要将背景层与文案层分别导出，其中背景层需要导出 <mark>一倍图</mark> 和 <mark>二倍图</mark> ，文案层只需导出 <mark>二倍图</mark> 图片即可，WAP 端需要单独导出，一共4个输出文件
 
-PC端
->背景层：底图区（含图层蒙版）
-背景层导出尺寸（1x）：**1920 × 620**
-背景层导出尺寸（2x）：**3840 × 1240**
-文字区域：大标题+副标题+按钮
-文字层导出尺寸（2x）：**3840 × 1240**
-<mark>导出格式：jpg</mark>
+**PC端:**
+
+>背景层：底图区（含图层蒙版）\
+>背景层导出尺寸（1x）：**1920 × 620** \
+>背景层导出尺寸（2x）：**3840 × 1240** \
+>文字区域：大标题+副标题+按钮 \
+>文字层导出尺寸（2x）：**3840 × 1240**
+
+<mark>导出格式：</mark> `.jpg`
 
 ![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E8%BF%90%E8%90%A5banner%E5%AF%BC%E5%87%BA%E8%A7%84%E8%8C%83.jpg)
 
-WAP端
->wap端设计尺寸：**750 × 600**
+**WAP 端**
+>WAP 端导出尺寸：**750 × 600**
 
 ![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2Fwap%20%E8%BF%90%E8%90%A5%E5%AF%BC%E5%87%BA.png)
 
