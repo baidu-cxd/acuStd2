@@ -5,9 +5,9 @@ navbar: false
 mainImage: http://baiduyun-guideline.bj.bcebos.com/public%2Fmainimg.png
 mainText: CXD
 subtitle: 一个服务于百度云业务的设计体系
-actionTextFirst: portal
+actionTextFirst: Portal
 actionLinkFirst: /portal/summarize/Summarize.md
-actionTextSecond: console
+actionTextSecond: Console
 actionLinkSecond: /console/outline/Outline.html
 footer: ACU design | Copyright © ACU
 ---
