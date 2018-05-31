@@ -149,13 +149,14 @@ export default {
     left 11px
     width 16px
     height 16px
-    z-index 2
+    z-index 0
     opacity .8
   input
+    background-color transparent
     cursor pointer
     width 36px
     height 36px
-    color lighten($textColorDark, 25%)
+    color transparent
     display inline-block
     border 1px solid $borderColor
     border-radius 20px
@@ -167,8 +168,11 @@ export default {
     position relative
     z-index 1
     &:focus
+      width 160px
+      padding-left 36px
       cursor auto
       border-color $accentColor
+      color $textColorMain
   .suggestions
     background #fff
     width 20rem
