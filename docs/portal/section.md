@@ -6,7 +6,7 @@ sidebar: false
 
 cmsblocks:
 
-- name     : 三项基本卡片11111
+- name     : 三项基本卡片
   type     : component
   component: SectionCardThree
   img      : http://baiduyun-guideline.bj.bcebos.com/portal%2FCMSsection%2Fcol-3-card
