@@ -58,7 +58,7 @@ export default {
     position relative
   .links
     position absolute
-    right 1.5rem
+    right 12px
     top 0
     a
       font-size 14px
@@ -68,5 +68,8 @@ export default {
   .navbar
     padding-left 4rem
     .can-hide
-      display none
+      display none  
+    .links
+      width auto
+      top 12px
 </style>

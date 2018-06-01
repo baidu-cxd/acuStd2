@@ -8,7 +8,7 @@ $mobileSidebarWidth = $sidebarWidth * 0.82
     font-size 15px
     width $mobileSidebarWidth
   .content:not(.custom)
-    padding 2rem
+    padding 0
 
 // wide mobile
 @media (max-width: $MQMobile)
@@ -23,7 +23,16 @@ $mobileSidebarWidth = $sidebarWidth * 0.82
     margin-right 0
     margin-top 60px
     .article-wrp
-      padding-top 20px
+      width 100%
+      padding 20px
+      box-sizing border-box
+      margin 0
+      .content
+        margin 0
+        width 100%
+  .theme-container
+    min-width 0
+    overflow-x hidden
   .theme-container.sidebar-open
     .sidebar
       transform translateX(0)
@@ -40,7 +49,7 @@ $mobileSidebarWidth = $sidebarWidth * 0.82
     font-size 18px
     margin 20 0 10px 0
   .content:not(.custom)
-    padding 0 20px 
+    padding 0
   .content
     pre, pre[class*="language-"]
       margin 0.85rem -1.5rem

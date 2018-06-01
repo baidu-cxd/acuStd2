@@ -202,11 +202,7 @@ export default {
 
 @media (max-width: $MQNarrow)
   .search-box input
-    width 0
     border-color transparent
-    position relative
-    top 12px
-    left 20px
     &:focus
       left 0px
       width 120px
