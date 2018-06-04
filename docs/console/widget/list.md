@@ -24,7 +24,7 @@ sidebarDepth: 0
 
 1. 列表需要定义一页显示的内容数量。点击查看[翻页控件规范](/console/widget/Pagination.html)
 
-2. 鼠标悬浮可以作为一些辅助功能和信息显示的触发方式，如表格内图标。点击查看[图标](/console/style/icons.html)
+2. 鼠标悬浮可以作为一些辅助功能和信息显示的触发方式，如表格内图标。点击查看[图标](/console/style/Icons.html)
 
 多行内容（每多一行文字内容，高度增加20）：
 

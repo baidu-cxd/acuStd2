@@ -1,4 +1,4 @@
----
+----
 title: 图表（Chart）
 author: Ting
 sidebarDepth: 0
@@ -26,7 +26,7 @@ sidebarDepth: 0
 
 ![图片](http://baiduyun-guideline.bj.bcebos.com/console/widget/chart/03_2x.png)
 
-##代码参考
+## 代码参考
 
  - 饼状图
  - 折线图
