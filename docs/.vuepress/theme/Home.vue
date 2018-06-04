@@ -65,21 +65,22 @@ export default {
       float right
       right 0
       width 90%
-      max-width 1400px
+      max-width 1437px
       display block
     .wrp
-      width 80%
+      width 85%
       position absolute
-      max-width 1366px
+      max-width 1440px
       top 0
       left 50%
       transform translateX(-50%)
     .title
-      font-size 100px
-      margin 200px 0 30px 0
+      font-size 68px
+      margin 240px 0 30px 0
     .description
-      font-size 30px
-      line-height 1.3
+      width 760px 
+      font-size 20px
+      line-height 1.7
       color lighten($textColorDark, 40%)
     .action
       display inline
@@ -88,19 +89,19 @@ export default {
     .action-button
       display inline-block
       text-align center
-      font-size 24px
-      line-height 24px
-      color #fff
-      margin 60px 30px 0 0
-      background-color $darkBlack
-      padding 16px 0
+      font-size 16px
+      line-height 16px
+      color $darkBlack
+      margin 60px 20px 0 0
+      padding 10px 0
       border-radius 0
-      width 200px
+      width 115px
       transition background-color .1s ease
       box-sizing border-box
-      border-bottom 1px solid darken($stdBlue, 10%)
+      border 1px solid $darkBlack
       &:hover
-        background-color lighten($stdBlue, 10%)
+        background-color $darkBlack
+        color #fff
   .footer
     padding 2.5rem
     border-top 1px solid $borderColor

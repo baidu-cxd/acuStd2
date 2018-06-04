@@ -55,12 +55,13 @@ $imgheight = 220px
     background-color #353638
     padding 20px 0
     overflow hidden
-    background-image url(../../portal/publicresource/sectionbg.jpg)
+    background-image url(http://baiduyun-guideline.bj.bcebos.com/public%2Fportal_banner.jpg) 
+    background-size 1920px
     h1
       font-size 36px
       line-height 36px
       margin 50px 0 32px
-      color #fff
+      color $textColorDark
       text-align center;
     ul
       overflow hidden
