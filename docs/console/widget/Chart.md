@@ -1,4 +1,4 @@
-----
+---
 title: 图表（Chart）
 author: Ting
 sidebarDepth: 0
