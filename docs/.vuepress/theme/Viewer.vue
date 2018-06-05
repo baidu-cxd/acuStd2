@@ -43,6 +43,7 @@ $imgheight = 220px
   overflow hidden
   padding-bottom 100px
   width 100%
+  background-color #fff
   ul
     li
       list-style none
@@ -77,17 +78,17 @@ $imgheight = 220px
         padding 0px
         line-height 34px
         font-size 14px
-        border 1px solid #ffffff60
-        color #ffffffee
+        border 1px solid #00000060
+        color #000000ee
         position relative
         z-index 5
         font-size 14px
         &:hover
           cursor pointer
         &.active
-          color #333
+          color #fff
           font-weight 400
-          background-color #ffffff
+          background-color #000000
           border 1px solid transparent
           z-index 10
   .cmsblocks
@@ -142,7 +143,7 @@ $imgheight = 220px
         margin 10px
         &:hover
           transform scale(1.02)
-          box-shadow 0 10px 10px 0 #00000010
+          box-shadow 0 4px 10px 0 #00000010
           z-index 99
           cursor pointer
       img
