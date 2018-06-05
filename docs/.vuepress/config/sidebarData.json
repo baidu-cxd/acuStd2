@@ -131,7 +131,8 @@
       "title": "组件",
       "collapsable": true,
       "children": [
-        "component/Base_component",   
+        "component/Base_component", 
+        "component/Form",  
         "component/Button",    
         "component/Hyperlink",
         "component/Table"
