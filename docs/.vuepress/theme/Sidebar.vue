@@ -104,7 +104,7 @@ function resolveOpenGroupIndex (route, items) {
         min-height 20px
         padding 10px 20px;
         a
-          line-height 20px
+          line-height 1.9
           font-size 16px
     .sidebar-links
       padding 20px 0

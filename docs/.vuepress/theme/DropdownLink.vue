@@ -118,7 +118,7 @@ export default {
           padding-top 0
         h4, & > a
           font-size 15px
-          height 2rem
+          height 1.9
           line-height 2rem
         .dropdown-subitem
           font-size 14px

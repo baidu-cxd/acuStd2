@@ -102,7 +102,7 @@ $imgheight = 220px
           font-weight 400
           background-color #000000
           border 1px solid transparent
-          z-index 10
+          z-index 8
   .cmsblocks
     width $imgwidth * 3 + 60px
     margin 40px auto 40px
