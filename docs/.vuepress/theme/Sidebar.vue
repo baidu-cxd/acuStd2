@@ -106,6 +106,11 @@ function resolveOpenGroupIndex (route, items) {
         a
           line-height 1.9
           font-size 16px
+        ul
+          li 
+            margin-bottom 10px
+            &:last-child
+              margin-bottom 0
     .sidebar-links
       padding 20px 0
       border-top 1px solid $borderColor

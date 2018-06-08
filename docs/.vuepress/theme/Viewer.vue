@@ -226,7 +226,14 @@ $imgheight = 220px
         font-size 30px
         display block
       img 
-        min-width 1600px
+        min-width 0
+        height 100%
+        width auto
+        left 30%
+      ul  
+        width 238px
+        li  
+          width 80px
     .cmsblocks
       width 90% 
       margin 0 5%
