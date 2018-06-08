@@ -227,9 +227,10 @@ $imgheight = 220px
         display block
       img 
         min-width 0
-        height 100%
+        height 130%
         width auto
-        left 30%
+        left -70%
+        top -0%
       ul  
         width 238px
         li  
