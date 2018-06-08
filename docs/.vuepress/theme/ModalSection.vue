@@ -140,6 +140,18 @@
     &.inner
       margin-bottom 20px
 
+ @media (max-width: $MQMobile)
+   .modal-section
+     .modal-header
+       height 80px
+       p
+         text-align left 
+         margin-left 20px
+     .modal-std-windows
+       .textwrp
+         width 90%
+       .img-wrp
+         width 400px
 
 </style>
 <script>

@@ -16,7 +16,7 @@
   position absolute
   padding 0.6rem
   top 0.6rem
-  left 1rem
+  left 0.6rem
   .icon
     display block
     width 1.25rem

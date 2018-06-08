@@ -7,6 +7,7 @@
   <ModalSection :isShow.sync="isShow" :sectionData="sectionData"/>
   <div class="banner" v-if="kindOfpage.list && kindOfpage.list.length">
     <h1>百度云 Portal 页面板块</h1>
+    <img src="http://baiduyun-guideline.bj.bcebos.com/public%2Fbannerin.jpg" alt="">
     <ul>
       <li v-for="i in kindOfpage.list" :id="i.className" @click="kindChose(i)"
       :class="kindOfpage.chose == i.className ? 'active' : ' '">
@@ -45,6 +46,7 @@ $imgheight = 220px
   width 100%
   background-color #fff
   ul
+    padding-left 0
     li
       list-style none
       box-sizing border-box
@@ -56,14 +58,24 @@ $imgheight = 220px
     background-color #353638
     padding 20px 0
     overflow hidden
-    background-image url(http://baiduyun-guideline.bj.bcebos.com/public%2Fportal_banner.jpg) 
     background-size 1920px
+    position relative
+    img 
+      min-width 1920px
+      width 100%
+      position absolute
+      top 0
+      left 50%
+      transform translateX(-50%)
+      z-index 0
     h1
       font-size 36px
       line-height 36px
       margin 50px 0 32px
       color $textColorDark
       text-align center;
+      position relative
+      z-index 2
     ul
       overflow hidden
       width 360px
@@ -206,6 +218,53 @@ $imgheight = 220px
     .imgtag.purpose
       display block
 
+
+ @media (max-width: $MQMobile)
+   .viewer
+    .banner
+      h1
+        font-size 30px
+        display block
+      img 
+        min-width 1600px
+    .cmsblocks
+      width 90% 
+      margin 0 5%
+      overflow hidden
+      .select
+        width 100%
+        overflow hidden
+        margin 20px 0px
+        ul
+          display block
+          width 1005
+          overflow hidden
+          li
+            line-height 30px
+            font-size 12px
+            width auto
+            padding 0 5px
+            margin 4px
+            display block
+          li:first-child
+            margin-left 4px
+      .list-wrp
+        width 100%
+        overflow hidden
+        .imgcard
+          width 100%
+          .imgtag
+            width 100%
+            margin 0
+            position relative
+            img 
+              position absolute
+              left 50%
+              top 50%
+              transform translate(-50%,-50%)
+              
+
+        
 
 </style>
 

@@ -18,7 +18,7 @@ module.exports = {
     themeConfig: {
       nav: navData,
       sidebar: sidebarData,
-      logo: 'http://baiduyun-guideline.bj.bcebos.com/public%2FCxD.svg',
+      logo: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg',
       favicon: '',
     },
     markdown: {

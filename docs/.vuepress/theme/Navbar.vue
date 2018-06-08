@@ -72,4 +72,6 @@ export default {
     .links
       width auto
       top 12px
+    .logo
+      margin-left 0
 </style>
