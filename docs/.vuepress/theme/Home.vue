@@ -4,9 +4,15 @@
       <img v-if="data.mainImage" :src="$withBase(data.mainImage)" alt="main" id = "main-img">
       <img :src="$withBase('./img/tree.png')" alt="tree" id = "main-img-tree">
       <img src="http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg" alt="" class="logo">
-      <img v-if="data.mainImageMo" :src="$withBase(data.mainImageMo)" alt="" id = "main-img-mo">
+      <img v-if="data.mainImageMo" :src="$withBase(data.mainImageMo)" id="main-img-mo">
       <div class="leaves">
-        <img :src="$withBase('./img/leaf01.png')" class="leaf">
+        <img :src="$withBase('./img/leaf01.png')" class="leaf leaf01">
+        <img :src="$withBase('./img/leaf02.png')" class="leaf leaf02">
+        <img :src="$withBase('./img/leaf03.png')" class="leaf leaf03 wave">
+        <img :src="$withBase('./img/leaf01.png')" class="leaf leaf04 wave">
+        <img :src="$withBase('./img/leaf04.png')" class="leaf leaf05 wave">
+        <img :src="$withBase('./img/leaf05.png')" class="leaf leaf06 wave">
+        <img :src="$withBase('./img/leaf05.png')" class="leaf leaf07 wave">
       </div>
       <div class="wrp">
         <h1 class="title">{{ data.mainText || $title || 'Hello' }}</h1>
@@ -83,15 +89,52 @@ export default {
       z-index 10
     .leaves
       .leaf
-        z-index 10
         position absolute
-        width 1.8%
-        animation leafsMoving 10s linear infinite, leafsRotation 0.5s linear infinite
+        transform rotate(-8deg)
+        &.leaf01
+          z-index 11
+          width 1.8%
+          animation leafsMoving01 10s linear infinite, leafsRotation01 0.5s linear infinite
+        &.leaf02
+          z-index 9
+          width 1.5%
+          animation leafsMoving02 9s 4s linear infinite, leafsRotation02 2s linear infinite
+        &.leaf03
+          width 1.8%
+          animation leaveWave 4s ease infinite alternate
+          transform-origin 0 100%
+          top 20%
+          right 15.5%
+        &.leaf04
+          width 1.8%
+          animation leaveWave 3.5s 1s ease infinite alternate
+          transform-origin 0 100%
+          top 7%
+          right 29%
+        &.leaf05
+          width 1.9%
+          animation leaveWave 3s 0.8s ease infinite alternate
+          transform-origin 0 100%
+          top 16%
+          right 25%
+        &.leaf06
+          width 1.9%
+          animation leaveWave 3.8s 1s ease infinite alternate
+          transform-origin 100% 100%
+          top 16%
+          right 35%
+        &.leaf07
+          width 1.7%
+          animation leaveWave 3s 1s ease infinite alternate
+          transform-origin 100% 100%
+          top 21%
+          right 41%
     // -------------------
     .wrp
       left 8%
       margin auto
       position absolute
+      z-index 20
       top 0
     .title
       font-size 64px
@@ -142,6 +185,10 @@ export default {
       padding 0 2.5rem
 
 @media (max-width: $MQMobileNarrow)
+  #main-img-tree
+    display none
+  .leaves
+    display none
   .home
     padding 0
     min-width 0
