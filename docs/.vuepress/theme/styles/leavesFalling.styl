@@ -1,0 +1,34 @@
+@keyframes leafsRotation
+  0%
+    transform rotateX(0) rotateZ(50deg)
+  100%
+    transform rotateX(360deg) rotateZ(50deg)
+
+$startX = 50px
+$startY = 0px
+$widthRatio = 5
+$heightRatio = 0.3
+
+$easelist = 0,0.6,1.2,1.9,2.6,3.4,  4.2,5.1,6,7,8.1,  9.2,10.3,11.5,12.7,14,  15.3,16.6,18,19.3,20.9,  22.3,23.2,23.8,24.4,25
+
+@keyframes leafsMoving
+  for i in 0..100
+    {1% * i}
+      if i <= 25
+          a = $easelist[i]
+          top 500px - (1px * (((a * 4 - 66.66)/2) ** 2)) * $heightRatio + $startY
+          left 1px * a * 4 * $widthRatio + $startX
+      else if i <= 50
+          a = $easelist[50 - i]
+          top 500px - (1px * (((a * 4 - 33.33)/2) ** 2)) * $heightRatio + $startY + 833px * $heightRatio
+          left 1px * a * 4 * $widthRatio + $startX
+      else if i <= 75
+          a = $easelist[i - 50]
+          top 500px - (1px * (((a * 4 - 66.66)/2) ** 2)) * $heightRatio + $startY + 833px * 2 * $heightRatio
+          left 1px * a * 4 * $widthRatio + $startX
+      else
+          a = $easelist[100 - i]
+          top 500px - (1px * (((a * 4 - 33.33)/2) ** 2)) * $heightRatio + $startY + 833px * 3 * $heightRatio
+          left 1px * a * 4 * $widthRatio + $startX
+
+

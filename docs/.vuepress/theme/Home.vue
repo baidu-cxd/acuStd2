@@ -2,8 +2,12 @@
   <div class="home">
     <div class="main-section">
       <img v-if="data.mainImage" :src="$withBase(data.mainImage)" alt="main" id = "main-img">
+      <img :src="$withBase('./img/tree.png')" alt="tree" id = "main-img-tree">
       <img src="http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg" alt="" class="logo">
       <img v-if="data.mainImageMo" :src="$withBase(data.mainImageMo)" alt="" id = "main-img-mo">
+      <div class="leaves">
+        <img :src="$withBase('./img/leaf01.png')" class="leaf">
+      </div>
       <div class="wrp">
         <h1 class="title">{{ data.mainText || $title || 'Hello' }}</h1>
         <p class="description">
@@ -48,7 +52,7 @@ export default {
 
 <style lang="stylus">
 @import './styles/config.styl'
-
+@import './styles/leavesFalling.styl';
 .home
   height 100%
   width 100%
@@ -60,6 +64,7 @@ export default {
     overflow-y hidden
     width 100%
     background-color #fff
+    position relative
     img
       width 100%
       display block
@@ -70,6 +75,19 @@ export default {
       left 8%
     img#main-img-mo
       display NONE
+    // -------------------
+    #main-img-tree
+      position absolute
+      top 0
+      width 100%
+      z-index 10
+    .leaves
+      .leaf
+        z-index 10
+        position absolute
+        width 1.8%
+        animation leafsMoving 10s linear infinite, leafsRotation 0.5s linear infinite
+    // -------------------
     .wrp
       left 8%
       margin auto
@@ -83,7 +101,7 @@ export default {
       letter-spacing 4px
       color #282828
     .description
-      width 760px 
+      width 760px
       font-size 18px
       line-height 2
       color #314659
