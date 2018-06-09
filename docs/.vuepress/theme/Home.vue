@@ -69,6 +69,7 @@ export default {
   overflow-y hidden
   .main-section
     overflow-y hidden
+    min-height 100%
     width 100%
     background-color #fff
     position relative
@@ -178,6 +179,8 @@ export default {
     color lighten($textColorDark, 25%)
 
 @media (max-width: $MQMobile)
+  #main-img-tree,#main-img-birds
+  display none
   .home
     .features
       flex-direction column
