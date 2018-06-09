@@ -3,6 +3,7 @@
     <div class="main-section">
       <img v-if="data.mainImage" :src="$withBase(data.mainImage)" alt="main" id = "main-img">
       <img :src="$withBase('./img/tree.png')" alt="tree" id = "main-img-tree">
+      <img :src="$withBase('./img/birds.png')" alt="tree" id = "main-img-birds">
       <img src="http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg" alt="" class="logo">
       <img v-if="data.mainImageMo" :src="$withBase(data.mainImageMo)" id="main-img-mo">
       <div class="leaves">
@@ -82,7 +83,7 @@ export default {
     img#main-img-mo
       display NONE
     // -------------------
-    #main-img-tree
+    #main-img-tree,#main-img-birds
       position absolute
       top 0
       width 100%
@@ -185,7 +186,7 @@ export default {
       padding 0 2.5rem
 
 @media (max-width: $MQMobileNarrow)
-  #main-img-tree
+  #main-img-tree,#main-img-birds
     display none
   .leaves
     display none
