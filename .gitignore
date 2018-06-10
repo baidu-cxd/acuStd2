@@ -6,3 +6,4 @@ yarn-error.log
 *.sh
 docs/.vuepress/theme/san-xui/xui.css
 docs/.vuepress/theme/san-xui/xui.min.css
+.DS_Store
