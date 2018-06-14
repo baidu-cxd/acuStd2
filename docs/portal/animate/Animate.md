@@ -29,6 +29,11 @@ sidebarDepth: 0
 
 ## 动效设计详情
 
-[1.动画出现的时机](./portal/animate/Animate.html)
-[2.动画的基本形式](./portal/animate/Animate.html)
-[3.常见动画组件](./portal/animate/Animate.html)
+[1.什么时候触发动效](/portal/animate/Animate.html)
+
+[2.动画的基本形式](/portal/animate/Animate.html)
+
+[3.常见动画组件](/portal/animate/Component.html)
+
+## 参考资料（设计用）
+
