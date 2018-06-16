@@ -152,7 +152,7 @@ export default {
       left 8%
       margin auto
       position absolute
-      z-index 20
+      z-index 1000
       top 0
     .title
       font-size 64px
