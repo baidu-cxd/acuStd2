@@ -14,7 +14,8 @@
     {
       "text": "其他",
       "items": [
-        { "text": "使用说明", "link": "/appendix/"}
+        { "text": "使用说明", "link": "/appendix/"},
+        { "text": "动画", "link": "/animate/Summarize"}
       ]
     }
 ]

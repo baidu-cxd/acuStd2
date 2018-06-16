@@ -181,6 +181,15 @@
     }
   ],
 
+  "/animate/": [       
+    "Summarize", 
+    "Principle",
+    "Language",   
+    "Base", 
+    "Component"
+  ],
+
+
   "/appendix/": [       
     "howToUsemd",  
     "howToUsemd2", 
