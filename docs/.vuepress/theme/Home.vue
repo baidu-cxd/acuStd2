@@ -2,11 +2,14 @@
   <div class="home">
     <div class="main-section">
       <img v-if="data.mainImage" :src="$withBase(data.mainImage)" alt="main" id = "main-img">
-      <img :src="$withBase('./img/tree.png')" alt="tree" id = "main-img-tree">
+      <img :src="$withBase('./img/trunk.png')" alt="tree" id = "main-img-tree">
       <img :src="$withBase('./img/birds.png')" alt="tree" id = "main-img-birds">
       <img src="http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg" alt="" class="logo">
       <img v-if="data.mainImageMo" :src="$withBase(data.mainImageMo)" id="main-img-mo">
       <div class="leaves">
+        <img :src="$withBase('./img/bigleaf01.png')" class="bigleaf bigleaf01">
+        <img :src="$withBase('./img/bigleaf02.png')" class="bigleaf bigleaf02">
+        <img :src="$withBase('./img/bigleaf03.png')" class="bigleaf bigleaf03">
         <img :src="$withBase('./img/leaf01.png')" class="leaf leaf01">
         <img :src="$withBase('./img/leaf02.png')" class="leaf leaf02">
         <img :src="$withBase('./img/leaf03.png')" class="leaf leaf03 wave">
@@ -90,9 +93,22 @@ export default {
       width 100%
       z-index 10
     .leaves
+      .bigleaf
+        position absolute
+        top 0
+        width 100%
+        &.bigleaf01
+          z-index 20
+          animation bigWave 8s ease infinite alternate
+        &.bigleaf03
+          z-index 21
+          animation bigWave 5s linear infinite alternate
+        &.bigleaf02
+          z-index 22
+          animation bigWave 6s linear infinite alternate
       .leaf
         position absolute
-        transform rotate(-8deg)
+        transform rotate(-16deg)
         &.leaf01
           z-index 11
           width 1.8%
