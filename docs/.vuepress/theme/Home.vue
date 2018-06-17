@@ -112,11 +112,11 @@ export default {
         &.leaf01
           z-index 11
           width 1.8%
-          animation leafsMoving01 10s linear infinite, leafsRotation01 0.5s linear infinite
+          animation leafsMoving01 8s linear infinite, leafsRotation01 4s linear infinite
         &.leaf02
           z-index 9
           width 1.5%
-          animation leafsMoving02 9s 4s linear infinite, leafsRotation02 2s linear infinite
+          animation leafsMoving02 7s 4s linear infinite, leafsRotation02 3s linear infinite
         &.leaf03
           width 1.8%
           animation leaveWave 4s ease infinite alternate
