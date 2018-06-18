@@ -99,22 +99,23 @@ export default {
         width 100%
         &.bigleaf01
           z-index 20
-          animation bigWave 8s ease infinite alternate
+          animation bigWave 6s ease infinite alternate
         &.bigleaf03
           z-index 21
-          animation bigWave 5s linear infinite alternate
+          animation bigWave 4s linear infinite alternate
         &.bigleaf02
           z-index 22
-          animation bigWave 6s linear infinite alternate
+          animation bigWave 5s linear infinite alternate
       .leaf
         position absolute
+        top 0
         transform rotate(-16deg)
         &.leaf01
-          z-index 11
+          z-index 9
           width 1.8%
           animation leafsMoving01 8s linear infinite, leafsRotation01 4s linear infinite
         &.leaf02
-          z-index 9
+          z-index 31
           width 1.5%
           animation leafsMoving02 7s 4s linear infinite, leafsRotation02 3s linear infinite
         &.leaf03

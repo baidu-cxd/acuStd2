@@ -6,9 +6,9 @@
 
 @keyframes leafsRotation02
   0%
-    transform rotateX(0) rotateZ(0deg)
+    transform rotateX(-20deg) rotateZ(0deg)
   100%
-    transform rotateX(180deg) rotateZ(360deg)
+    transform rotateX(340deg) rotateZ(360deg)
 
 leaveTrack(x)
   0.08 * (x ** 2) - 0.0016 * (x ** 3)
@@ -24,17 +24,14 @@ makeLeafMoving($startX, $startY, $widthRatio, $heightRatio)
   for i in 0..100
     {1% * i}
       if i <= 25
-          // a = $easelist[25 - i]
           a = leaveTrack(25 - i)
           top 10% - (0.01% * (((a * 4 - 33.33)/2) ** 2)) * $heightRatio + $startY
           left 0.01% * a * 4 * $widthRatio + $startX
       else if i <= 50
-          // a = $easelist[i - 25]
           a = leaveTrack(i - 25)
           top 10% - (0.01% * (((a * 4 - 66.66)/2) ** 2)) * $heightRatio + $startY + 8.33% * $heightRatio
           left 0.01% * a * 4 * $widthRatio + $startX
       else if i <= 75
-          // a = $easelist[75 - i]
           a = leaveTrack(75 - i)
           top 10% - (0.01% * (((a * 4 - 33.33)/2) ** 2)) * $heightRatio + $startY + 8.33% * 2 * $heightRatio
           left 0.01% * a * 4 * $widthRatio + $startX
@@ -47,7 +44,7 @@ makeLeafMoving($startX, $startY, $widthRatio, $heightRatio)
   // makeLeafMoving(10%, 10%, 50, 2)
   makeLeafMoving(18%, 32%, 55, 3.2)
 @keyframes leafsMoving02
-  makeLeafMoving(90%, 23%, 20, 2)
+  makeLeafMoving(85%, 15%, 20, 2)
 
 @keyframes leaveWave
   0%
