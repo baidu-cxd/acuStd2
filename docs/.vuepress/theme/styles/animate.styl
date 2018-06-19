@@ -1,0 +1,87 @@
+@require './config'
+
+
+//默认过渡
+
+.animate-before
+  animation opacity-out .15s $fastSlow forwards
+
+.animate-after
+  animation opacity-scale-in .15s $fastSlow forwards
+
+
+//
+//动画:fade-in／put
+//
+
+.fade-in.animate,.fade-in.animate-after
+  animation fade-in .7s $fastSlow  forwards
+  transform translateY(0)
+
+
+.fade-out.animate,.fade-out.animate-before
+  animation fade-out .7s $slowFast  forwards
+  transform translateY(0)
+
+//
+//动画:opacity-in／put
+//
+
+.opacity-in.animate,.opacity-in.animate-after
+  animation opacity-in .7s $fastSlow  forwards
+  transform translateY(0)
+
+
+.opacity-out.animate,.opacity-out.animate-before
+  animation opacity-out .7s $slowFast  forwards
+  transform translateY(0)
+
+
+//进入函数动画
+
+@keyframes fade-in
+  from 
+    transform translateY(60px)
+    opacity 0
+  to 
+    transform translateY(0)
+    opacity 1
+
+@keyframes fade-out
+  from 
+    transform translateY(0)
+    opacity 1
+  to 
+    transform translateY(60px)
+    opacity 0
+
+
+//透明度动画
+
+@keyframes opacity-scale-in
+  from 
+    opacity 0
+    transform scale(0,0)
+  to 
+    opacity 1
+    transform scale(1,1)
+
+@keyframes opacity-scale-out
+  from 
+    opacity 1
+    transform scale(1,1)
+  to 
+    opacity 0
+    transform scale(0,0)
+
+@keyframes opacity-out
+  from 
+    opacity 1
+  to 
+    opacity 0
+
+@keyframes opacity-in
+  from 
+    opacity 0
+  to 
+    opacity 1

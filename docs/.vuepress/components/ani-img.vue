@@ -1,5 +1,5 @@
 <template>
-    <div @click="runAni()" class="page-component-wrp" :style="{width: width, height: width}">
+    <div @click="runAni()" class="page-component-wrp ani-img" :style="{width: width, height: width}">
         <img :src="img" class="animate">
     </div>
 </template>
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="stylus">
-.content .page-component-wrp
+.content .page-component-wrp.ani-img
   overflow hidden
   img 
     position relative

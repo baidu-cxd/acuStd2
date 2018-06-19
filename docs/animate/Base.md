@@ -8,13 +8,27 @@ sidebarDepth: 1
 
 [[toc]]
 
-<ani-img :img="'http://yihan.gz.bcebos.com/testa.jpg'" :width="'100px'"/>
-
 ## 基本动效形式
+
+### 序列帧动画测试
+
+::: tip 仅供测试用
+
+这是一个图片序列动画，只是用来测试的
+
+:::
+
+<ani-img :img="'http://yihan.gz.bcebos.com/testa.jpg'" :width="'100px'"/>
 
 ### 浮入/浮出
 
+浮入／浮出动画（fade-in／out）常用于页面组件的进入，离开
+
+<ani-base :animate="['fade-in','fade-out']" :width="'100px'"/>
+
 ### 渐现/渐隐
+
+<ani-base :animate="['opacity-in','opacity-out']" :width="'100px'"/>
 
 ### 移入/移出
 
