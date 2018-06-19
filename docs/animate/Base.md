@@ -8,6 +8,8 @@ sidebarDepth: 1
 
 [[toc]]
 
+<ani-img :img="'http://yihan.gz.bcebos.com/testa.jpg'" :width="'100px'"/>
+
 ## 基本动效形式
 
 ### 浮入/浮出
