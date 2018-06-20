@@ -27,7 +27,7 @@ sidebarDepth: 1
 **相关资料：**
 
 - [浮入](/animate/Base.html#浮入动画)  
-- [始快终慢曲线](/animate/Base.html#始快终慢) 
+- [缓出曲线](/animate/Base.html#始快终慢) 
 
 ## 阵列次序
 

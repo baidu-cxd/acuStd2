@@ -51,9 +51,12 @@ export default {
     border 1px solid $borderColor
     margin 0 20px 20px 0
     position relative
+    transition all .6s $easeOutStd
     &:hover
       cursor pointer
       border 1px solid darken($borderColor,10%)
+      background-color $lightBgcolor
+      transition all .6s $easeOutStd
     &:first-child
       margin-left 0
     .inner-component

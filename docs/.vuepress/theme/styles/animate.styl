@@ -26,9 +26,9 @@
 
 
 .fade-left-right.animate-in
-  animation fade-left-in .6s $easeOutStd   forwards
+  animation fade-left-in .6s $easeOutQuint  forwards
 .fade-left-right.animate-out
-  animation fade-right-out .6s $easeInStd   forwards
+  animation fade-right-out .6s $easeInQuint  forwards
 
 
 //
@@ -357,64 +357,76 @@
 //
 
 .animate-in .run-linear,.animate-in .run.linear
-  animation run-move-left .6s linear  forwards
+  animation run-left-right .6s linear  forwards
 .animate-out .run-linear,.animate-out .run.linear
-  animation run-move-right .6s linear  forwards
+  animation run-right-left .6s linear  forwards
 
 .animate-in .run.easeInStd
-  animation run-move-left .6s $easeInStd   forwards
+  animation run-left-right .6s $easeInStd   forwards
 .animate-out .run.easeInStd
-  animation run-move-right .6s $easeInStd   forwards
+  animation run-right-left .6s $easeInStd   forwards
 
 .animate-in .run.easeOutStd
-  animation run-move-left .6s $easeOutStd   forwards
+  animation run-left-right .6s $easeOutStd   forwards
 .animate-out .run.easeOutStd
-  animation run-move-right .6s $easeOutStd   forwards
+  animation run-right-left .6s $easeOutStd   forwards
 
 .animate-in .run.easeInOutStd
-  animation run-move-left .6s $easeInOutStd   forwards
+  animation run-left-right .6s $easeInOutStd   forwards
 .animate-out .run.easeInOutStd
-  animation run-move-right .6s $easeInOutStd   forwards
+  animation run-right-left .6s $easeInOutStd   forwards
 
 .animate-in .run.easeInSine
-  animation run-move-left .6s $easeInSine   forwards
+  animation run-left-right .6s $easeInSine   forwards
 .animate-out .run.easeInSine
-  animation run-move-right .6s $easeInSine   forwards
+  animation run-right-left .6s $easeInSine   forwards
 
 .animate-in .run.easeOutSine
-  animation run-move-left .6s $easeOutSine   forwards
+  animation run-left-right .6s $easeOutSine   forwards
 .animate-out .run.easeOutSine
-  animation run-move-right .6s $easeOutSine   forwards
+  animation run-right-left .6s $easeOutSine   forwards
 
 .animate-in .run.easeInOutSine
-  animation run-move-left .6s $easeInOutSine   forwards
+  animation run-left-right .6s $easeInOutSine   forwards
 .animate-out .run.easeInOutSine
-  animation run-move-right .6s $easeInOutSine   forwards
+  animation run-right-left .6s $easeInOutSine   forwards
 
 
 .animate-in .run.easeInQuint
-  animation run-move-left .6s $easeInQuint   forwards
+  animation run-left-right .6s $easeInQuint   forwards
 .animate-out .run.easeInQuint
-  animation run-move-right .6s $easeInQuint   forwards
+  animation run-right-left .6s $easeInQuint   forwards
 
 .animate-in .run.easeOutQuint
-  animation run-move-left .6s $easeOutQuint   forwards
+  animation run-left-right .6s $easeOutQuint   forwards
 .animate-out .run.easeOutQuint
-  animation run-move-right .6s $easeOutQuint   forwards
+  animation run-right-left .6s $easeOutQuint   forwards
 
 .animate-in .run.easeInOutQuint
-  animation run-move-left .6s $easeInOutQuint   forwards
+  animation run-left-right .6s $easeInOutQuint   forwards
 .animate-out .run.easeInOutQuint
-  animation run-move-right .6s $easeInOutQuint   forwards
+  animation run-right-left .6s $easeInOutQuint   forwards
 
-@keyframes run-move-right
+@keyframes run-up-down
+  from 
+    transform translateY(0)
+  to 
+    transform translateY(-15em)
+
+@keyframes run-down-up
+  from 
+    transform translateY(-15em)
+  to 
+    transform translateY(0)
+
+@keyframes run-right-left
   from 
     transform translateX(0)
   to 
-    transform translateX(300px)
+    transform translateX(15em)
 
-@keyframes run-move-left
+@keyframes run-left-right
   from 
-    transform translateX(300px)
+    transform translateX(15em)
   to 
     transform translateX(0)

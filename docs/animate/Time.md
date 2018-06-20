@@ -7,7 +7,7 @@ sidebarDepth: 1
 # 缓动函数
 
 
-缓动函数用于控制动画的速度变化，通过对曲线地规范统一页面中的动画节奏风格。一般使用标准的动画曲线进行设计即可，但是如果有特殊的需要也可以使用较为舒缓或者更加剧烈的动画曲线，如 [涟漪动画](/animate/Base.html#涟漪)
+缓动函数用于控制动画的速度变化，通过对曲线地规范统一页面中的动画节奏风格。一般使用标准的动画曲线进行设计即可，但是如果有特殊的需要也可以使用较为舒缓的动画曲线，如 [涟漪动画](/animate/Base.html#涟漪)，也有时候需要使用较强的动画曲线，如 [pulse/wiggle](/animate/Base.html#强调)
 
 
 [[toc]]
@@ -19,51 +19,69 @@ sidebarDepth: 1
 
 <ani-timing :timing="['linear']"/>
 
-## ease-in
+## 缓入曲线（ease-in）
 
 缓慢地开始，然后加速的动画曲线，一般用于元素从界面中离开
 
-### 标准 ease-in
+```stylus
+$easeInStd   = cubic-bezier(.55, .055, .675, .19) //标准
+$easeInSine  = cubic-bezier(.47, 0, .745, .715)  //舒缓的
+$easeInQuint = cubic-bezier(.755, .05, .855, .06)  //较强的
+```
+
+### 标准缓入曲线
 
 <ani-timing :timing="['easeInStd']"/>
 
-### 较为舒缓的 ease-in
+### 舒缓的缓入曲线
 
 <ani-timing :timing="['easeInSine']"/>
 
-### 剧烈的 ease-in
+### 较强的缓入曲线
 
 <ani-timing :timing="['easeInQuint']"/>
 
-## ease-out
+## 缓出曲线（ease-out）
 
 很快的速度开始运动，然后持续减速动画曲线，一般用于元素进入界面
 
-### 标准 ease-out
+```stylus
+$easeOutStd = cubic-bezier(.215, .61, .355, 1) //标准 
+$easeOutSine = cubic-bezier(.39, .575, .565, 1) //舒缓的
+$easeOutQuint = cubic-bezier(.23, 1, .32, 1) //较强的
+```
+
+### 标准缓出曲线 
 
 <ani-timing :timing="['easeOutStd']"/>
 
-### 较为舒缓的 ease-out
+### 较为舒缓的缓出曲线 
 
 <ani-timing :timing="['easeOutSine']"/>
 
-### 剧烈的 ease-out
+### 较强的缓出曲线 
 
 <ani-timing :timing="['easeOutQuint']"/>
 
-## ease-in-out
+## 缓入缓出曲线（ease-in-out）
 
 先加速进入，然后减速退出的动画曲线，一般用于元素在界面内的状态变化
 
-### 标准 ease-in-out
+```stylus
+$easeInOutStd = cubic-bezier(.645, .045, .355, 1) //标准
+$easeInOutSine = cubic-bezier(.445, .05, .55, .95) //慢舒缓的进慢出
+$easeInOutQuint = cubic-bezier(.86, 0, .07, 1) //较强的
+```
+
+### 标准缓入缓出曲线
 
 <ani-timing :timing="['easeInOutStd']"/>
 
-### 较为舒缓的 ease-in-out
+### 舒缓的缓入缓出曲线
 
 <ani-timing :timing="['easeInOutSine']"/>
 
-### 剧烈的 ease-in-out
+### 较强的缓入缓出曲线
 
 <ani-timing :timing="['easeInOutQuint']"/>
 
