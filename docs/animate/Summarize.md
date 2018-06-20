@@ -30,5 +30,5 @@ sidebarDepth: 0
 4. 使用哪种动画曲线？
 5. 动效结束后页面会是什么状态？
 
-设计过程中，可以参考文档 [基础动效形式](/animate/Base.html#基础动效形式) 和 [动画曲线](animate/Base.html#动画曲线)
+设计过程中，可以参考文档 [基础动效形式](/animate/Base.html#基础动效形式) 和 [动效曲线](/animate/Base.html#动效曲线)
 

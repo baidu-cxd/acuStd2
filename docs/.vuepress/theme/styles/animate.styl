@@ -1,45 +1,133 @@
 @require './config'
 
 
-//默认过渡
-
-.animate-before
-  animation opacity-out .15s $fastSlow forwards
-
-.animate-after
-  animation opacity-scale-in .15s $fastSlow forwards
 
 
 //
-//动画:fade-in／put
+//动画:fade-in
 //
 
-.fade-in.animate,.fade-in.animate-after
-  animation fade-in .7s $fastSlow  forwards
-  transform translateY(0)
+.fade-down.animate-in
+  animation fade-down-in .6s $easeOutStd  forwards
+.fade-down.animate-out
+  animation fade-down-out .6s $easeInStd  forwards
 
 
-.fade-out.animate,.fade-out.animate-before
-  animation fade-out .7s $slowFast  forwards
-  transform translateY(0)
+.fade-left.animate-in
+  animation fade-left-in .6s $easeOutStd  forwards
+.fade-left.animate-out
+  animation fade-left-out .6s $easeInStd  forwards
+
+
+.fade-right.animate-in
+  animation fade-right-in .6s $easeOutStd  forwards
+.fade-right.animate-out
+  animation fade-right-out .6s $easeInStd  forwards
+
+
+.fade-left-right.animate-in
+  animation fade-left-in .6s $easeOutStd   forwards
+.fade-left-right.animate-out
+  animation fade-right-out .6s $easeInStd   forwards
+
 
 //
-//动画:opacity-in／put
+//动画:消失出现
 //
 
-.opacity-in.animate,.opacity-in.animate-after
-  animation opacity-in .7s $fastSlow  forwards
-  transform translateY(0)
+.opacity.animate-in
+  animation opacity-in .6s $easeOutStd  forwards
+.opacity.animate-out
+  animation opacity-out .6s $easeInStd  forwards
 
 
-.opacity-out.animate,.opacity-out.animate-before
-  animation opacity-out .7s $slowFast  forwards
-  transform translateY(0)
+.scale.animate-in
+  animation scale-in .6s $easeOutStd  forwards
+.scale.animate-out
+  animation scale-out .6s $easeInStd  forwards
+
+.expand.animate-in
+  animation expand-in .6s $easeOutStd  forwards
+.expand.animate-out
+  animation expand-out .6s $easeInStd  forwards
 
 
+//
+//动画:颜色变化
+//
+
+.color.animate-in
+  animation color-in .6s $easeInOutStd  forwards
+.color.animate-out
+  animation color-out .6s $easeInOutStd  forwards
+
+
+//
+//动画:强调
+//
+
+.pulse.animate-in
+  animation pulse-in .3s $easeInOutQuint  forwards
+.pulse.animate-out
+  animation pulse-out .3s $easeInOutQuint  forwards
+
+.wave.animate-in
+  animation none
+.wave.animate-out
+  animation pulse-wave .8s  $easeInOutSine   infinite
+
+.wiggle.animate-in
+  animation wiggle-in .3s  $easeInOutQuint   forwards
+.wiggle.animate-out
+  animation wiggle-out .3s  $easeInOutQuint   forwards
+
+.emphasize.animate-in
+  animation emphasize-in .3s  $easeInOutStd   forwards
+.emphasize.animate-out
+  animation emphasize-out .3s  $easeInOutStd   forwards
+
+//
+//动画:涟漪
+//
+
+.ripples.animate-in::before
+  animation none
+.ripples.animate-out::before
+  animation ripples-out .8s $easeInOutSine  infinite
+
+
+//
+//动画:旋转
+//
+
+.rotate.animate-in
+  animation rotate-in .6s $easeInOutStd  forwards
+.rotate.animate-out
+  animation rotate-out .6s $easeInOutStd  forwards
+
+.rotate-z.animate-in
+  animation rotate-z-in .6s $easeInOutStd  forwards
+.rotate-z.animate-out
+  animation rotate-z-out .6s $easeInOutStd  forwards
+
+//
+//动画:投影
+//
+.content .page-component-wrp.ani-base .wrp .inner-component.shadow
+  background-color #fff
+  color $textColorMain
+  box-shadow 0 2px 10px 0 #0000001a
+  transition all .3s $easeInOutStd
+  &.animate-in
+    box-shadow 0 2px 10px 0 #0000001a
+  &.shadow.animate-out
+    box-shadow 0 4px 12px 0 #3333
+
+//
 //进入函数动画
+//
 
-@keyframes fade-in
+@keyframes fade-down-in
   from 
     transform translateY(60px)
     opacity 0
@@ -47,7 +135,7 @@
     transform translateY(0)
     opacity 1
 
-@keyframes fade-out
+@keyframes fade-down-out
   from 
     transform translateY(0)
     opacity 1
@@ -55,24 +143,41 @@
     transform translateY(60px)
     opacity 0
 
-
-//透明度动画
-
-@keyframes opacity-scale-in
+@keyframes fade-left-in
   from 
+    transform translateX(-60px)
     opacity 0
-    transform scale(0,0)
   to 
+    transform translateX(0)
     opacity 1
-    transform scale(1,1)
 
-@keyframes opacity-scale-out
+@keyframes fade-left-out
   from 
+    transform translateX(0)
     opacity 1
-    transform scale(1,1)
   to 
+    transform translateX(-60px)
     opacity 0
-    transform scale(0,0)
+
+@keyframes fade-right-in
+  from 
+    transform translateX(60px)
+    opacity 0
+  to 
+    transform translateX(0)
+    opacity 1
+
+@keyframes fade-right-out
+  from 
+    transform translateX(0)
+    opacity 1
+  to 
+    transform translateX(60px)
+    opacity 0
+
+//
+//消失出现函数动画
+//
 
 @keyframes opacity-out
   from 
@@ -84,4 +189,232 @@
   from 
     opacity 0
   to 
-    opacity 1
+    opacity 
+    
+@keyframes scale-out
+  from 
+    transform scale(1)
+  to 
+    transform scale(0)
+
+@keyframes scale-in
+  from 
+    transform scale(0)
+  to 
+    transform scale(1)
+
+@keyframes expand-out
+  from 
+    height: transparent
+  to 
+    height: 0
+
+@keyframes expand-in
+  from 
+    height: 0
+  to 
+    height: transparent
+
+//
+//颜色动画
+//
+
+@keyframes color-out
+  from 
+    background-color $stdBlue
+  to 
+    background-color $stdRed
+
+@keyframes color-in
+  from 
+    background-color $stdRed
+  to 
+    background-color $stdBlue
+
+//
+//调调动画
+//
+
+@keyframes emphasize-out
+  0%
+    transform scale(1)
+  100% 
+    transform scale(1.1)
+
+@keyframes emphasize-in
+  0%
+    transform scale(1.1)
+  100% 
+    transform scale(1)
+
+@keyframes pulse-out
+  0%
+    transform scale(1)
+  50% 
+    transform scale(.9)
+  100% 
+    transform scale(1)
+
+@keyframes pulse-in
+  0%
+    transform scale(1)
+  50% 
+    transform scale(.8)
+  100% 
+    transform scale(1)
+
+@keyframes pulse-wave
+  0%
+    transform scale(1)
+  45% 
+    transform scale(.9)
+  90% 
+    transform scale(1)
+  100% 
+    transform scale(1)
+
+@keyframes wiggle-out
+  0%
+    transform translateX(0)
+  25% 
+    transform translateX(8px)
+  50%
+    transform translateX(-8px)
+  75% 
+    transform translateX(8px)
+  100% 
+    transform translateX(0)
+
+@keyframes wiggle-in
+  0%
+    transform translateX(0)
+  25% 
+    transform translateX(8px)
+  50%
+    transform translateX(-8px)
+  75% 
+    transform translateX(8px)
+  100% 
+    transform translateX(0)
+
+//
+//涟漪动画
+//
+
+@keyframes ripples-out
+  from 
+    transform scale(1)
+    opacity .5
+  to 
+    transform scale(1.4)
+    opacity 0
+
+//
+//旋转动画
+//
+
+@keyframes rotate-in
+  from 
+    transform rotate(0)
+  to 
+    transform rotate(90deg)
+
+@keyframes rotate-out
+  from 
+    transform rotate(90deg)
+  to 
+    transform rotate(0deg)
+
+@keyframes rotate-z-in
+  from 
+    transform rotateY(0)
+  to 
+    transform rotateY(180deg)
+
+@keyframes rotate-z-out
+  from 
+    transform rotateY(180deg)
+  to 
+    transform rotateY(0deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//曲线控制
+//
+
+.animate-in .run-linear,.animate-in .run.linear
+  animation run-move-left .6s linear  forwards
+.animate-out .run-linear,.animate-out .run.linear
+  animation run-move-right .6s linear  forwards
+
+.animate-in .run.easeInStd
+  animation run-move-left .6s $easeInStd   forwards
+.animate-out .run.easeInStd
+  animation run-move-right .6s $easeInStd   forwards
+
+.animate-in .run.easeOutStd
+  animation run-move-left .6s $easeOutStd   forwards
+.animate-out .run.easeOutStd
+  animation run-move-right .6s $easeOutStd   forwards
+
+.animate-in .run.easeInOutStd
+  animation run-move-left .6s $easeInOutStd   forwards
+.animate-out .run.easeInOutStd
+  animation run-move-right .6s $easeInOutStd   forwards
+
+.animate-in .run.easeInSine
+  animation run-move-left .6s $easeInSine   forwards
+.animate-out .run.easeInSine
+  animation run-move-right .6s $easeInSine   forwards
+
+.animate-in .run.easeOutSine
+  animation run-move-left .6s $easeOutSine   forwards
+.animate-out .run.easeOutSine
+  animation run-move-right .6s $easeOutSine   forwards
+
+.animate-in .run.easeInOutSine
+  animation run-move-left .6s $easeInOutSine   forwards
+.animate-out .run.easeInOutSine
+  animation run-move-right .6s $easeInOutSine   forwards
+
+
+.animate-in .run.easeInQuint
+  animation run-move-left .6s $easeInQuint   forwards
+.animate-out .run.easeInQuint
+  animation run-move-right .6s $easeInQuint   forwards
+
+.animate-in .run.easeOutQuint
+  animation run-move-left .6s $easeOutQuint   forwards
+.animate-out .run.easeOutQuint
+  animation run-move-right .6s $easeOutQuint   forwards
+
+.animate-in .run.easeInOutQuint
+  animation run-move-left .6s $easeInOutQuint   forwards
+.animate-out .run.easeInOutQuint
+  animation run-move-right .6s $easeInOutQuint   forwards
+
+@keyframes run-move-right
+  from 
+    transform translateX(0)
+  to 
+    transform translateX(300px)
+
+@keyframes run-move-left
+  from 
+    transform translateX(300px)
+  to 
+    transform translateX(0)

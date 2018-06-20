@@ -67,7 +67,7 @@
       transition .1s opacity linear
       opacity .4
     .modal-std-windows
-      transition .2s all $fastSlow //进入 .2s完成缩放
+      transition .2s all $easeOutStd //进入 .2s完成缩放
       transform scale(1)
       opacity 1
   .modal-bg
@@ -80,7 +80,7 @@
     z-index -1
     left 0
     opacity 0
-    transition .05s opacity $fastSlow  .05s //缩放完成后开始消失
+    transition .05s opacity $easeOutStd  .05s //缩放完成后开始消失
   .modal-std-windows
     overflow hidden
     background-color #fff
@@ -90,7 +90,7 @@
     left 10px
     bottom 10px
     right 10px
-    transition .2s all $fastSlow  //退出 .2s完成缩放
+    transition .2s all $easeOutStd  //退出 .2s完成缩放
     transform translateY(100px) scale(.96)
     opacity 0
     .content-wrp
