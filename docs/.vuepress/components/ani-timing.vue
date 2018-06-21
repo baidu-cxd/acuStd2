@@ -60,6 +60,7 @@ export default {
 .content .page-component-wrp.ani-timing
   .timing-inner
     .img-wrp
+     display none
      img 
        position absolute
        margin 0
