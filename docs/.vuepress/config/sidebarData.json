@@ -152,7 +152,8 @@
       "children": [
         "page/Home",  
         "page/Product",     
-        "page/Solution"
+        "page/Solution",
+        "page/Document"
       ]
     },
     {
@@ -173,7 +174,6 @@
       "title": "其他资料",
       "collapsable": true,
       "children": [
-        "other/Tower",
         "other/Dictionaries",  
         "other/Token",
         "other/New"

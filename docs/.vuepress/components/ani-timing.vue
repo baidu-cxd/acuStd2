@@ -35,6 +35,15 @@ export default {
 @import '../theme/styles/config.styl' 
 @import '../theme/styles/animate.styl' 
 
+.content .page-component-wrp.ani-timing
+  .timing-inner
+    .img-wrp
+      img 
+        position absolute
+        margin 0
+        width 0
+        height 0
+
 @media (min-width: $MQMobile)
   .content .page-component-wrp.ani-timing
     .timing-inner
@@ -57,13 +66,6 @@ export default {
           right -3.5em
           transition all .3s $easeOutStd
     
-.content .page-component-wrp.ani-timing
-  .timing-inner
-    .img-wrp
-     display none
-     img 
-       position absolute
-       margin 0
        
 
 .content .page-component-wrp.ani-timing

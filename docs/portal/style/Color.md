@@ -83,16 +83,16 @@ sidebarDepth: 0
 
 页面一般常用规范字体颜色。主要为栏目标题、文本内容等。
 
-:::color #333333
-标题/重要文本色
+:::color #000000d9
+标题/重要文本色（85% 透明度）
 :::
 
-:::color #666666
-一般文本色
+:::color #00000099
+一般文本色（60% 透明度）
 :::
 
-:::color #999999
-轻文本色
+:::color #00000066
+轻文本色（40% 透明度）
 :::
 
 ## 其他颜色
@@ -111,11 +111,58 @@ sidebarDepth: 0
 表头颜色
 :::
 
-## 视觉层次
+## 拓展的颜色定义
 
-主色 <label class="color" id="color-108cee">#108cee</label> 赋予在 <mark>重要信息或关键主动点</mark> 上，利用大量留白和大面积中性色区分各个板块，去除多余的视觉干扰，以最简洁的页面元素搭配排版，从而最大限度提高用户阅读浏览效率。
+百度云体系下的页面还有很多营销风格的页面，需要使用更丰富的色彩：
 
-![视觉层次](http://baiduyun-guideline.bj.bcebos.com/portal%2Fstyle%2Fcolor%2Fcolor_1.png)
+<div class="wrp" id="gra-5">
+
+::: color gradient(left,#F061D8,#8C31FA)
+辅助色对应渐变色
+:::
+
+</div>
+
+<div class="wrp" id="gra-4">
+
+::: color gradient(left,#1BC3FF,#465FFF)
+辅助色对应渐变色
+:::
+
+</div>
+
+<div class="wrp" id="gra-2">
+
+::: color gradient(left,#71EFFF,#2CB1FF)
+辅助色对应渐变色
+:::
+
+</div>
+
+
+<div class="wrp" id="gra-7">
+
+::: color gradient(left,#8BE934,#41BC0D)
+辅助色对应渐变色
+:::
+
+</div>
+
+<div class="wrp" id="gra-6">
+
+::: color gradient(left,#FDE705,#FE9201)
+辅助色对应渐变色
+:::
+
+</div>
+
+<div class="wrp" id="gra-3">
+
+::: color gradient(left,#FF995F,#FF4C5C)
+辅助色对应渐变色
+:::
+
+</div>
 
 <style>
 #gra-0 .colorBox{
@@ -125,6 +172,32 @@ sidebarDepth: 0
 #gra-1 .colorBox{
   background: -webkit-linear-gradient(left,#3C3C4D,#0F1012);
 }
+
+#gra-2 .colorBox{
+  background: -webkit-linear-gradient(left,#71EFFF,#2CB1FF);
+}
+
+#gra-3 .colorBox{
+  background: -webkit-linear-gradient(left,#FF995F,#FF4C5C);
+}
+
+#gra-4 .colorBox{
+  background: -webkit-linear-gradient(left,#1BC3FF,#465FFF);
+}
+
+#gra-5 .colorBox{
+  background: -webkit-linear-gradient(left,#F061D8,#8C31FA);
+}
+
+#gra-6 .colorBox{
+  background: -webkit-linear-gradient(left,#FDE705,#FE9201);
+}
+
+#gra-7 .colorBox{
+  background: -webkit-linear-gradient(left,#8BE934,#41BC0D);
+}
+
+
 
 #color-108cee:before{
   background:#108cee;

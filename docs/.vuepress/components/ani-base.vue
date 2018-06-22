@@ -83,6 +83,8 @@ export default {
         left 50%
         transform translate(-50%,-50%)
         z-index 1
+        border solid 1px $borderColor
+        box-sizing border-box
         &:before,&:after
           transition all .3s $easeInOutStd
           content ""
@@ -155,3 +157,5 @@ export default {
       font-size 14px
       color $textColorMain
 </style>
+
+
