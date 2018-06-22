@@ -115,10 +115,17 @@ sidebarDepth: 0
 
 百度云体系下的页面还有很多营销风格的页面，需要使用更丰富的色彩：
 
+::: danger 请勿随意使用这些颜色
+
+1. 以下颜色主要运用于营销风格的页面元素，请勿在一般的产品页和解决方案页面元素使用
+2. 请勿大面积使用这些颜色
+
+:::
+
 <div class="wrp" id="gra-5">
 
 ::: color gradient(left,#F061D8,#8C31FA)
-辅助色对应渐变色
+拓展渐变-紫
 :::
 
 </div>
@@ -126,7 +133,7 @@ sidebarDepth: 0
 <div class="wrp" id="gra-4">
 
 ::: color gradient(left,#1BC3FF,#465FFF)
-辅助色对应渐变色
+拓展渐变-蓝
 :::
 
 </div>
@@ -134,7 +141,7 @@ sidebarDepth: 0
 <div class="wrp" id="gra-2">
 
 ::: color gradient(left,#71EFFF,#2CB1FF)
-辅助色对应渐变色
+拓展渐变-亮蓝
 :::
 
 </div>
@@ -143,7 +150,7 @@ sidebarDepth: 0
 <div class="wrp" id="gra-7">
 
 ::: color gradient(left,#8BE934,#41BC0D)
-辅助色对应渐变色
+拓展渐变-绿
 :::
 
 </div>
@@ -151,7 +158,7 @@ sidebarDepth: 0
 <div class="wrp" id="gra-6">
 
 ::: color gradient(left,#FDE705,#FE9201)
-辅助色对应渐变色
+拓展渐变-橙
 :::
 
 </div>
@@ -159,7 +166,7 @@ sidebarDepth: 0
 <div class="wrp" id="gra-3">
 
 ::: color gradient(left,#FF995F,#FF4C5C)
-辅助色对应渐变色
+拓展渐变-橘
 :::
 
 </div>
