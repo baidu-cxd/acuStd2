@@ -1,15 +1,15 @@
 <template>
   <div class="home">
     <div class="main-section">
-      <img v-if="data.mainImage" :src="$withBase(data.mainImage)" alt="main" id = "main-img">
-      <img :src="$withBase('./img/trunk.png')" alt="tree" id = "main-img-tree">
-      <img :src="$withBase('./img/birds.png')" alt="tree" id = "main-img-birds">
-      <img src="http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg" alt="" class="logo">
+      <img :src="$bosLink('public/bgn.png')" alt="main" id = "main-img">
+      <img :src="$bosLink('public/trunk.png')" alt="tree" id = "main-img-tree">
+      <img :src="$bosLink('public/birds.png')" alt="birds" id = "main-img-birds">
+      <img :src="$bosLink('public/cxd.svg')" alt="" class="logo">
       <img v-if="data.mainImageMo" :src="$withBase(data.mainImageMo)" id="main-img-mo">
       <div class="leaves">
-        <img :src="$withBase('./img/bigleaf01.png')" class="bigleaf bigleaf01">
-        <img :src="$withBase('./img/bigleaf02.png')" class="bigleaf bigleaf02">
-        <img :src="$withBase('./img/bigleaf03.png')" class="bigleaf bigleaf03">
+        <img :src="$bosLink('public/bigleaf01.png')" class="bigleaf bigleaf01">
+        <img :src="$bosLink('public/bigleaf02.png')" class="bigleaf bigleaf02">
+        <img :src="$bosLink('public/bigleaf03.png')" class="bigleaf bigleaf03">
         <img :src="$withBase('./img/leaf01.png')" class="leaf leaf01">
         <img :src="$withBase('./img/leaf02.png')" class="leaf leaf02">
         <img :src="$withBase('./img/leaf03.png')" class="leaf leaf03 wave">
@@ -117,7 +117,7 @@ export default {
         &.leaf02
           z-index 31
           width 1.5%
-          animation leafsMoving02 7s 4s linear infinite, leafsRotation02 3s linear infinite
+          animation leafsMoving02 7s linear infinite, leafsRotation02 3s linear infinite
         &.leaf03
           width 1.8%
           animation leaveWave 4s ease infinite alternate
