@@ -137,6 +137,7 @@ export default {
 
 .search-box
   display inline-block
+  display none
   position relative
   margin-right 0.5rem
   &:before
