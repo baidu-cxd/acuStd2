@@ -1,15 +1,19 @@
 <template>
-  <div class="theme-container"
+  <!-- 原版 -->
+  <div class="theme-container v1"
+    v-if="edition === 'v1'"
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
-    <!-- 侧边的位置 -->
-    <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
-    <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
-    <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-      <slot name="sidebar-top" slot="top"/>
-      <slot name="sidebar-bottom" slot="bottom"/>
-    </Sidebar>
+    <!-- 导航的位置 -->
+    <div>
+      <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
+      <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
+      <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
+        <slot name="sidebar-top" slot="top"/>
+        <slot name="sidebar-bottom" slot="bottom"/>
+      </Sidebar>
+    </div>
     <!-- 自定义组件 -->
     <div class="custom-layout" v-if="$page.frontmatter.layout">
       <component :is="$page.frontmatter.layout"/>
@@ -20,7 +24,24 @@
       <slot name="page-bottom" slot="bottom"/>
     </Page>
   </div>
+  <!-- 新版v2 -->
+  <div class="theme-container v2"
+    v-else-if="edition === 'v2'"
+    :class="pageClasses">
+    <NavV2/>
+    <Hero/>
+    <div class="std-wrp-v2 main-wrp-v2">
+      <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
+        <slot name="sidebar-top" slot="top"/>
+        <slot name="sidebar-bottom" slot="bottom"/>
+      </Sidebar>     
+      <PageV2/>
+    </div>
+    <PrevNext :sidebar-items="sidebarItems"/>
+    <Footer/>
+  </div>
 </template>
+
 
 <script>
 import Vue from 'vue'
@@ -32,11 +53,16 @@ import Sidebar from './Sidebar.vue'
 import Viewer from './Viewer.vue'
 import { pathToComponentName } from '@app/util'
 import { resolveSidebarItems } from './util'
-
+/* 新版组件 */
+import NavV2 from './v2/NavV2.vue'
+import PageV2 from './v2/PageV2.vue'
+import Hero from './v2/Hero.vue'
+import PrevNext from './v2/PrevNext.vue'
+import Footer from './v2/Footer.vue'
 export default {
   props:{
   },
-  components: { Home, Page, Sidebar, Navbar ,Viewer},
+  components: { Home, Page, Sidebar, Navbar ,Viewer, NavV2, PageV2, Hero, PrevNext, Footer},
   data () {
     return {
       isSidebarOpen: false,
@@ -45,6 +71,11 @@ export default {
   computed: {
     section(dataIn){
       return dataIn.section
+    },
+    edition () {
+      const { frontmatter } = this.$page
+      if (frontmatter.edition === 'v2') return frontmatter.edition
+      return 'v1'
     },
     shouldShowNavbar () {
       const { themeConfig } = this.$site
@@ -190,5 +221,6 @@ function updateMetaTags (meta, current) {
 <style src="./san-xui/xui.scss" lang="scss"></style>
 <style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="./styles/theme.styl" lang="stylus"></style>
+<style src="./styles/v2.styl" lang="stylus"></style>
 
 <!-- Hotjar Tracking Code for http://yunshe.design/ -->

@@ -1,0 +1,89 @@
+//v2 配置
+$headerHeight = 56px
+$navWidth = 220px
+$iconSize = 24px
+$logoWidth = 120px
+$sideBarV2Width = 200px
+
+@require './config'
+
+.clear-float
+  &:after
+    content:"."; 
+    display:block; 
+    height:0; 
+    visibility:hidden; 
+    clear:both;
+
+.theme-container.v2
+  background-color #fff
+  height 100vh
+  .std-wrp-v2
+    width 960px
+    margin auto
+    position relative
+    z-index 10
+    &.main-wrp-v2
+      padding-bottom 80px
+  .sidebar
+    width $sideBarV2Width 
+    position absolute
+    top 0px
+    left 0
+    background-color #fff
+    margin 80px 0
+    border 1px solid #ebebeb
+    z-index 1
+  .sidebar-links 
+    padding 0
+    li
+      &:last-child
+        border 0px solid transparent
+      border-bottom 1px solid #ebebeb
+      width 100%
+      min-height 52px
+      box-sizing border-box
+      display block
+      padding 0
+      position relative
+      z-index 2
+      .sidebar-group
+        margin-top 0
+        min-height 52px
+        max-height 300px
+        overflow-y scroll
+        p
+          line-height 52px
+        ul
+          border-top 1px solid #ebebeb
+          li
+            float left
+            width 200px
+      a
+        line-height 52px
+        padding 0 0 0 16px
+      ul
+        z-index 100
+        width 100%
+        opacity 1
+        background-color #ffffff
+        padding 0
+        border 0px solid #ebebeb
+        overflow hidden
+        padding-bottom 16px
+        li
+          width 100%
+          min-height 36px
+          float left
+          border-bottom 0px solid #ebebeb
+          a
+            line-height 36px
+            margin-left 0px
+            font-size 14px
+
+.pageV2 .content
+  width auto
+  margin-left $sideBarV2Width + 80px
+  padding 0
+  box-sizing border-box
+  margin-top -60px

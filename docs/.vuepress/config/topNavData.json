@@ -1,0 +1,22 @@
+[
+    { 
+      "text": "ACU-Portal", 
+      "link": "/summarize/Summarize" ,
+      "icon": "http://yihan.gz.bcebos.com/icon16.png"
+    },
+    {
+      "text": "ACU-Console",
+      "link": "/console/",
+      "icon": "http://yihan.gz.bcebos.com/icon16.png"
+    },
+    {
+      "text": "ACU-Animate",
+      "link": "/animate/Summarize",
+      "icon": "http://yihan.gz.bcebos.com/icon16.png"
+    },
+    { 
+      "text": "返回首页", 
+      "link": "/" ,
+      "icon": "http://yihan.gz.bcebos.com/icon16.png"
+    }
+]

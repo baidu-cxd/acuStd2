@@ -2,6 +2,7 @@
 title:  常见动效单元
 author:  dz（wangyihan05@baidu.com）
 sidebarDepth: 1
+edition: v2
 ---
 
 # 常见动画单元

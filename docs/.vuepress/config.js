@@ -11,6 +11,9 @@ const navData = require('./config/navData.json')
 var sidebarData = require('./config/sidebarData.json')
 
 
+//v2-新页面顶部导航配置文件
+const topNavData = require('./config/topNavData.json')
+
 module.exports = {
     title: '百度云设计规范',
     description: '百度云设计规范',
@@ -18,6 +21,7 @@ module.exports = {
     themeConfig: {
       nav: navData,
       sidebar: sidebarData,
+      topNav: topNavData,
       logo: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg',
       favicon: '',
     },
@@ -73,8 +77,5 @@ module.exports = {
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`]
-    ],
-    $bosLink(fileName) {
-      return 'http://baiduyun-guideline.bj.bcebos.com/' + fileName;
-    }
+    ]
 }

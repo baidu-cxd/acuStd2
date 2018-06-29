@@ -131,7 +131,7 @@ function find (page, items, offset) {
     color lighten($textColorDark, 25%)
     margin-right 0.25rem
 
-.page-nav.content:not(.custom)
+.v1 .page-nav.content:not(.custom)
   padding-top 80px
   .inner
     display block

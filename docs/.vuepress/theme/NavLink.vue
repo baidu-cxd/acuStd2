@@ -3,15 +3,18 @@
     class="nav-link"
     :to="link"
     v-if="!isExternal(link)"
-    :exact="link === '/'"
-  >{{ item.text }}</router-link>
+    :exact="link === '/'">
+    <img v-if="hasIcon === true" :src="item.icon" alt="" class=""/>
+    <span>{{ item.text }}</span>
+  </router-link>
   <a
     v-else
     :href="link"
     class="nav-link"
     :target="isMailto(link) ? null : '_blank'"
-    :rel="isMailto(link) ? null : 'noopener noreferrer'"
-  >{{ item.text }}</a>
+    :rel="isMailto(link) ? null : 'noopener noreferrer'">
+    {{ item.text }}
+  </a>
 </template>
 
 <script>
@@ -21,6 +24,9 @@ export default {
   props: {
     item: {
       required: true
+    },
+    hasIcon: {
+      default: false
     }
   },
   computed: {

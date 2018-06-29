@@ -2,6 +2,7 @@
 title:  动效基本设计准则
 author:  dz（wangyihan05@baidu.com）
 sidebarDepth: 0
+edition: v2
 ---
 
 # 动效基本设计准则
