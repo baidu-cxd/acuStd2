@@ -2,7 +2,7 @@
 title: 选择控件（Select）
 author: Ting
 sidebarDepth: 0
-edition: v2
+edition: v1
 ---
 # 选择控件（Select）
 

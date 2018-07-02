@@ -4,7 +4,7 @@
     :to="link"
     v-if="!isExternal(link)"
     :exact="link === '/'">
-    <img v-if="hasIcon === true" :src="item.icon" alt="" class=""/>
+    <img v-if="hasIcon === true && item.icon" :src="item.icon" alt="" class=""/>
     <span>{{ item.text }}</span>
   </router-link>
   <a

@@ -1,15 +1,14 @@
 {
   "/console/": [
     {
-      "title": "概述",
-      "collapsable": true,
-      "children": [
-        "outline/Outline"    
-      ]
+      "title" : "概述",
+      "icon" : "http://baiduyun-guideline.bj.bcebos.com/console%2Fsidebar-icon%2F%E6%A6%82%E8%BF%B0-2x.png",
+      "link" : "outline/Outline"
     },
     {
       "title": "设计原则",
       "collapsable": true,
+      "icon": "http://baiduyun-guideline.bj.bcebos.com/console%2Fsidebar-icon%2F%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99-2x.png",
       "children": [
         "principle/Wayfinding" ,             
         "principle/Simplicity" ,            
@@ -21,6 +20,7 @@
     {
       "title": "风格",
       "collapsable": true,
+      "icon" : "http://baiduyun-guideline.bj.bcebos.com/console%2Fsidebar-icon%2F%E9%A3%8E%E6%A0%BC-2x.png",
       "children": [
         "style/Color" ,     
         "style/Typography" ,    
@@ -32,6 +32,7 @@
     {
       "title": "组件",
       "collapsable": true,
+      "icon": "http://baiduyun-guideline.bj.bcebos.com/console%2Fsidebar-icon%2F%E6%8E%A7%E4%BB%B6-2x.png",
       "children": [
         "widget/Button",      
         "widget/List",     
@@ -67,6 +68,7 @@
     {
       "title": "反馈",
       "collapsable": true,
+      "icon": "http://baiduyun-guideline.bj.bcebos.com/console%2Fsidebar-icon%2F%E5%8F%8D%E9%A6%88-2x.png",
       "children": [
         "feedback/Feedback_review",      
         "feedback/Message_prompt",      
@@ -77,6 +79,7 @@
     },
     {
       "title": "校验",
+      "icon": "http://baiduyun-guideline.bj.bcebos.com/console%2Fsidebar-icon%2F%E6%A0%A1%E9%AA%8C%E5%8E%9F%E5%88%99-2x.png",
       "collapsable": true,
       "children": [
         "check/Check"      
@@ -86,6 +89,7 @@
     {
       "title": "下载",
       "collapsable": true,
+      "icon": "http://baiduyun-guideline.bj.bcebos.com/console%2Fsidebar-icon%2F%E5%B7%A5%E5%85%B7%E4%B8%8B%E8%BD%BD-2x.png",
       "children": [
         "download/Download"     
         

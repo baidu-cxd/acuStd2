@@ -8,7 +8,7 @@
             :src="$withBase($site.themeConfig.logo)">
         </router-link>
         <!--页面级别导航-->  
-        <div class="top-nav-wrp clear-float"
+        <div class="top-nav-wrp"
           @mouseleave="toggleList()"
           @mouseenter="toggleList()">
           <div
@@ -16,19 +16,8 @@
           :class="[item.link.split('/')[1] == nowPage ? 
           'active' : '', 'nav-current']"
           :key="item.link">
-            <NavLink :item="item" :hasIcon="true"/>
+            <NavLink :item="item" :hasIcon="flase"/>
           </div>
-          <transition name="fade">
-          <ul class="nav-list clear-float" 
-            v-show="topNavShow" 
-            transiton="fade">
-            <li v-for="item in userLinks" :key="item.link"
-              :class="[item.link.split('/')[1] == nowPage ? 
-              'active-li' : '', 'nav-li']">
-                <NavLink :item="item" :hasIcon="true"/>
-            </li>
-          </ul>
-          </transition>
         </div>
       </div>
     </div>
@@ -71,83 +60,31 @@ export default {
 <style lang="stylus">
 @import '../styles/config.styl'
 @import '../styles/v2.styl'
-//配置
-.top-nav-wrp
-  width $navWidth
-  margin-left $logoWidth
-  height $headerHeight * 1
-  overflow hidden
-  &:hover
-    box-shadow 0 5px 10px 0 $black10
-    transition: all .15s $easeOutStd
-    height $headerHeight * 4
-.theme-container.v2 .logo
-  float left
-  height 16px
-  margin-top 0.5 * ($headerHeight - 16px )
-  margin-left 0
-
-.theme-container.v2 .header
-  box-shadow 0 2px 10px $black10
-  width 100%
-  height $headerHeight
-  background-color #fff
-  position fixed
-  z-index 1000
-  top 0
-  left 0
-  ul.nav-list
-    padding 0
-    margin 0
-    width $navWidth
-    background-color #fff
-    li
+//样式
+.v2 .header 
+  height $headerHeightV2 //顶部高度
+  position relative
+  .logo//.logo
+    width $logoWidth
+    position absolute
+    top 50%
+    transform translateY(-50%)
+    left 0
+  .top-nav-wrp
+    width 100%
+    height $headerHeightV2
+    margin 0 $searchWidth 0  $logoWidth + 80px
+    a
+      width 25%
+      heihgt $headerHeightV2
+      display block
       float left
-  .nav-current,.nav-list li
-    width $navWidth
-    overflow hidden
-    &.active-li
-      height 0
-      overflow hidden
-    &:hover
-      background-color #108cee
-      span
-        color #fff 
-    a.nav-link
-      color $black60
-      width 100%
-      height $headerHeight
-      display block
-      img
-        width $iconSize
-        height $iconSize
-        margin-top 0.5 * ($headerHeight - $iconSize)
-        margin-left 24px
-        float left
-      span 
-        line-height $headerHeight
-        display block
-        float left
-        margin-left 24px
-        font-size 14px
-    a.router-link
-      color $black85
-  .nav-current
-    display none
-    height 0
-    &.active
-      height auto
-      display block
-    a.nav-link
-      display block
-      color $black85
-      line-height $headerHeight
+      line-height $headerHeightV2
+      color #000
+      opacity .85
+      text-align center
+      &:hover
+        cursor pointer
 //动画
-.fade-enter-active
-  transition: all .3s $easeOutSine
-.fade-leave-active
-  transition: all .3s $easeInSine
-.fade-enter, .fade-leave-to
-  opacity: 0
 </style>
 

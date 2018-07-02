@@ -16,7 +16,7 @@
             class="dropdown-subitem"
             v-for="childSubItem in subItem.items"
             :key="childSubItem.link">
-              <NavLink :item="childSubItem"/>
+              <NavLink :item="childSubItem" :hasIcon="true"/>
             </li>
           </ul>
           <NavLink v-else :item="subItem"/>

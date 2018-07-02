@@ -1,6 +1,7 @@
 ---
 title: console 规范概述
 sidebarDepth: 0
+icon: http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg
 ---
 # 概述
 

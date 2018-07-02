@@ -6,7 +6,7 @@
       v-for="item in userLinks"
       :key="item.link">
       <DropdownLink v-if="item.type === 'links'" :item="item"/>
-      <NavLink v-else :item="item"/>
+      <NavLink v-else :item="item"  :hasIcon="true"/>
     </div>
     <!-- repo link -->
     <a v-if="repoLink"

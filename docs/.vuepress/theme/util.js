@@ -49,7 +49,7 @@ export function isActive (route, path) {
   return routePath === pagePath
 }
 
-export function resolvePage (pages, rawPath, base) {
+export function resolvePage (pages, rawPath, base, icon) {
   if (base) {
     rawPath = resolvePath(rawPath, base)
   }
@@ -58,7 +58,8 @@ export function resolvePage (pages, rawPath, base) {
     if (normalize(pages[i].path) === path) {
       return Object.assign({}, pages[i], {
         type: 'page',
-        path: ensureExt(rawPath)
+        path: ensureExt(rawPath),
+        icon: icon //传入 icon 参数
       })
     }
   }
@@ -187,13 +188,16 @@ function ensureEndingSlash (path) {
 }
 
 function resolveItem (item, pages, base, isNested) {
-  if (typeof item === 'string') {
-    return resolvePage(pages, item, base)
-  } else if (Array.isArray(item)) {
+  if (!item.hasOwnProperty("children")) {//如果不是编组的内容
+    if (typeof item === 'string'){//如果只有链接
+      return resolvePage(pages, item, base)
+    }
+    return resolvePage(pages, item.link, base, item.icon)//如果数据中有其他东西，找到 item.link 作为链接
+  } else if (Array.isArray(item)) {//这段是干嘛的？没看懂
     return Object.assign(resolvePage(pages, item[0], base), {
       title: item[1]
     })
-  } else {
+  } else {//编组内容
     if (isNested) {
       console.error(
         '[vuepress] Nested sidebar groups are not supported. ' +
@@ -201,10 +205,13 @@ function resolveItem (item, pages, base, isNested) {
       )
     }
     const children = item.children || []
-    return {
+    return {//组内容
       type: 'group',
       title: item.title,
-      children: children.map(child => resolveItem(child, pages, base, true)),
+      text: item.title,
+      icon: item.icon,
+      link: item.link,
+      children: children.map(child => resolveItem(child, pages, base, true)),//组内子内容
       collapsable: item.collapsable !== false
     }
   }

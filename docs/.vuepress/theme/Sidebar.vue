@@ -72,46 +72,73 @@ function resolveOpenGroupIndex (route, items) {
 <style lang="stylus">
 @import './styles/config.styl'
 
+$listTop = 40px
+
+$listSec = 40px
+
+$listTri = 40px
+
 .sidebar
-  ul
-    padding 0
-    margin 0
-    list-style-type none
-    li
-      padding 0
-      margin 0
-  a
-    display inline-block
   .nav-links
     display none
-    border-top 1px solid $borderColor
-    padding 0.5rem 0 0.75rem 0
-    a
-      font-weight 500
-    .nav-item, .repo-link
-      display block
-      line-height 1rem
-      font-size 1em
-      padding 0.5rem 0 0.5rem 1.5rem
-  .sidebar-links
-    padding 20px 0
+  ul
+    padding-left 0
+  li
+    list-style:none
 
-@media (max-width: $MQMobile)
-  .sidebar
-    .nav-links
-      display block
-      .nav-item
-        min-height 20px
-        padding 10px 20px;
-        a
-          line-height 1.9
-          font-size 16px
-        ul
-          li 
-            margin-bottom 10px
-            &:last-child
-              margin-bottom 0
-    .sidebar-links
-      padding 20px 0
-      border-top 1px solid $borderColor
+.sidebar-links
+ li //一级
+   display block
+   min-height $listTop
+   a,.sidebar-group
+     min-height $listTop
+     overflow hidden
+     display block
+     width 100%
+     transition all .3s $easeInOutSine 
+     &:hover
+       cursor pointer
+       transition all .3s  $easeInOutSine 
+       background-color #f7f7f7
+       p.sidebar-heading
+         color $stdBlue
+     img.sidebar-icon
+       width 24px
+       margin 8px
+       display block
+       float left
+     p //top
+       display block
+       float left
+       line-height $listTop
+       padding 0
+       margin 0
+       font-size 15px
+       color #333
+       margin-left 12px
+       transition all .3s $easeInOutSine 
+     .arrow
+       margin-left 8px
+.sidebar-links  
+  .sidebar-group-items //2级
+    transition all .3s $easeInOutSine 
+    li
+      min-height $listSec
+      a
+        min-height $listSec
+        &:hover
+          background-color #EBEBEB
+        p
+          line-height $listSec
+          font-size 14px
+          margin-left 16px
+.sidebar-links  
+  .sidebar-group-items //2级
+    .sidebar-sub-headers // 3
+      li
+        min-height $listTri
+        p
+          margin-left 24px
+          font-size 13px
+      
 </style>

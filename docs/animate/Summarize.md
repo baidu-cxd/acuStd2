@@ -2,7 +2,7 @@
 title:  动效设计概述
 author:  dz（wangyihan05@baidu.com）
 sidebarDepth: 0
-edition: v2
+edition: v1
 hero: https://cdn.dribbble.com/users/10958/screenshots/4761268/53.jpg
 ---
 
