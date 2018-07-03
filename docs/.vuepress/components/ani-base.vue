@@ -1,5 +1,6 @@
 <template>
-    <div class="page-component-wrp ani-base">
+    <!--只有一个动画-->
+    <div v-if="type == 'solo'" class="page-component-wrp ani-base">
         <div @click="runAni(j)" v-for="(i,j) in animate" :class="i + ' ' + 'wrp'">
           <div :class="i + ' ' + 'inner-component'" ref="and">
             CXD
@@ -9,11 +10,32 @@
           <div class="animate-name">{{i}}</div>
         </div>
     </div>
+    <!--一组动画-->
+    <div v-else-if="type == 'list' || type == 'list-2'" :class="['page-component-wrp ani-base', type]">
+      <div @click="runAni(j)" v-for="(i,j) in animate" :class="animate + ' ' + 'wrp'" ref="and"> 
+        <div :class="[i,'inner-component','list-1']"></div>
+        <div :class="[i,'inner-component','list-2']"></div>
+        <div :class="[i,'inner-component','list-3']"></div>
+        <div :class="[i,'inner-component','list-4']"></div>
+        <div :class="[i,'inner-component','list-5']" v-if="type == 'list-2'"></div>
+        <div :class="[i,'inner-component','list-6']" v-if="type == 'list-2'"></div>
+        <div :class="[i,'inner-component','list-7']" v-if="type == 'list-2'"></div>
+        <div :class="[i,'inner-component','list-8']" v-if="type == 'list-2'"></div>
+        <div class="animate-name">{{i}}</div>
+      </div>
+    </div>
 </template>
 
 <script>
 export default {
-    props: ['animate'],
+      props: {
+        animate: {
+          default: null
+        },
+        type: {
+          default: 'solo'
+        }
+    },
     methods:{
       runAni(j){
          let a = this.$refs.and[j]
@@ -156,6 +178,75 @@ export default {
       text-align center
       font-size 14px
       color $textColorMain
+
+.content .page-component-wrp.ani-base.list,.page-component-wrp.ani-base.list-2
+  .wrp
+    width 100%
+    box-sizing border-box
+    .inner-component
+      width 18.5%
+      height 100px
+      float  left 
+      margin-left 5%
+  .wrp.animate-in
+    .delay-200ms.list-1
+      animation-delay 200ms
+    .delay-200ms.list-2
+      animation-delay 400ms 
+    .delay-200ms.list-3
+      animation-delay 600ms 
+    .delay-200ms.list-4
+      animation-delay 800ms 
+    .delay-50ms.list-1
+      animation-delay 50ms
+    .delay-50ms.list-2
+      animation-delay 100ms 
+    .delay-50ms.list-3
+      animation-delay 150ms 
+    .delay-50ms.list-4
+      animation-delay 200ms 
+    .delay-50ms.list-5
+      animation-delay 100ms
+    .delay-50ms.list-6
+      animation-delay 150ms 
+    .delay-50ms.list-7
+      animation-delay 200ms 
+    .delay-50ms.list-8
+      animation-delay 250ms 
+  .wrp.animate-out
+    .delay-200ms.list-1
+      animation-delay 800ms
+    .delay-200ms.list-2
+      animation-delay 600ms 
+    .delay-200ms.list-3
+      animation-delay 400ms 
+    .delay-200ms.list-4
+      animation-delay 200ms 
+    .delay-50ms.list-1
+      animation-delay 250ms
+    .delay-50ms.list-2
+      animation-delay 200ms 
+    .delay-50ms.list-3
+      animation-delay 150ms 
+    .delay-50ms.list-4
+      animation-delay 100ms
+    .delay-50ms.list-5
+      animation-delay 200ms
+    .delay-50ms.list-6
+      animation-delay 150ms 
+    .delay-50ms.list-7
+      animation-delay 100ms 
+    .delay-50ms.list-8
+      animation-delay 50ms 
+.content .page-component-wrp.ani-base.list-2
+  .wrp
+    height 360px
+    padding 40px 0 20px 0
+    .inner-component
+      height 60px
+      margin 40px 0 0 0 
+      margin-left 5%
+    
 </style>
 
 

@@ -1,7 +1,8 @@
 <template>
   <div class="sidebar-group" :class="{ first, collapsable }">
     <img :src="item.icon" alt="" v-if="item.icon" class="sidebar-icon">
-    <p class="sidebar-heading" :class="{ open }" @click="$emit('toggle')">
+    <p :class="[item.icon ? 'has-icon' : ' ','sidebar-heading',open]" 
+      @click="$emit('toggle')">
       <span>{{ item.title }}</span>
       <span class="arrow"
         v-if="collapsable"

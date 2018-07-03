@@ -1,7 +1,9 @@
 <template>
-  <div class="bezier-container" :style="{width, height, display: 'inline-block'}">
-    <canvas @click="play" ref="canvas"></canvas>
-    <div class="cursor" :style="{transform, transition, opacity, width: cursorWidth + 'px'}"></div>
+  <div class="container-out" @click="play">
+    <div class="bezier-container" :style="{width, height, display: 'block'}" ref="canvaswrp">
+      <canvas ref="canvas"></canvas>
+      <div class="cursor" :style="{transform, transition, opacity, width: cursorWidth + 'px'}"></div>
+    </div>
   </div>
 </template>
 
@@ -21,7 +23,7 @@ export default {
     },
     width: {
       type: [String, Number],
-      default: '150px'
+      default: '200px'
     },
     param: {
       type: Array,
@@ -33,7 +35,7 @@ export default {
     },
     time: {
       type: Number,
-      default: 1
+      default: .6
     }
   },
   data() {
@@ -43,39 +45,48 @@ export default {
       // 箭头宽度
       arrowWidth: cursor.arrawWidth,
       cursorHeight: cursor.height,
-      isPlaying: false
+      isPlaying: false,
+      isStart: true
     }
   },
   mounted() {
     let canvas = this.$refs.canvas;
-    canvas.width = this.$el.clientWidth - this.cursorWidth - this.arrowWidth;
-    canvas.height = this.$el.clientHeight;
+    canvas.width = this.$refs.canvaswrp.clientWidth - this.cursorWidth - this.arrowWidth;
+    canvas.height = this.$refs.canvaswrp.clientHeight;
     let bezier = new Bezier(canvas, this.param);
     bezier.draw();
   },
   methods: {
     play() {
-      if (!this.isPlaying) {
-        this.isPlaying = true;
+      if (!this.isPlaying && this.isStart) {
+        setTimeout(() => this.isPlaying = true, 800);
         this.toEnd();
-        setTimeout(this.toStart, 1000 * this.time + 800);
+      }
+      else if(this.isPlaying){
+        this.opacity = 0;
+        this.isStart = false
+        setTimeout(this.toStart, 200);
       }
     },
     toEnd() {
       this.transform = `translate(0, 0)`;
-      this.opacity = 0;
+      //this.opacity = 0;
     },
     toStart() {
       this.transform = `translate(0, ${this.height})`;
       this.opacity = 1;
-      setTimeout(() => this.isPlaying = false, 800);
+      setTimeout(() => this.isPlaying = false, 0);
+      setTimeout(() => this.isStart = true, 200);
+      setTimeout(() => this.play(), 400);
     }
   },
   computed: {
     transition() {
       let cb = this.param.join(',');
       let time = this.time;
-      return `transform ${time}s cubic-bezier(${cb}), opacity 0.2s ease ${time + 0.5}s`;
+      if (this.isStart){
+        return `transform ${time}s cubic-bezier(${cb}),opacity 0.2s ease`;
+      }
     }
   }
 };
@@ -84,8 +95,20 @@ export default {
 <style lang="stylus">
 $arrowSize = 5px
 $arrowColor = #108cee
+.container-out
+  width 100%
+  max-width 360px
+  padding 40px 0 60px
+  border 1px solid #e6e6e6
+  margin 20px 0
+  &:hover
+    cursor pointer
+    background-color #fcfcfc
+    border 1px solid darken(#e6e6e6,5%) 
 .bezier-container
-  margin 10px
+  margin auto
+  &:hover 
+    cursor pointer
   position relative
   canvas
     position relative

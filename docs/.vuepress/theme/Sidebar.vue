@@ -78,13 +78,52 @@ $listSec = 40px
 
 $listTri = 40px
 
+
 .sidebar
+  font-size 14px
+  background-color #fff
+  width $sidebarWidth
+  position fixed
+  z-index 10
+  margin 0
+  top 60px
+  left 0
+  bottom 0
+  box-sizing border-box
+  border-right 1px solid $borderColor
+  overflow-y auto
+
+.v1.sidebar-open .sidebar
+  transform translateX(0)
+  .nav-links
+    display block
+    padding 24px 0
+    border-bottom 1px solid $borderColor
+    .nav-item
+      width 100%
+      margin 0
+      padding 0 
+      height 32px
+      padding-left 12px
+      a
+        height 32px
+        line-height 32px
+      ul
+        margin 0
+
+.sidebar
+  .has-icon,.sidebar-group p.has-icon//左侧有图标的文字
+    padding-left 32px
   .nav-links
     display none
   ul
     padding-left 0
   li
     list-style:none
+  .active,.active.sidebar-link p
+    background-color #f5f5f5
+    color #333
+    font-weight 600
 
 .sidebar-links
  li //一级
@@ -92,6 +131,7 @@ $listTri = 40px
    min-height $listTop
    a,.sidebar-group
      min-height $listTop
+     position relative
      overflow hidden
      display block
      width 100%
@@ -117,22 +157,29 @@ $listTri = 40px
        color #333
        margin-left 12px
        transition all .3s $easeInOutSine 
+       position absolute
+       top 0
+       left 0
+       right 0
      .arrow
        margin-left 8px
 .sidebar-links  
-  .sidebar-group-items //2级
+  .sidebar-group-items
+    padding-top $listTop
+  .sidebar-group-items,.sidebar-sub-headers //2级
     transition all .3s $easeInOutSine 
     li
       min-height $listSec
       a
         min-height $listSec
         &:hover
-          background-color #EBEBEB
+          background-color #f5f5f5
         p
           line-height $listSec
           font-size 14px
           margin-left 16px
-.sidebar-links  
+          color #999
+.sidebar-links         
   .sidebar-group-items //2级
     .sidebar-sub-headers // 3
       li
@@ -140,5 +187,4 @@ $listTri = 40px
         p
           margin-left 24px
           font-size 13px
-      
 </style>

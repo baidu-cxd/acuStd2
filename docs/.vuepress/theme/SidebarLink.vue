@@ -33,7 +33,7 @@ export default {
 function renderLink (h, to, text, active, icon) {
   let htmlTemplate = null
   if(icon){
-    htmlTemplate = '<img class="sidebar-icon" src= '+ icon +'>' + '<p class="sidebar-heading">' + text + '</p>'
+    htmlTemplate = '<img class="sidebar-icon" src= '+ icon +'>' + '<p class="sidebar-heading has-icon">' + text + '</p>'
   }
   else{
     htmlTemplate = '<p>' + text + '</p>'

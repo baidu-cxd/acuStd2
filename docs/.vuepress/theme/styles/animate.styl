@@ -1,6 +1,45 @@
 @require './config'
 
+//
+//动画:阵列
+//
 
+.delay-200ms.animate-in .inner-component
+  animation fade-down-in .4s $easeOutStd  forwards
+  opacity 0
+.delay-200ms.animate-out .inner-component
+  animation fade-down-out .4s $easeInStd  forwards
+
+
+.delay-50ms.animate-in .inner-component
+  animation fade-near-in .4s $easeOutStd  forwards
+  opacity 0
+.delay-50ms.animate-out .inner-component
+  animation fade-near-out .4s $easeInStd  forwards
+
+//
+//动画:时间
+//
+
+.time-800ms.animate-in
+  animation fade-near-in .8s $easeOutStd  forwards
+.time-800ms.animate-out
+  animation fade-near-out .8s $easeInStd  forwards
+
+.time-600ms.animate-in
+  animation fade-near-in .6s $easeOutStd  forwards
+.time-600ms.animate-out
+  animation fade-near-out .6s $easeInStd  forwards
+
+.time-400ms.animate-in
+  animation fade-near-in .4s $easeOutStd  forwards
+.time-400ms.animate-out
+  animation fade-near-out .4s $easeInStd  forwards
+
+.time-200ms.animate-in
+  animation fade-near-in .2s $easeOutStd  forwards
+.time-200ms.animate-out
+  animation fade-near-out .2s $easeInStd  forwards
 
 
 //
@@ -11,6 +50,11 @@
   animation fade-down-in .6s $easeOutStd  forwards
 .fade-down.animate-out
   animation fade-down-out .6s $easeInStd  forwards
+
+.fade-near.animate-in
+  animation fade-near-in .6s $easeOutStd  forwards
+.fade-near.animate-out
+  animation fade-near-out .6s $easeInStd  forwards
 
 
 .fade-left.animate-in
@@ -26,9 +70,9 @@
 
 
 .fade-left-right.animate-in
-  animation fade-left-in .6s $easeOutQuint  forwards
+  animation fade-left-in .6s $easeOutStd  forwards
 .fade-left-right.animate-out
-  animation fade-right-out .6s $easeInQuint  forwards
+  animation fade-right-out .6s $easeInStd  forwards
 
 
 //
@@ -93,7 +137,7 @@
 .ripples.animate-in::before
   animation none
 .ripples.animate-out::before
-  animation ripples-out .8s $easeInOutSine  infinite
+  animation ripples-out 1.2s $easeInOutSine  infinite
 
 
 //
@@ -129,7 +173,7 @@
 
 @keyframes fade-down-in
   from 
-    transform translateY(60px)
+    transform translateY(-60px)
     opacity 0
   to 
     transform translateY(0)
@@ -175,6 +219,22 @@
     transform translateX(60px)
     opacity 0
 
+@keyframes fade-near-in
+  from 
+    transform translateY(20px) scale(0.85)
+    opacity 0
+  to 
+    transform translateY(0) scale(1)
+    opacity 1
+
+@keyframes fade-near-out
+  from 
+    transform translateY(0) scale(1)
+    opacity 1
+  to 
+    transform translateY(20px) scale(0.85)
+    opacity 0
+
 //
 //消失出现函数动画
 //
@@ -194,14 +254,18 @@
 @keyframes scale-out
   from 
     transform scale(1)
+    opacity 1
   to 
     transform scale(0)
+    opacity 0
 
 @keyframes scale-in
   from 
-    transform scale(0)
+    transform scale(1.4)
+    opacity 0
   to 
     transform scale(1)
+    opacity 1
 
 @keyframes expand-out
   from 
@@ -302,11 +366,14 @@
 //
 
 @keyframes ripples-out
-  from 
+  0%
     transform scale(1)
-    opacity .5
-  to 
-    transform scale(1.4)
+    opacity .3
+  80% 
+    transform scale(1.3)
+    opacity 0
+  100% 
+    transform scale(1.3)
     opacity 0
 
 //
