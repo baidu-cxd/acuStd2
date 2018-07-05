@@ -146,7 +146,8 @@
       "title": "导航",
       "collapsable": true,
       "children": [
-        "navgation/Tag",   
+        "navgation/Tag",  
+        "navgation/Sidebar",   
         "navgation/Fastguid"    
       ]
     },
