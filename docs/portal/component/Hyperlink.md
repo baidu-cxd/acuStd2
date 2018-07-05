@@ -15,7 +15,7 @@ sidebarDepth: 0
 
 常用于查看更多、查看详情等链接形式
 
-![banner 样式一](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhyperlink%2F%E6%A0%B7%E5%BC%8F%E4%B8%80%402x.jpg)
+![banner 样式一](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhyperlink%2F%E6%A0%B7%E5%BC%8F%E4%B8%80.jpg)
 
 
 ## 样式二
@@ -23,6 +23,5 @@ sidebarDepth: 0
 
 常用于文本内的字符链接形式
 
-![banner 样式二](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhyperlink%2F%E6%A0%B7%E5%BC%8F%E4%BA%8C%402x.jpg)
-
+![banner 样式二](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhyperlink%2F%E6%A0%B7%E5%BC%8F%E4%BA%8C.jpg)
 

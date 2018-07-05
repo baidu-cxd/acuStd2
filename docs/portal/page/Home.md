@@ -52,8 +52,9 @@ sidebarDepth: 2
 描述字符上限为24个中文字符
 
 
-小标题：</br>
->需不少于10个汉字（即：20个字符），最多不超过34个汉字（即：68个字符）
+副标题：</br>
+>需不少于10个汉字（即：20个字符），最多不超过28个汉字（即：56个字符）
+>文案要求在一行以内，不允许折行
 
 
 ### 图形设计规范
@@ -158,6 +159,10 @@ sidebarDepth: 2
 ![banner 规范尺寸](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2Fwap%20%E8%BF%90%E8%90%A5%E5%AF%BC%E5%87%BA.png)
 
 
+
+### 下载
+
+图形对齐自查请参考首页 banner 模板[跳转到位置：首页 banner 模板下载](/portal/resource/Download.html#首页-banner-模板下载)
 
 
 
