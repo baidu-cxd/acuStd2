@@ -157,8 +157,7 @@
       "children": [
         "page/Home",  
         "page/Product",     
-        "page/Solution",
-        "page/Document"
+        "page/Solution"
       ]
     },
     {
@@ -190,8 +189,7 @@
     "Summarize", 
     "Principle", 
     "Base", 
-    "Time", 
-    "Component"
+    "Time"
   ],
 
 

@@ -113,7 +113,7 @@ $listTri = 40px
 
 .sidebar
   .has-icon,.sidebar-group p.has-icon//左侧有图标的文字
-    padding-left 32px
+    padding-left 0px
   .nav-links
     display none
   ul
@@ -126,27 +126,34 @@ $listTri = 40px
     font-weight 600
 
 .sidebar-links
- li //一级
-   display block
-   min-height $listTop
-   a,.sidebar-group
-     min-height $listTop
-     position relative
-     overflow hidden
-     display block
-     width 100%
-     transition all .3s $easeInOutSine 
-     &:hover
-       cursor pointer
-       transition all .3s  $easeInOutSine 
-       background-color #f7f7f7
-       p.sidebar-heading
-         color $stdBlue
+  li //一级
+    display block
+    min-height $listTop
+    a,.sidebar-group
+      min-height $listTop
+      position relative
+      overflow hidden
+      display block
+      width 100%
+      transition all .2s $easeInOutSine 
+      &:hover
+        cursor pointer
+        transition all .32  $easeInOutSine 
+      p.sidebar-heading
+        &:hover
+          background-color #f7f7f7
+          color $stdBlue
+        width 100%
+        &.has-icon
+          padding-left 48px //有图标时候的样式
      img.sidebar-icon
        width 24px
        margin 8px
        display block
-       float left
+       position absolute
+       left 0
+       top 0
+       z-index 10
      p //top
        display block
        float left
@@ -155,9 +162,9 @@ $listTri = 40px
        margin 0
        font-size 15px
        color #333
-       margin-left 12px
-       transition all .3s $easeInOutSine 
-       position absolute
+       padding-left 12px
+       transition all .2s $easeInOutSine 
+       position relative
        top 0
        left 0
        right 0
@@ -165,9 +172,9 @@ $listTri = 40px
        margin-left 8px
 .sidebar-links  
   .sidebar-group-items
-    padding-top $listTop
+    padding-top 0
   .sidebar-group-items,.sidebar-sub-headers //2级
-    transition all .3s $easeInOutSine 
+    transition all .2s $easeInOutSine 
     li
       min-height $listSec
       a
@@ -178,7 +185,7 @@ $listTri = 40px
           line-height $listSec
           font-size 14px
           margin-left 16px
-          color #999
+          color #666
 .sidebar-links         
   .sidebar-group-items //2级
     .sidebar-sub-headers // 3
