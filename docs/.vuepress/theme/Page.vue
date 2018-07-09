@@ -42,15 +42,17 @@ export default {
   props: ['sidebarItems'],
   data() {
     return {
-      aniType: 'right'
+      aniType: 'no'
     }
   },
   methods: {
     changePage (changeType) {
       if (changeType === 'prev') {
         this.aniType = 'left'
+        setTimeout(() => this.aniType = 'no', 1200)
       } else if (changeType === 'next') {
         this.aniType = 'right'
+        setTimeout(() => this.aniType = 'no', 1200)
       }
     }
   },

@@ -23,6 +23,8 @@ export default {
         return 'slide-left'
       } else if (this.aniType === 'right') {
         return 'slide-right'
+      } else {
+        return 'slide-no'
       }
     }
   }
@@ -34,6 +36,23 @@ export default {
 
 <style lang="stylus">
 @import './styles/config.styl'
+//原地
+.slide-no-enter
+  opacity 0
+  transform translateY(0px) 
+.slide-no-enter-to
+  opacity 1
+  transform translateY(0)
+.slide-no-leave
+  opacity 1
+  transform translateY(0)
+.slide-no-leave-to
+  opacity 0
+  transform translateY(0px) 
+.slide-no-enter-active
+  transition .4s all $easeOutSine
+ .slide-no-leave-active
+  transition .4s all $easeInSine 
 //从上到下
 .slide-up-enter
   opacity 0
@@ -48,7 +67,7 @@ export default {
   opacity 0
   transform translateY(50px) 
 .slide-up-enter-active
-  transition .6s all $easeOutSine .2s
+  transition .6s all $easeOutSine
  .slide-up-leave-active
   transition .6s all $easeInSine 
 //从左到右
