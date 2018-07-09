@@ -16,6 +16,7 @@
     "san": "^3.5.7",
     "san-xui": "^0.2.0",
     "sass-loader": "^7.0.1",
+    "smoothscroll-polyfill": "^0.4.3",
     "underscore": "^1.9.0"
   },
   "scripts": {

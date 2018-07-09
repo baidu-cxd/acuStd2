@@ -73,7 +73,7 @@ export default {
 //从左到右
 .slide-left-enter
   opacity 0
-  transform translateX(-10%)
+  transform translateX(-40px)
 .slide-left-enter-to
   opacity 1
   transform translateX(0)
@@ -86,11 +86,11 @@ export default {
 .slide-left-enter-active
   transition .6s all ease-out
 .slide-left-leave-active
-  transition .4s all ease-in
+  transition .2s all ease-in
 //从右到左
 .slide-right-enter
   opacity 0
-  transform translateX(10%)
+  transform translateX(40px)
 .slide-right-enter-to
   opacity 1
   transform translateX(0)
@@ -103,5 +103,5 @@ export default {
 .slide-right-enter-active
   transition .6s all ease-out
 .slide-right-leave-active
-  transition .4s all ease-in
+  transition .2s all ease-in
 </style>

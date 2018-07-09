@@ -71,6 +71,32 @@ sidebarDepth: 2
 
 ![banner 渐变使用规范](http://baiduyun-guideline.bj.bcebos.com/portal%2Fhomebanner%2F%E6%B8%90%E5%8F%98%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83.png)
 
+<div class="wrp">
+
+第一组渐变：
+
+::: color-l #70faff
+点击复制颜色
+:::
+
+::: color-l #3f63ff
+点击复制颜色
+:::
+</div>
+
+
+<div class="wrp">
+
+第二组渐变：
+
+::: color-l #ffd469
+点击复制颜色
+:::
+
+::: color-l #fc4e6c
+点击复制颜色
+:::
+</div>
 
 #### 渐变角度
 
