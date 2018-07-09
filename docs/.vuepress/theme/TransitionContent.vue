@@ -13,16 +13,16 @@ export default {
     aniType: {
       type: String,
         default:function(){
-          return 'horizontal'  
+          return 'left'  
         }
     }
   },
   computed:{
     transitionName () {
-      if (this.aniType === 'horizontal') {
+      if (this.aniType === 'left') {
         return 'slide-left'
-      } else if (this.aniType === 'verticle') {
-        return 'slide-up'
+      } else if (this.aniType === 'right') {
+        return 'slide-right'
       }
     }
   }
@@ -63,11 +63,11 @@ export default {
   transform translateX(0)
 .slide-left-leave-to
   opacity 0
-  transform translateX(10%)
+  transform translateX(0)
 .slide-left-enter-active
-  transition 1s all ease
+  transition .6s all ease-out
 .slide-left-leave-active
-  transition 1s all ease
+  transition .4s all ease-in
 //从右到左
 .slide-right-enter
   opacity 0
@@ -80,9 +80,9 @@ export default {
   transform translateX(0)
 .slide-right-leave-to
   opacity 0
-  transform translateX(-10%)
+  transform translateX(0)
 .slide-right-enter-active
-  transition 1s all ease
+  transition .6s all ease-out
 .slide-right-leave-active
-  transition 1s all ease
+  transition .4s all ease-in
 </style>

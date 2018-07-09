@@ -1,7 +1,7 @@
 <template>
   <div class="article">
     <div class="article-wrp">
-      <TransitionContent :aniType="'verticle'">
+      <TransitionContent :aniType="aniType">
         <Content :custom="false"/>
       </TransitionContent>
       <div class="content edit-link" v-if="editLink">
@@ -10,12 +10,13 @@
       </div>
       <div class="content page-nav" v-if="prev || next">
         <p class="inner">
-          <span v-if="prev" class="prev">
-            ← <router-link v-if="prev" class="prev" :to="prev.path">
+          <span v-if="prev" class="prev" @click="changePage('prev')">
+            ← <router-link v-if="prev" class="prev" 
+            :to="prev.path">
               {{ prev.title || prev.path }}
             </router-link>
           </span>
-          <span v-if="next" class="next">
+          <span v-if="next" class="next"  @click="changePage('next')">
             <router-link v-if="next" :to="next.path">
               {{ next.title || next.path }}
             </router-link> →
@@ -39,6 +40,20 @@ import("clipboard").then(cb => {
 export default {
   components: { OutboundLink, TransitionContent },
   props: ['sidebarItems'],
+  data() {
+    return {
+      aniType: 'right'
+    }
+  },
+  methods: {
+    changePage (changeType) {
+      if (changeType === 'prev') {
+        this.aniType = 'left'
+      } else if (changeType === 'next') {
+        this.aniType = 'right'
+      }
+    }
+  },
   computed: {
     prev () {
       const prev = this.$page.frontmatter.prev
