@@ -1,7 +1,9 @@
 <template>
   <div class="article">
     <div class="article-wrp">
-      <Content :custom="false"/>
+      <TransitionContent :aniType="'verticle'">
+        <Content :custom="false"/>
+      </TransitionContent>
       <div class="content edit-link" v-if="editLink">
         <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
         <OutboundLink/>
@@ -27,6 +29,7 @@
 
 <script>
 import OutboundLink from './OutboundLink.vue'
+import TransitionContent from './TransitionContent.vue'
 import { resolvePage, normalize, outboundRE, endingSlashRE } from './util'
 //点击复制功能
 import("clipboard").then(cb => {
@@ -34,7 +37,7 @@ import("clipboard").then(cb => {
     })
 
 export default {
-  components: { OutboundLink },
+  components: { OutboundLink, TransitionContent },
   props: ['sidebarItems'],
   computed: {
     prev () {
@@ -133,6 +136,7 @@ function find (page, items, offset) {
 
 .v1 .page-nav.content:not(.custom)
   padding-top 80px
+  transition 1s all ease 
   .inner
     display block
     overflow hidden

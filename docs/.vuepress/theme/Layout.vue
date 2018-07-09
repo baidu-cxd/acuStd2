@@ -53,6 +53,7 @@ import Sidebar from './Sidebar.vue'
 import Viewer from './Viewer.vue'
 import { pathToComponentName } from '@app/util'
 import { resolveSidebarItems } from './util'
+import TransitionContent from './TransitionContent.vue'
 /* 新版组件 */
 import NavV2 from './v2/NavV2.vue'
 import PageV2 from './v2/PageV2.vue'
@@ -62,7 +63,7 @@ import Footer from './v2/Footer.vue'
 export default {
   props:{
   },
-  components: { Home, Page, Sidebar, Navbar ,Viewer, NavV2, PageV2, Hero, PrevNext, Footer},
+  components: { Home, Page, Sidebar, Navbar ,Viewer, NavV2, PageV2, Hero, PrevNext, Footer, TransitionContent},
   data () {
     return {
       isSidebarOpen: false,
