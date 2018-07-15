@@ -33,11 +33,9 @@ sidebarDepth: 0
 
 **渐变拓展色：**
 
-<div class="wrp" id="gra-0">
+<div class="wrp">
 
-::: color gradient(left,#1EC5E7,#0A65FF)
-主色对应渐变色
-:::
+<color-copyer color="#1EC5E7" text="主色对应渐变色" color2="#0A65FF"/>
 
 </div>
 
@@ -122,89 +120,45 @@ sidebarDepth: 0
 
 :::
 
-<div class="wrp" id="gra-5">
+<div class="wrp">
 
-::: color gradient(left,#F061D8,#8C31FA)
-拓展渐变-紫
-:::
+<color-copyer color="#1BC3FF" text="拓展渐变-紫" color2="#465FFF"  type= "light"/>
 
 </div>
 
-<div class="wrp" id="gra-4">
+<div class="wrp">
 
-::: color gradient(left,#1BC3FF,#465FFF)
-拓展渐变-蓝
-:::
+<color-copyer color="#1BC3FF" text="拓展渐变-蓝" color2="#465FFF"  type= "light"/>
 
 </div>
 
-<div class="wrp" id="gra-2">
+<div class="wrp">
 
-::: color gradient(left,#71EFFF,#2CB1FF)
-拓展渐变-亮蓝
-:::
+<color-copyer color="#71EFFF" text="拓展渐变-亮蓝" color2="#2CB1FF"  type= "light"/>
 
 </div>
 
 
-<div class="wrp" id="gra-7">
+<div class="wrp">
 
-::: color gradient(left,#8BE934,#41BC0D)
-拓展渐变-绿
-:::
+<color-copyer color="#8BE934" text="拓展渐变-绿" color2="#41BC0D"  type= "light"/>
 
 </div>
 
-<div class="wrp" id="gra-6">
+<div class="wrp">
 
-::: color gradient(left,#FDE705,#FE9201)
-拓展渐变-橙
-:::
+
+<color-copyer color="#FDE705" text="拓展渐变-橙" color2="#FE9201"  type= "light"/>
 
 </div>
 
-<div class="wrp" id="gra-3">
+<div class="wrp">
 
-::: color gradient(left,#FF995F,#FF4C5C)
-拓展渐变-橘
-:::
+<color-copyer color="#FF995F" text="拓展渐变-橘" color2="#FF4C5C"  type= "light"/>
 
 </div>
 
 <style>
-#gra-0 .colorBox{
-  background: -webkit-linear-gradient(left,#1EC5E7,#0A65FF);
-}
-
-#gra-1 .colorBox{
-  background: -webkit-linear-gradient(left,#3C3C4D,#0F1012);
-}
-
-#gra-2 .colorBox{
-  background: -webkit-linear-gradient(left,#71EFFF,#2CB1FF);
-}
-
-#gra-3 .colorBox{
-  background: -webkit-linear-gradient(left,#FF995F,#FF4C5C);
-}
-
-#gra-4 .colorBox{
-  background: -webkit-linear-gradient(left,#1BC3FF,#465FFF);
-}
-
-#gra-5 .colorBox{
-  background: -webkit-linear-gradient(left,#F061D8,#8C31FA);
-}
-
-#gra-6 .colorBox{
-  background: -webkit-linear-gradient(left,#FDE705,#FE9201);
-}
-
-#gra-7 .colorBox{
-  background: -webkit-linear-gradient(left,#8BE934,#41BC0D);
-}
-
-
 
 #color-108cee:before{
   background:#108cee;
