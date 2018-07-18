@@ -14,7 +14,7 @@ export default {
         default: function() {
           return {
           'fontSize': 12,
-          'lineHeiht': 24
+          'lineHeiht': 22
           }
         }
       },
