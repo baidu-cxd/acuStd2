@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>CXD sketch</title>
-    <link>https://yunshe.design/sketch/appcast.xml</link>
+    <link>http://cxd-sketch.gz.bcebos.com/appcast.xml</link>
     <description></description>
     <language>en</language>
     <item>
@@ -14,7 +14,7 @@
           </ul>
         ]]>
       </description>
-      <enclosure url="https://yunshe.design/sketch/CxdSketch-1.0.1.sketchplugin.zip" sparkle:version="1.0.1" type="application/octet-stream" />
+      <enclosure url="http://cxd-sketch.gz.bcebos.com/cxd-sketch.sketchplugin-1.0.1.zip" sparkle:version="1.0.1" type="application/octet-stream" />
     </item>
     <item>
       <title>Version 1.0.0</title>
@@ -25,7 +25,7 @@
           </ul>
         ]]>
       </description>
-      <enclosure url="https://yunshe.design/sketch/CxdSketch-1.0.0.sketchplugin.zip" sparkle:version="1.0.0" type="application/octet-stream" />
+      <enclosure url="http://cxd-sketch.gz.bcebos.com/cxd-sketch.sketchplugin-1.0.0.zip" sparkle:version="1.0.0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>
