@@ -15,7 +15,7 @@ export default {
 </script>
 <style lang="stylus">
 @import '../styles/config.styl'
-@import '../styles/v2.styl'
+@import './styles/v2.styl'
 .v2 .hero
   width 100%
   height 10px

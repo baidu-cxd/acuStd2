@@ -30,11 +30,7 @@
     :class="pageClasses">
     <NavV2/>
     <Hero/>
-    <div class="std-wrp-v2 main-wrp-v2">
-      <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-        <slot name="sidebar-top" slot="top"/>
-        <slot name="sidebar-bottom" slot="bottom"/>
-      </Sidebar>     
+    <div class="std-wrp-v2 main-wrp-v2">   
       <PageV2/>
     </div>
     <PrevNext :sidebar-items="sidebarItems"/>
@@ -222,6 +218,6 @@ function updateMetaTags (meta, current) {
 <style src="./san-xui/xui.scss" lang="scss"></style>
 <style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="./styles/theme.styl" lang="stylus"></style>
-<style src="./styles/v2.styl" lang="stylus"></style>
+<style src="./v2/styles/v2.styl" lang="stylus"></style>
 
 <!-- Hotjar Tracking Code for http://yunshe.design/ -->

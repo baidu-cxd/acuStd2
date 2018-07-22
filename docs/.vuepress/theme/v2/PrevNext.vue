@@ -18,7 +18,7 @@
 
 <style lang="stylus">
 @import '../styles/config.styl'
-@import '../styles/v2.styl'
+@import './styles/v2.styl'
 .v2 .prev-next
   background-color #ffc107
   height 120px

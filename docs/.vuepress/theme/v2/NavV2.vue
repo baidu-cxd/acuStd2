@@ -22,8 +22,6 @@
       </div>
     </div>
 </template>
-
-
 <script>
 import NavLink from '../NavLink.vue'
 import { resolveNavLinkItem } from '../util'
@@ -58,8 +56,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../styles/config.styl'
-@import '../styles/v2.styl'
+@import './styles/v2.styl'
 //样式
 .v2 .header 
   height $headerHeightV2 //顶部高度

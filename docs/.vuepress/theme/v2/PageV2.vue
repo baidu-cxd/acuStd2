@@ -16,7 +16,7 @@ export default {
 
 <style lang="stylus">
 @import '../styles/config.styl'
-@import '../styles/articleV2.styl'
+@import './styles/articleV2.styl'
 .pageV2
   background-color #fff
   padding 56px 0 0px

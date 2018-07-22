@@ -1,7 +1,7 @@
 [
     { 
       "text": "ACU-Portal", 
-      "link": "/summarize/Summarize" ,
+      "link": "/portal/" ,
       "icon": "http://yihan.gz.bcebos.com/icon16.png"
     },
     {
@@ -11,7 +11,7 @@
     },
     {
       "text": "ACU-Animate",
-      "link": "/animate/Summarize",
+      "link": "/animate/",
       "icon": "http://yihan.gz.bcebos.com/icon16.png"
     },
     { 
