@@ -1,22 +1,22 @@
 [
     { 
-      "text": "Portal 门户", 
-      "link": "/portal/" ,
+      "text": "动画基础规范", 
+      "link": "Summarize", 
       "icon": "http://yihan.gz.bcebos.com/icon16.png"
     },
     {
-      "text": "Console 后台",
-      "link": "/console/",
+      "text": "动画设计原则",
+      "link": "Principle", 
       "icon": "http://yihan.gz.bcebos.com/icon16.png"
     },
     {
-      "text": "Animate 动画",
-      "link": "/animate/",
+      "text": "动画基本单元",
+      "link": "Base", 
       "icon": "http://yihan.gz.bcebos.com/icon16.png"
     },
     { 
-      "text": "Lab 实验室", 
-      "link": "/lab/" ,
+      "text": "动画节奏",
+      "link": "Time",
       "icon": "http://yihan.gz.bcebos.com/icon16.png"
     }
 ]

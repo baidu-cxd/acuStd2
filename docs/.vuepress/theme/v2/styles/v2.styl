@@ -24,19 +24,30 @@ $black60   = #00000099
 $white     = #ffffff
 $white10   = #ffffff1a //10%
 $white20   = #ffffff33 //20%
-$white50    = rgba(255,255,255,.5) //80%
+$white40    = rgba(255,255,255,.4) //80%
+$white45    = rgba(255,255,255,.45) //80%
 $white60    = #ffffff99 //60%
-$white80    = rgba(255,255,255,.8) //80%
+$white85    = rgba(255,255,255,.85) //80%
 
+
+//动画 配置
+$easeInOutStd = cubic-bezier(.75,0,.5,1)
+$easeInStd = cubic-bezier(.55, .055, .675, .19)
+$easeOutStd = cubic-bezier(.215, .61, .355, 1)
+$stdt = .15s all linear
+$longt = .6s all cubic-bezier(.645, .045, .355, 1)
 
 //v2 配置
-$headerHeightV2 = 48px
+$navHeight = 40px 
 $navWidth = 220px
 $iconSize = 24px
 $logoWidth = 90px
 $sideBarV2Width = 200px
 $searchWidth = 0
 
+//v2 尺寸
+$bigNavHeight = 40px
+$navHeight = 40px 
 //v2 样式工具
 .clear-float
   &:after
@@ -45,8 +56,26 @@ $searchWidth = 0
     height:0; 
     visibility:hidden; 
     clear:both;
+.v-middle
+  position absolute
+  top 50%
+  transform translateY(-50%)
+.max-width-content
+  max-width 1180px
 
 
 //v2 默认配置
 body
-  overflow-x hidden
+  min-width 1200px
+
+.main-wrp-v2
+  background-color #fff 
+  margin 0 0 80px $navWidth
+  min-height 100vh
+  transition .9s margin $easeInOutStd 
+.v2.sidebar-hidden .main-wrp-v2
+  margin 0 0 80px 0
+  transition .9s margin $easeInOutStd 200ms
+.page-wrp-v2
+  background-color #fff
+  margin 0 80px 0 80px

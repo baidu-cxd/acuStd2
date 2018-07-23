@@ -5,14 +5,19 @@
 </template>
 
 <style lang="stylus">
+  @import './styles/V2.styl'
   .v2 .footer
-    width 100%
-    height 100px
-    background-color #000
+    transition .6s margin $easeInOutStd 200ms
+    margin-left $navWidth
+    height 40px
+    background-color #ebebeb
     p
       text-align center
-      line-height 100px
-      color #fff
-      opacity .5
+      line-height 40px
+      color #000
+      opacity .2
+  .v2.sidebar-hidden .footer
+    margin-left 0
+    transition .6s margin $easeInOutStd
 </style>
 

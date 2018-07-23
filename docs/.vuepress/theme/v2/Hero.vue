@@ -18,12 +18,13 @@ export default {
 @import './styles/v2.styl'
 .v2 .hero
   width 100%
-  height 10px
+  height 0px
   background-color #ffc107
   overflow hidden
   position relative
+  z-index 10
   &.has-hero
-    height 200px
+    height 240px
   img 
     width 100%
     min-width 1920px

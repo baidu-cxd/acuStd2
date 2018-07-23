@@ -1,10 +1,11 @@
 <template>
-  <div class="pageV2">
+  <div :class="['pageV2',frontmatterdata.grid? 'page-grid':' ',
+    this.frontmatterdata.hero? 'has-hero':' ']">
     <Content :custom="false" class="article"/>
   </div>
 </template>
 <script>
-import { resolvePage } from '../util'
+import { resolvePage } from './utilv2'
 export default {
   computed: {
     frontmatterdata () {
@@ -15,10 +16,12 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../styles/config.styl'
+@import './styles/V2.styl'
 @import './styles/articleV2.styl'
+@import './styles/layoutGrid.styl'
 .pageV2
-  background-color #fff
-  padding 56px 0 0px
+  width 100%
+  max-width 960px
+  margin auto
 </style>
 

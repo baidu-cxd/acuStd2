@@ -3,8 +3,8 @@
 //配置
 $h1Margin = 80px
 $h2Margin = 40px
-$h3Margin = 20px
-$h4Margin = 20px
+$h3Margin = 40px
+$h4Margin = 40px
 
 /*
  *
@@ -23,31 +23,38 @@ $h4Margin = 20px
 
 
 
+.pageV2.has-hero .content h1
+  margin-top -160px
+  position relative
+  z-index 110
+  color white
 .pageV2 .content
   /* 标题 */
   h1, h2, h3, h4, h5, h6,
     display block
     font-weight 500
     color $textColorDark
-    padding-top $headerHeight
+    padding-top 0
     &:hover
       a
         color #000
         cursor pointer
         opacity .1
   h1
-    margin ($h1Margin - $headerHeight) 0px 0px 0
+    margin ($h1Margin) 0px 0px 0
     font-size 42px
     line-height 64px
+    border-bottom 1px solid #ebebeb
+    padding-bottom 40px
   h2
-    margin ($h2Margin - $headerHeight) 0 20px
+    margin ($h2Margin) 0 20px
     font-size 22px
   h3
-    margin ($h3Margin - $headerHeight) 0px 10px 0
+    margin ($h3Margin) 0px 10px 0
     font-size 18px
     line-height 36px
   h4
-    margin ($h4Margin - $headerHeight) 0px 10px 0
+    margin ($h4Margin) 0px 10px 0
     font-size 16px
     line-height 30px
   a.header-anchor
@@ -64,7 +71,7 @@ $h4Margin = 20px
   p
     line-height 26px
     margin 10px 0
-    color $textColorMain
+    color #666
   strong
     font-weight 500
     color $textColorDark
@@ -72,7 +79,7 @@ $h4Margin = 20px
   ul, ol
     padding-left 16px
     margin 20px 0
-    color $textColorMain
+    color #666
     li
       line-height 26px
       padding-left 0px
@@ -89,7 +96,7 @@ $h4Margin = 20px
     color $stdBlue
     text-decoration none
     &:hover
-      color lighten($stdBlue, 10%)
+      color lighten(#108cee, 10%)
       text-decoration underline
   /* 代码 */
   code, kbd//代码样式
@@ -114,7 +121,7 @@ $h4Margin = 20px
   /* 分割线 */
   hr
     border 0
-    border-top 1px solid $borderColor
+    border-top 1px solid #ebebeb
     &.footnotes-sep
       margin-top 60px
       margin-bottom 40px
@@ -131,7 +138,7 @@ $h4Margin = 20px
     &:before
       content "脚注："
       opacity .5
-      color $textColorLight
+      color #999
       display block
       font-size 13px
       height 26px
@@ -159,15 +166,3 @@ $h4Margin = 20px
     min-width 80px
     padding 10px 15px
 
-
-
-
-  /* 移动端 */
- @media (max-width: $MQMobile)
-  .content 
-    h1
-      font-size 32px 
-      margin -60px 0 20px 0  
-    h2
-      font-size 22px 
-      margin -60px 0 20px 0  

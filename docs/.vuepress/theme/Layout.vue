@@ -28,12 +28,14 @@
   <div class="theme-container v2"
     v-else-if="edition === 'v2'"
     :class="pageClasses">
-    <NavV2/>
-    <Hero/>
-    <div class="std-wrp-v2 main-wrp-v2">   
-      <PageV2/>
+    <NavV2 @toggle-sidebar-hidden="toggleSidebarHidden"/>
+    <div class="main-wrp-v2">   
+      <Hero/>
+      <div class="page-wrp-v2">  
+        <PageV2/>
+        <PrevNext :sidebar-items="sidebarItems"/>
+      </div>  
     </div>
-    <PrevNext :sidebar-items="sidebarItems"/>
     <Footer/>
   </div>
 </template>
@@ -63,6 +65,7 @@ export default {
   data () {
     return {
       isSidebarOpen: false,
+      isSidebarHidden: false,
     }
   },
   computed: {
@@ -110,6 +113,7 @@ export default {
         {
           'no-navbar': !this.shouldShowNavbar,
           'sidebar-open': this.isSidebarOpen,
+          'sidebar-hidden': this.isSidebarHidden,
           'no-sidebar': !this.shouldShowSidebar,
         },
         userPageClass
@@ -170,6 +174,9 @@ export default {
     },
     toggleSidebar (to) {
       this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
+    },
+    toggleSidebarHidden (to) {
+      this.isSidebarHidden = typeof to === 'boolean' ? to : !this.isSidebarHidden
     },
     // side swipe
     onTouchStart (e) {

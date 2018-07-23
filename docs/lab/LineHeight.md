@@ -2,6 +2,7 @@
 author: dz
 title: 行高实验室
 sidebarDepth: 0
+edition: v2
 ---
 
 # 行高实验室
