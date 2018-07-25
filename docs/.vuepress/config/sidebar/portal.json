@@ -1,0 +1,37 @@
+[
+    { 
+      "text": "Portal 首页", 
+      "link": "./", 
+      "icon": "http://yihan.gz.bcebos.com/icon16.png"
+    },
+    { 
+      "text": "风格", 
+      "link": "Style", 
+      "icon": "http://yihan.gz.bcebos.com/icon16.png"
+    },
+    {
+      "text": "原子组件",
+      "link": "Atom", 
+      "icon": "http://yihan.gz.bcebos.com/icon16.png"
+    },
+    { 
+      "text": "页面规范",
+      "link": "Page",
+      "icon": "http://yihan.gz.bcebos.com/icon16.png"
+    },
+    { 
+      "text": "Design Token",
+      "link": "DesignToken",
+      "icon": "http://yihan.gz.bcebos.com/icon16.png"
+    },
+    { 
+      "text": "CMS 组件状态管理",
+      "link": "CMS",
+      "icon": "http://yihan.gz.bcebos.com/icon16.png"
+    },
+    {
+      "text": "资源",
+      "link": "Resource", 
+      "icon": "http://yihan.gz.bcebos.com/icon16.png"
+    }
+]

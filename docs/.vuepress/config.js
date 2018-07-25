@@ -18,6 +18,7 @@ const topNavData = require('./config/topNavData.json')
 //v2-动画／lab规范导航数据
 const animateNav = require('./config/sidebar/animate.json')
 const labNav = require('./config/sidebar/lab.json')
+const portalNav = require('./config/sidebar/portal.json')
 
 module.exports = {
     title: '百度云设计规范',
@@ -28,6 +29,7 @@ module.exports = {
       sidebar: sidebarData,
       topNav: topNavData,
       animateNav: animateNav,
+      portalNav: portalNav,
       labNav: labNav,
       logo: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg',
       logoWhite: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxdw.svg',

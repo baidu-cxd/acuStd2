@@ -14,7 +14,7 @@ export default {
         default: function() {
           return {
           'fontSize': 12,
-          'lineHeiht': 22
+          'lineHeiht': 24
           }
         }
       },
@@ -43,8 +43,9 @@ export default {
         const c = this.big.fontSize
         const d = this.big.lineHeiht
         const e = (d - b) / (c - a) * (i - a) + b
-        const h = Math.floor(e)
-        return h
+        const f = e/2
+        const g = Math.round(f)*2
+        return g
       }
     }
 }

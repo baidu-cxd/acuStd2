@@ -1,10 +1,10 @@
 @require './v2'
 
 //配置
-$h1Margin = 80px
+$h1Margin = 60px
 $h2Margin = 40px
-$h3Margin = 40px
-$h4Margin = 40px
+$h3Margin = 30px
+$h4Margin = 20px
 
 /*
  *
@@ -41,7 +41,7 @@ $h4Margin = 40px
         cursor pointer
         opacity .1
   h1
-    margin ($h1Margin) 0px 0px 0
+    margin ($h1Margin) 0px 40px 0
     font-size 42px
     line-height 64px
     border-bottom 1px solid #ebebeb
@@ -71,7 +71,7 @@ $h4Margin = 40px
   p
     line-height 26px
     margin 10px 0
-    color #666
+    color $black60
   strong
     font-weight 500
     color $textColorDark
@@ -91,7 +91,7 @@ $h4Margin = 40px
     max-width 100%
     margin 10px 0
   /* 连接 */
-  p a,li a
+  p a,li a,tbody a
     font-weight normal
     color $stdBlue
     text-decoration none
@@ -157,12 +157,13 @@ $h4Margin = 40px
     border 1px solid #dfe2e5
     color $textColorMain
   th 
-    line-height 52px
-    text-align center
+    padding 6px 15px
+    line-height 26px
+    text-align left
     background-color #fbfbfb
     color $textColorDark
   td
     line-height 26px
     min-width 80px
-    padding 10px 15px
+    padding 6px 15px
 

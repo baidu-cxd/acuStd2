@@ -7,7 +7,7 @@
 <style lang="stylus">
   @import './styles/V2.styl'
   .v2 .footer
-    transition .6s margin $easeInOutStd 200ms
+    transition .6s margin $easeOutStd 200ms
     margin-left $navWidth
     height 40px
     background-color #ebebeb
@@ -18,6 +18,6 @@
       opacity .2
   .v2.sidebar-hidden .footer
     margin-left 0
-    transition .6s margin $easeInOutStd
+    transition .6s margin $easeInStd
 </style>
 

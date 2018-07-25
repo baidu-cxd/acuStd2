@@ -28,7 +28,12 @@
               v-for="(item,i) in userLinks"
               v-if="item.link.split('/')[1] == nowPage"
               :class="['nav-guide-link','nav-now']">
-              <span>{{item.text}}</span>
+              <span class="text">{{item.text}}</span>
+              <div class="arr">
+                <span class="point1 point"></span>
+                <span class="point2 point"></span>
+                <span class="point3 point"></span>
+              </div>
             </div>
           <!--全部页面-->  
             <div
@@ -74,7 +79,7 @@ export default {
       this.topNavShow = !this.topNavShow
     },
     delay (i) {
-      return "transition-delay:" + 50 * i + "ms;"
+      return "transition-delay:" + (50 * i + 50) + "ms;"
     }
   }
 }
@@ -84,6 +89,66 @@ export default {
 @import './styles/v2.styl'
 
 // 样式
+
+//顶部的三个点
+.showTop .nav-now:hover .arr
+  span.point
+    opacity .8
+    width 16px
+    height 1px
+    border-radius 0
+    &.point1
+      top 9px
+      transform rotateZ(45deg) 
+      left 3px  
+    &.point2
+      transform scale(0)
+      width 2px
+    &.point3
+      top 9px
+      transform rotateZ(-45deg) 
+      left 3px       
+.nav-now:hover .arr
+  span.point
+    opacity .8
+    width 10px
+    height 1px
+    border-radius 0
+    &.point1
+      top 9px
+      transform rotateZ(45deg) 
+    &.point2
+      transform scale(0)
+      width 2px
+    &.point3
+      top 9px
+      transform rotateZ(-45deg) 
+      left 9px    
+.nav-now .arr
+  width 20px
+  height 20px
+  position absolute
+  //background-color #000
+  right 20px
+  top 10px
+  overflow hidden
+  span.point 
+    display block
+    width 2px
+    height 2px
+    border-radius 100px
+    background-color #fff
+    padding 0
+    position absolute
+    top 8px
+    opacity .5
+    transition $stdt
+    &.point1
+      left 2px
+    &.point2
+      left 9px
+    &.point3
+      left 16px
 .controller-1//收起后的汉堡
   position fixed
   width 40px
@@ -91,7 +156,7 @@ export default {
   background-color #f5f5f5
   top 0
   left 0
-  transition .6s all $easeInOutStd 400ms 
+  transition .4s all $easeInOutStd 400ms 
   &:hover
     cursor pointer
     .humberger
@@ -120,10 +185,11 @@ export default {
       top 26px
 .v2.sidebar-hidden
   .nav-v2
-    transform translateX( - $navWidth)
+    transition .4s all $easeInStd
+    transform translateX( - $navWidth) //隐藏动画
   .controller-1
     transform translateX($navWidth)
-    transition .6s all $easeInOutStd .6s 
+    transition .4s all $easeInOutStd .4s 
 .nav-content
   position absolut 
   top 0
@@ -165,7 +231,7 @@ export default {
       &.hum3
         top 17px
 .nav-v2
-  transition .6s all $easeInStd
+  transition .4s all $easeOutStd
   width $navWidth
   position fixed
   top 0
@@ -195,29 +261,30 @@ export default {
     .nav-guide-link
       &.nav-other
         transform translateX(0px)
-        transition .6s all $easeInOutStd  
+        transition .4s all $easeOutStd 
         opacity 1
   width 100%
   height $bigNavHeight
-  transition .6s all $easeInOutStd //展开动画
+  transition .4s all $easeInOutStd //展开动画
   overflow-y hidden
   .nav-guide-link
     height $bigNavHeight 
     &.nav-now
       cursor pointer
-      span 
+      position relative
+      span.text 
         padding 0 20px
         color $white85
   .nav-guide-link
     &.nav-other
       transform translateX(-40px)
-      transition .6s all $easeInOutStd
+      transition .4s all $easeInStd 
       opacity 0
     a
       color $white45//主导航文字颜色
       &:hover
         color #fff
-    span 
+    span.text
       line-height $bigNavHeight 
       display block
       font-size 14px

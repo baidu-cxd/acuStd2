@@ -1,6 +1,7 @@
 <template>
   <div class="sub-nav-v2">
     <div class="sub-nav-content">
+      <!-- 动画文档的导航栏 -->
       <transition name="fade">
       <ul v-show="nowPage == 'animate'">
         <li v-for="(item,i) in animateNav" :key="item.link">
@@ -11,6 +12,13 @@
       <transition name="fade">
       <ul v-show="nowPage == 'lab'">
         <li v-for="(item,i) in labNav" :key="item.link">
+            <NavLinkV2 :item="item" :hasIcon="false"/>
+        </li>
+      </ul>
+      </transition>
+      <transition name="fade">
+      <ul v-show="nowPage == 'portal'">
+        <li v-for="(item,i) in portalNav" :key="item.link">
             <NavLinkV2 :item="item" :hasIcon="false"/>
         </li>
       </ul>
@@ -47,9 +55,9 @@
     top 0
 
 .fade-enter-active
-  transition: all .6s $easeInOutStd 200ms
+  transition: all .4s $easeInOutStd 50ms
 .fade-leave-active 
-  transition: all .3s $easeInOutStd
+  transition: all .4s $easeInOutStd
 .fade-enter
   opacity: 0
   transform translateX(-20px)
@@ -71,6 +79,9 @@ export default {
     },
     labNav () {
       return this.$site.themeConfig.labNav
+    },
+    portalNav () {
+      return this.$site.themeConfig.portalNav
     },
   }
 }
