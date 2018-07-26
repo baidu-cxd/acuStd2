@@ -23,5 +23,4 @@ export default {
   width 100%
   max-width 960px
   margin auto
-</style>
 
