@@ -16,8 +16,8 @@
         <div class="logo-content">
           <router-link :to="$localePath" class="home-link">
             <img class="logo"
-              v-if="$site.themeConfig.logoWhite"
-              :src="$withBase($site.themeConfig.logoWhite)">
+              v-if="$site.themeConfig.logo"
+              :src="$withBase($site.themeConfig.logo)">
           </router-link>
         </div>
         <!--页面级别导航-->  
@@ -137,7 +137,7 @@ export default {
     width 2px
     height 2px
     border-radius 100px
-    background-color #fff
+    background-color #000
     padding 0
     position absolute
     top 8px
@@ -191,7 +191,6 @@ export default {
     transform translateX($navWidth)
     transition .4s all $easeInOutStd .4s 
 .nav-content
-  position absolut 
   top 0
   left 0
   .controller
@@ -203,6 +202,7 @@ export default {
     z-index 100
     opacity .4
     &:hover
+      opacity 1
       cursor pointer
       .humberger
         &.hum1
@@ -223,7 +223,7 @@ export default {
       position absolute
       left 0
       z-index 101
-      background-color #fff
+      background-color #000
       &.hum1
         top 5px
       &.hum2
@@ -237,14 +237,15 @@ export default {
   top 0
   left 0
   bottom 0
-  background-color #212121
+  background-color #f5f5f5
+  border-right 1px solid #ebebeb
   z-index 21
 .nav-v2 .logo-content// logo
   width 100%
   height 80px
   position relative
   display block
-  background-color #212121
+  background-color #f5f5f5
   .logo
     height 18px
     top 60%
@@ -274,16 +275,16 @@ export default {
       position relative
       span.text 
         padding 0 20px
-        color $white85
+        color $black85
   .nav-guide-link
     &.nav-other
       transform translateX(-40px)
       transition .4s all $easeInStd 
       opacity 0
     a
-      color $white45//主导航文字颜色
+      color $black60//主导航文字颜色
       &:hover
-        color #fff
+        color #000
     span.text
       line-height $bigNavHeight 
       display block

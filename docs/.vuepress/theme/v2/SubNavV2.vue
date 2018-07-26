@@ -34,7 +34,7 @@
     content ""
     display block
     height 1px
-    background-color $white10 
+    background-color $black10
     margin 10px 20px
   ul
     padding 0
@@ -44,10 +44,13 @@
       line-height $navHeight 
       cursor pointer
       padding 0 20px
-      color $white45 
+      color $black60
       transition $stdt
       &:hover
-        color #fff 
+        color #000
+    a.router-link-exact-active
+      color #108cee
+      font-weight 500
 .sub-nav-content
   position relative
   ul
