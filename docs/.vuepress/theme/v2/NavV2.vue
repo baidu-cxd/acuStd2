@@ -153,7 +153,6 @@ export default {
   position fixed
   width 40px
   height 40px
-  background-color #f5f5f5
   top 0
   left 0
   transition .4s all $easeInOutStd 400ms 

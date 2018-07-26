@@ -47,9 +47,9 @@
       color $black60
       transition $stdt
       &:hover
-        color #000
+        color #108cee
     a.router-link-exact-active
-      color #108cee
+      color #000
       font-weight 500
 .sub-nav-content
   position relative
