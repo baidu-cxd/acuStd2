@@ -29,12 +29,12 @@
     v-else-if="edition === 'v2'"
     :class="pageClasses">
     <NavV2 @toggle-sidebar-hidden="toggleSidebarHidden"/>
-    <div class="main-wrp-v2">   
+    <div class="main-wrp-v2">
       <Hero/>
-      <div class="page-wrp-v2">  
+      <div class="page-wrp-v2">
         <PageV2/>
         <PrevNext :sidebar-items="sidebarItems"/>
-      </div>  
+      </div>
     </div>
     <Footer/>
   </div>
