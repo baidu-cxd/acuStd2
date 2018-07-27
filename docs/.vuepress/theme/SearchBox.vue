@@ -172,8 +172,8 @@ export default {
       width 160px
       padding-left 36px
       cursor auto
-      border-color $accentColor
-      color $textColorMain
+      border-color #999999 
+      color $textStd 
   .suggestions
     background #fff
     width 20rem
@@ -190,7 +190,7 @@ export default {
     padding 0.4rem 0.6rem
     border-radius 4px
     a
-      color lighten($textColorDark, 35%)
+      color lighten($textDark, 35%)
       .page-title
         font-weight 500
       .header
@@ -199,7 +199,7 @@ export default {
     &.focused
       background-color #f3f4f5
       a
-        color $accentColor
+        color #999999 
 
 @media (max-width: $MQNarrow)
   .search-box input

@@ -178,7 +178,7 @@ sidebarDepth: 0
 标题/重要文本色
 :::
 
-::: color #666666
+::: color $textStd
 普通文本色
 :::
 

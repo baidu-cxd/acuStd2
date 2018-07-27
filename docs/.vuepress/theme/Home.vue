@@ -193,7 +193,7 @@ export default {
     padding 2.5rem
     border-top 1px solid $borderColor
     text-align center
-    color lighten($textColorDark, 25%)
+    color lighten($textDark, 25%)
 
 @media (max-width: $MQMobile)
   #main-img-tree,#main-img-birds

@@ -77,7 +77,7 @@ export default {
     &:hover
       cursor pointer
       border 1px solid darken($borderColor,10%)
-      background-color $lightBgcolor
+      background-color #f7f7f7
       transition all .6s $easeOutStd
     &:first-child
       margin-left 0
@@ -177,7 +177,7 @@ export default {
       line-height 90px
       text-align center
       font-size 14px
-      color $textColorMain
+      color $textStd 
 
 .content .page-component-wrp.ani-base.list,.page-component-wrp.ani-base.list-2
   .wrp

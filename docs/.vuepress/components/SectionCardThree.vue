@@ -50,7 +50,7 @@ h3
 p 
   font-size 14px
   line-height 26px
-  color #666666
+  color $textStd
 
 .modal-section
   .section-viewer

@@ -33,7 +33,7 @@ $h4Margin = 20px
   h1, h2, h3, h4, h5, h6,
     display block
     font-weight 500
-    color $textColorDark
+    color $textDark
     padding-top 0
     &:hover
       a
@@ -74,12 +74,12 @@ $h4Margin = 20px
     color $black60
   strong
     font-weight 500
-    color $textColorDark
+    color $textDark
   /* 列表 */
   ul, ol
     padding-left 16px
     margin 20px 0
-    color #666
+    color $textStd 
     li
       line-height 26px
       padding-left 0px
@@ -103,7 +103,7 @@ $h4Margin = 20px
     font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
   p code,li code//行内代码
     background-color #0000000d
-    color #666666
+    color $textStd
     padding 4px 6px
     display inline
     font-size 12px
@@ -157,13 +157,13 @@ $h4Margin = 20px
       background-color #ffff
   th, td
     //border 1px solid #dfe2e5
-    color $textColorMain
+    color $textStd 
   th 
     padding 6px 15px
     line-height 26px
     text-align left
     background-color #fbfbfb
-    color $textColorDark
+    color $textDark
   td
     line-height 26px
     min-width 80px

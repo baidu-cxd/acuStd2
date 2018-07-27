@@ -148,7 +148,7 @@ function find (page, items, offset) {
 .edit-link.content
   padding-top 0 !important
   a
-    color lighten($textColorDark, 25%)
+    color lighten($textDark, 25%)
     margin-right 0.25rem
 
 .v1 .page-nav.content:not(.custom)

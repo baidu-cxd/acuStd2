@@ -26,7 +26,7 @@ sidebarDepth: 0
 滑过状态
 :::
 
-::: color #047BD8
+::: color #047bd8
 点击状态
 :::
 </div>
@@ -74,7 +74,7 @@ sidebarDepth: 0
 价格、折扣、促销等需要突出提示
 :::
 
-:::color #F5A623
+:::color #f5a623
 普通的标签背景辅助色
 :::
 
@@ -98,15 +98,15 @@ sidebarDepth: 0
 
 页面中某一些特定辅助修饰的浅灰色。主要为卡片、表格描边，板块背景色等
 
-:::color-l #F5F5F5
+:::color-l #f5f5f5
 板块底色
 :::
 
-:::color-l #EBEBEB
+:::color-l #ebebeb
 卡片描边、表格描边、分割线等颜色
 :::
 
-:::color-l #FBFBFB
+:::color-l #fbfbfb
 表头颜色
 :::
 

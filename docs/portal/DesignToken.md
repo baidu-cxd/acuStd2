@@ -14,40 +14,29 @@ edition: v2
 | ---   |--- |--- |  
 | $stdBlue | #108cee  | 百度云规范蓝色 |
 | $stdBlueHover | #209bfd | 百度云规范蓝色对应 :hover |
-| $stdBlueActive | #047BD8   | 百度云规范蓝色对应 :active |
-| $stdRed | #D0021B   | 百度云规范红色，用于重要信息的标记|
-| $stdYellow | #F5A623   | 百度云规范黄色，用于提示信息 |
-| $bgLight | #F5F5F5  | 板块背景用色 |
+| $stdBlueActive | #047bd8   | 百度云规范蓝色对应 :active |
+| $stdRed | #d0021b  | 百度云规范红色，用于重要信息的标记|
+| $stdYellow | #f5a623   | 百度云规范黄色，用于提示信息 |
+| $bgLight | #f5f5f5  | 板块背景用色 |
 | $borderColor | #ebebeb   | 边框颜色 |
-| $tableColor | #FBFBFB   | 表头用色 |
+| $tableColor | #fbfbfb   | 表头用色 |
 
 ## 文字
 
 | Token | 值 | 描述 | 
 | ---   |--- |--- |  
-| $fontH | #000000d9   | 标题文字用色 |
-| $fontP | #00000099   | 一般文字用色 |
-| $fontPLight | #00000066   | 浅色文字用色 |
-| $fontWhiteH   | #ffffff     | 标题文字用色 |
-| $fontWhiteP| #ffffff99   | 一般文字用色 |
-| $fontWhitePLight | #ffffff66   | 浅色文字用色 |
+| $textDark| #000000d9   | 标题文字用色 |
+| $textStd | #00000099   | 一般文字用色 |
+| $textLight | #00000066   | 浅色文字用色 |
 
-## 尺寸
-
-| Token | 值 | 描述 | 
-| ---   |--- |--- |  
-| $spaceStd | 20px  | 标准尺寸单元 |
-| $paddingStd | 30px  | 用于卡片内间距尺寸单元 |
-| $paddingBig | 40px  | 用于卡片内间距尺寸单元 |
-| $sectionPadding | 80px  | 用于板块内间距 |
 
 
 ## 投影
 
 | Token | 值 | 描述 | 
 | ---   |--- |--- |  
-| $bigShadow | 0 2px 30px 0 rgba(0, 0, 0, 0.1)  | 比较重的投影 |
-| $stdShadow | 0 2px 10px 0 rgba(0, 0, 0, 0.1)  | 一般的投影 |
+| $shadowStd | 0 2px 10px 0 rgba(0, 0, 0, 0.1)  | 一般的投影 |
+| $shadowBig | 0 2px 30px 0 rgba(0, 0, 0, 0.1)  | 比较重的投影 |
 
 
 
