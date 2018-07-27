@@ -1,5 +1,12 @@
 <template>
   <div class="line-height">
+    <div class="size-item item-head">
+    <p class="label">输入字号查询:</p>
+    <input v-model="changeAsk" placeholder="输入字号查询">
+    <p :style="resourveStyle(changeAsk)">字号: {{ changeAsk }}  px
+      <br>行高:{{resourveLineHeiht(changeAsk)}} px</p>
+    </div>
+    <h3>百度云官网字号:</h3>
     <div v-if="ask" v-for="i in ask" class="size-item"
     :style="resourveStyle(i)">
       字号: {{i}}  行高:{{resourveLineHeiht(i)}} <br> 对酒当歌，人生几何 <br> 譬如朝露，去日苦多
@@ -8,6 +15,11 @@
 </template>
 <script>
 export default {
+    data() {
+      return {
+        changeAsk: 12
+      }
+    },
     props: {
       small: {
         type: Object,
@@ -53,9 +65,29 @@ export default {
 
 <style lang="stylus">
 .line-height
+  width 100%
+  overflow hidden
+  border 1px solid #ebebeb
+  margin-top 40px
+  h3
+    padding-left 40px
   .size-item
-    width 400px
-    border 1px solid #ebebeb
-    margin 40px 0
-    padding 0 10px
+    box-sizing border-box
+    border-bottom 1px solid #ebebeb
+    margin 0 40px
+    padding 20px 0
+  .item-head
+    margin 0 0
+    padding 20px 40px
+    input 
+      height 28px
+      width 300px
+      font-size 14px
+      padding 0 10px
+      color #666
+    p
+      margin 20px 0 0 0
+      color #999
+    p.label
+      margin-bottom 10px
 </style>

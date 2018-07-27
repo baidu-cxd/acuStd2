@@ -10,18 +10,8 @@
       "icon": "http://yihan.gz.bcebos.com/icon16.png"
     },
     {
-      "text": "动画实验室",
-      "link": "Animate", 
-      "icon": "http://yihan.gz.bcebos.com/icon16.png"
-    },
-    {
-      "text": "品牌实验室",
-      "link": "Brand", 
-      "icon": "http://yihan.gz.bcebos.com/icon16.png"
-    },
-    { 
-      "text": "交互实验室",
-      "link": "UX",
+      "text": "Markdown 实验室",
+      "link": "MarkDownLayout", 
       "icon": "http://yihan.gz.bcebos.com/icon16.png"
     }
 ]
