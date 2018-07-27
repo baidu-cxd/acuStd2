@@ -6,7 +6,7 @@
     <p :style="resourveStyle(changeAsk)">字号: {{ changeAsk }}  px
       <br>行高:{{resourveLineHeiht(changeAsk)}} px</p>
     </div>
-    <h3>百度云官网字号:</h3>
+    <h3>百度云官网规范:</h3>
     <div v-if="ask" v-for="i in ask" class="size-item"
     :style="resourveStyle(i)">
       字号: {{i}}  行高:{{resourveLineHeiht(i)}} <br> 对酒当歌，人生几何 <br> 譬如朝露，去日苦多
@@ -71,6 +71,7 @@ export default {
   margin-top 40px
   h3
     padding-left 40px
+    margin-bottom 0
   .size-item
     box-sizing border-box
     border-bottom 1px solid #ebebeb

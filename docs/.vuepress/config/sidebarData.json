@@ -61,7 +61,8 @@
         "widget/Modal",     
         "widget/Drawer",      
         "widget/Tips",      
-        "widget/Badge"      
+        "widget/Badge",
+        "widget/Transfer"      
 
       ]
     },
