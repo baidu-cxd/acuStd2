@@ -2,24 +2,10 @@
   <div class="sub-nav-v2">
     <div class="sub-nav-content">
       <!-- 动画文档的导航栏 -->
-      <transition name="fade">
-      <ul v-show="nowPage == 'animate'">
-        <li v-for="(item,i) in animateNav" :key="item.link">
-            <NavLinkV2 :item="item" :hasIcon="false"/>
-        </li>
-      </ul>
-      </transition>
-      <transition name="fade">
-      <ul v-show="nowPage == 'lab'">
-        <li v-for="(item,i) in labNav" :key="item.link">
-            <NavLinkV2 :item="item" :hasIcon="false"/>
-        </li>
-      </ul>
-      </transition>
-      <transition name="fade">
-      <ul v-show="nowPage == 'portal'">
-        <li v-for="(item,i) in portalNav" :key="item.link">
-            <NavLinkV2 :item="item" :hasIcon="false"/>
+      <transition name="fade-nav">
+      <ul :key="nowPage">
+        <li v-for="(item,i) in resolveItem()">
+          <NavLinkV2 :item="item" :hasIcon="false"/>
         </li>
       </ul>
       </transition>
@@ -57,14 +43,14 @@
     position absolute
     top 0
 
-.fade-enter-active
+.fade-nav-enter-active
   transition: all .4s $easeInOutStd 50ms
-.fade-leave-active 
+.fade-nav-leave-active 
   transition: all .4s $easeInOutStd
-.fade-enter
+.fade-nav-enter
   opacity: 0
   transform translateX(-20px)
-.fade-leave-active 
+.fade-nav-leave-active 
   opacity: 0
   transform translateX(20px)
 </style>
@@ -86,6 +72,11 @@ export default {
     portalNav () {
       return this.$site.themeConfig.portalNav
     },
+  },
+  methods: {
+    resolveItem () { 
+      return this[this.nowPage+"Nav"]
+    }
   }
 }
 </script>
