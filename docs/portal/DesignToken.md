@@ -6,35 +6,57 @@ edition: v2
 
 # Design Token
 
+Design Token 是一个设计前端协作的工具，是为了提高页面样式的规范性和统一性和后期修改的灵活性
+
+::: more :::
+
+### 定义
+
+Design Token (设计变量) 是设计系统中的原子级单元, 它们是命名实体，用于存储视觉设计属性。我们使用它们代替编码值（例如颜色的十六进制值或间距的像素值），以便为 UI 开发维护可扩展且一致的可视系统
+
+
+### 为什么要这么做？
+
+**确保样式统一:** &nbsp;对两个不同的按钮组件，如果使用同样的颜色，那么我们可以规定一个 token ,在组件使用这个 token ，以确保统一
+
+**约束设计规范:** &nbsp;设计师站在更高的层面进行设计：不去思考具体每个位置的样式，而是思考某个类型的样式，然后将类型注册为 token
+
+**更改样式灵活:** &nbsp;如果我们希望让页面中某个用于按钮的颜色都替换成另一个颜色，那么我们就可以直接在 token 中变更数值
+
+**降低沟通成本:** &nbsp;Design Token 可以作为设计前端沟通的桥梁和页面样式控制的唯一来源
+
+::: more-end :::
+
 [[toc]]
 
-## 颜色规范
+
+## 一般颜色
 
 | Token | 值 | 描述 | 
 | ---   |--- |--- |  
-| @blue-std | #108cee  | 标准蓝色，也是品牌主色 |
-| @blue-std-hover | #209bfd | 品牌标准蓝色蓝色对应 :hover |
-| @blue-std-active | #047bd8   | 品牌标准色对应 :active |
-| @red-std | #d0021b  | 标准红色，很重要的信息使用|
-| @yellow-std | #f5a623   | 标准黄色，用于提示，比红色级别稍弱 |
-| @bg-color-dark <i class="iconfont icon-new-tag"></i>| #0f1012  | 背景用最黑色，用于头图背景等情况 |
-| @bg-color-black <i class="iconfont icon-new-tag"></i>| #303030  | 解决方案页面内容板块深色背景 |
-| @bg-color-light | #f5f5f5  | 背景用标准亮灰色，用于页面内的板块划分 |
-| @border-color | #ebebeb   | 边框颜色 |
-| @thead-color | #fbfbfb   | 表头用色 |
+| @brand-color-main |  <i class="color brand-color-main"></i> #108cee  | 品牌标准色 |
+| @brand-color-main-hover | <i class="color brand-color-main-hover"></i> #209bfd | 品牌标准色对应 :hover |
+| @brand-color-main-active | <i class="color brand-color-main-active"></i> #047bd8   | 品牌标准色对应 :active |
+| @emphasize-color | <i class="color emphasize-color"></i> #d0021b  | 需要突出强调的时候使用的颜色 |
+| @tips-color | <i class="color tips-color"></i> #f5a623   | 标准黄色，用于提示，比红色级别稍弱 |
+| @bg-color-dark | <i class="color bg-color-dark"></i> #0f1012  | 背景用最黑色，用于头图背景等情况 |
+| @bg-color-black | <i class="color bg-color-black"></i> #303030  | 解决方案页面内容板块深色背景 |
+| @bg-color-light | <i class="color bg-color-light"></i> #f5f5f5  | 背景用标准亮灰色，用于页面内的板块划分 |
+| @border-color | <i class="color border-color"></i>#ebebeb   | 边框颜色 |
+| @thead-color | <i class="color thead-color"></i>#fbfbfb   | 表头用色 |
 
 
 
-## 文字
+## 文字颜色
 
 | Token | 值 | 描述 | 
 | ---   |--- |--- |  
-| @text-black-heading| rgba(0, 0, 0, .85)   | 标题文字用色 |
-| @text-black-std | rgba(0, 0, 0, .6)  | 一般文字用色 |
-| @text-black-label | rgba(0, 0, 0, .4)  | 浅色文字用色，一般用于标签和注释情况 |
-| @text-white-heading| rgba(255, 255, 255, 1)| 标题文字用色-深色背景 |
-| @text-white-std | rgba(255, 255, 255, .8)  | 一般文字用色-深色背景  |
-| @text-white-label | rgba(255, 255, 255, .5)  | 浅色文字用色-深色背景  |
+| @text-black-heading|  <i class="color text-black-heading">A</i> rgba(0, 0, 0, .85)   | 标题文字用色 |
+| @text-black-std | <i class="color text-black-std">A</i> rgba(0, 0, 0, .6)  | 一般文字用色 |
+| @text-black-weak | <i class="color text-black-weak">A</i> rgba(0, 0, 0, .4)  | 浅色文字用色，一般用于标签和注释情况 |
+| @text-white-heading| <i class="color text-white-heading">A</i> rgba(255, 255, 255, 1)| 标题文字用色-深色背景 |
+| @text-white-std | <i class="color text-white-std">A</i> rgba(255, 255, 255, .75)  | 一般文字用色-深色背景  |
+| @text-white-weak | <i class="color text-white-weak">A</i> rgba(255, 255, 255, .5)  | 浅色文字用色-深色背景  |
 
 
 
@@ -47,7 +69,7 @@ edition: v2
 
 
 
-## 动画规范
+## 动画
 
 | Token | 值 | 描述 | 
 | ---   |--- |--- |  
@@ -66,30 +88,28 @@ edition: v2
 | @time-longer | 800ms | 更慢的动画的时间 |
 | @delay-std | 50ms  | 组件内的序列动画间距时间 |
 | @delay-long | 200ms  | 组件内的序列动画较长的间距时间 |
-| @transition-std | @time-std all @ease-in-out-std <i class="iconfont icon-new-tag"></i>  | 标准过渡: transition: @transition-std  |
+| @transition-std | @time-std all @ease-in-out-std   | 标准过渡: transition: @transition-std  |
 
 
 ## 命名规范
 
-`@[样式用途] - [后缀]`
+`@[样式用途] - [样式类型] - [后缀]`
 
-#### 样式用途
+1. 如果某种情况下的样式仅有一种，可以省略后缀
 
-样式用途需要能让人理解这个 token 对应的是什么用途的样式内容，比如“用于动画延时参数控制”，则 `[样式用途]` 值为 `delay`   
+2. 推荐后缀带有一定的语义，如果是难以找到合适的语义，在考虑用 1，2，3
 
-#### 后缀
+3. 后缀可以有多个
 
-1. 后缀一般用于一个用途的样式有多种级别的时候，所以后缀一般是表示程度的修饰词**
+#### 举例
 
-    如：`@delay-std` 是标准的间隔时间 `@delay-long` 则是较长的间隔时间
+`@brand-color-main`&nbsp; 主品牌色
 
-2. 有一些 token 过短，也需要修饰词占位，常见的占位修饰词为 `std` (standard 的缩写)
+`@brand-color-main-hover` &nbsp; 主品牌色对应的 hover 样式
 
-    如: `@yellow-std`
+`@border-color` &nbsp; border 使用的颜色 
 
-3. 有一些 token 一般不会有非标准情况的用法，也不过短，则没有修饰词
 
-    如: `@border-color ` border 的颜色一般是没有其它情况的
 
 
 

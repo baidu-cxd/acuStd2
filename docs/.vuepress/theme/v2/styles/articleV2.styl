@@ -6,6 +6,8 @@ $h2Margin = 40px
 $h3Margin = 30px
 $h4Margin = 20px
 
+$toTop = 30px
+
 /*
  *
  * page 样式
@@ -36,20 +38,24 @@ $h4Margin = 20px
     color $textDark
     padding-top 0
   h1
-    margin ($h1Margin) 0px 40px 0
+    margin ($h1Margin - $toTop) 0px 40px 0
     font-size 42px
     line-height 64px
     border-bottom 1px solid #ebebeb
     padding-bottom 40px
+    padding-top $toTop
   h2
-    margin ($h2Margin) 0 20px
+    margin ($h2Margin - $toTop) 0 20px
+    padding-top $toTop
     font-size 22px
   h3
-    margin ($h3Margin) 0px 10px 0
+    margin ($h3Margin - $toTop) 0px 10px 0
+    padding-top $toTop
     font-size 18px
     line-height 36px
   h4
-    margin ($h4Margin) 0px 10px 0
+    margin ($h4Margin - $toTop) 0px 10px 0
+    padding-top $toTop
     font-size 15px
     line-height 26px
   a.header-anchor
@@ -66,7 +72,7 @@ $h4Margin = 20px
   p
     line-height 26px
     margin 10px 0
-    color $black60
+    color $textStd 
   strong
     font-weight 500
     color $textDark
@@ -155,12 +161,86 @@ $h4Margin = 20px
     color $textStd 
   th 
     padding 6px 15px
-    line-height 30px
+    line-height 32px
     text-align left
     background-color #fbfbfb
     color $textDark
   td
-    line-height 30px
+    line-height 32px
     min-width 80px
     padding 6px 15px
 
+
+//色彩控制器
+i.color
+  display inline-block
+  width 16px
+  height 16px
+  border-radius 1px
+  vertical-align middle
+  margin-right 4px
+  box-sizing border-box
+  font-size 12px
+  line-height 14px
+  text-align center
+  font-style normal
+
+.brand-color-main
+  background-color #108cee
+
+.brand-color-main-hover
+  background-color #209bfd
+
+.brand-color-main-active
+  background-color #047bd8
+
+.emphasize-color
+  background-color #d0021b
+
+.tips-color
+  background-color #f5a623
+
+.bg-color-dark
+  background-color #0f1012
+
+.bg-color-black
+  background-color #303030
+
+.bg-color-light
+  background-color #f5f5f5
+  border 1px solid #ccc
+
+.border-color
+  background-color #ebebeb
+  border 1px solid #ccc
+
+.thead-color
+  background-color #fbfbfb
+  border 1px solid #ccc
+
+.text-black-heading
+  color rgba(0, 0, 0, .85)
+  border 1px solid #ccc
+
+.text-black-std
+  color rgba(0, 0, 0, .6)
+  border 1px solid #ccc
+
+.text-black-weak
+  color rgba(0, 0, 0, .4)
+  border 1px solid #ccc
+
+.text-white-heading
+  color rgba(255, 255, 255, 1)
+  background-color #000
+  border 1px solid #000
+
+.text-white-std
+  color rgba(255, 255, 255, .75)
+  background-color #000
+  border 1px solid #000
+
+.text-white-weak
+  color rgba(255, 255, 255, .5)
+  background-color #000
+  border 1px solid #000

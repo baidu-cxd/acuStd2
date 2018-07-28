@@ -9,7 +9,7 @@ edition: v2
 
 行高实验室的目的是创建一套百度云风格的字号行高关系
 
-### [不看说明了，直接查询](#行高查询工具) <i class="iconfont icon-youjiantou" style="font-size:16px; color:#108cee;"></i>
+::: more :::
 
 ## 为什么做这个?
 
@@ -100,6 +100,8 @@ hx: 想要知道的行高
 ::: end :::
 
 ::: end :::
+
+::: more-end :::
 
 ## 行高查询工具
 

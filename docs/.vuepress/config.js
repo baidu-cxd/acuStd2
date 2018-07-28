@@ -75,6 +75,31 @@ module.exports = {
             }
           }
         });
+        // more
+        md.use(require('markdown-it-container'), 'more', {
+          validate: function(params) {
+            return params.trim().match(/^more\s+(.*)$/);
+          },
+          render: function (tokens, idx) {
+            if (tokens[idx].nesting === 1) {
+              return '<markdown-more>\n'
+            } else {
+              return ' ';
+            }
+          }
+        });
+        md.use(require('markdown-it-container'), 'more-end', {
+          validate: function(params) {
+            return params.trim().match(/^more-end\s+(.*)$/);
+          },
+          render: function (tokens, idx) {
+            if (tokens[idx].nesting === 1) {
+              return '</markdown-more>\n'
+            } else {
+              return ' ';
+            }
+          }
+        });
         // 栅格布局生成器
         md.use(require('markdown-it-container'), 'raw', {
           validate: function(params) {

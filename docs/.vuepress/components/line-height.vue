@@ -3,8 +3,12 @@
     <div class="size-item item-head">
     <p class="label">输入字号查询:</p>
     <input v-model="changeAsk" placeholder="输入字号查询">
-    <p :style="resourveStyle(changeAsk)">字号: {{ changeAsk }}  px
-      <br>行高:{{resourveLineHeiht(changeAsk)}} px</p>
+    <p :style="resourveStyle(changeAsk)" class="text-show-first">
+      字号: {{ changeAsk }}  px
+    </p>
+    <p :style="resourveStyle(changeAsk)" class="text-show">
+      行高:{{resourveLineHeiht(changeAsk)}} px
+    </p>
     </div>
     <h3>百度云官网规范:</h3>
     <div v-if="ask" v-for="i in ask" class="size-item"
@@ -86,9 +90,16 @@ export default {
       font-size 14px
       padding 0 10px
       color #666
-    p
+    p.text-show-first
       margin 20px 0 0 0
       color #999
+      display block
+      min-height 24px
+    p.text-show
+      margin 0 0 0 0
+      color #999
+      display block
+      min-height 24px
     p.label
       margin-bottom 10px
 </style>
