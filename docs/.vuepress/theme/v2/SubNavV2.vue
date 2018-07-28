@@ -62,20 +62,11 @@ export default {
   computed: {
     nowPage : function () {
       return this.$page.path.split('/')[1]
-    },
-    animateNav () {
-      return this.$site.themeConfig.animateNav
-    },
-    labNav () {
-      return this.$site.themeConfig.labNav
-    },
-    portalNav () {
-      return this.$site.themeConfig.portalNav
-    },
+    }
   },
   methods: {
     resolveItem () { 
-      return this[this.nowPage+"Nav"]
+      return this.$site.themeConfig[this.nowPage+"Nav"]
     }
   }
 }
