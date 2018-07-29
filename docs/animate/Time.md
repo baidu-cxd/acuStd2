@@ -2,6 +2,7 @@
 title:  节奏
 author:  dz（wangyihan05@baidu.com）
 sidebarDepth: 1
+edition: v2
 ---
 
 # 节奏

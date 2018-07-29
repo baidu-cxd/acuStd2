@@ -1,6 +1,6 @@
 [
     { 
-      "text": "实验室首页", 
+      "text": "关于实验室", 
       "link": "./", 
       "icon": "http://yihan.gz.bcebos.com/icon16.png"
     },
@@ -12,6 +12,11 @@
     {
       "text": "Markdown 实验室",
       "link": "MarkDownLayout", 
+      "icon": "http://yihan.gz.bcebos.com/icon16.png"
+    },
+    {
+      "text": "Sketch 插件实验室",
+      "link": "SketchPlugin", 
       "icon": "http://yihan.gz.bcebos.com/icon16.png"
     }
 ]
