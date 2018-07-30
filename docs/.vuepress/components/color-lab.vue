@@ -86,7 +86,7 @@ export default {
       return lightenHSVColor(normal,0.2) 
     },
     resolveHSVActive(normal){
-      return darkenHSVColor(normal,0.1) 
+      return darkenHSVColor(normal,0.15) 
     },
   }
 }
