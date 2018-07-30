@@ -125,7 +125,7 @@
 
 .modal-section
   p
-    color $textStd 
+    color #666
     margin 0
     padding 0
     font-size 14px

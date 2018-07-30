@@ -70,16 +70,16 @@ font-family: -apple-system, BlinkMacSystemFont,"SF Pro SC","SF Pro Text","Helvet
 | -------------|------------ | -----|-----|
 | Special      | 42 + 6n(px)   | -      |拓展规则 |
 | H1           | 42px       | 64px |首页/产品和解决方案页面的标题 |
-| H2           | 30px       | 52px |页面中板块的标题 |
-| H3           | 18px       | 36px |板块中模块的标题 |
+| H2           | 30px       | 48px |页面中板块的标题 |
+| H3           | 18px       | 32px |板块中模块的标题 |
 | H4           | 16px       | 30px |模块内部的标题 |
 | p            | 14px       | 26px |正文 |
 | p.small      | 12px       | 24px |备注说明文字 |
 
 **备选文字大小：**
 
->**H1.small** : 36px; 行高：58px<br>
-**H2.small** : 24px; 行高：42px<br>
+>**H1.small** : 36px; 行高：56px<br>
+**H2.small** : 24px; 行高：40px<br>
 用于上述规范无法涵盖的特殊情况，<mark>一般不建议使用</mark>
 
 ## 列表

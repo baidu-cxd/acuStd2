@@ -9,6 +9,9 @@ edition: v2
 
 <div class="now-page">
 
+## 官网图标
+
+
 | Icon | class |    用途 | 状态 |
 | ----|--------|  ---  | ---  | 
 | <i class="iconfont icon-business-consult"></i> 业务咨询 |icon-business-consult| 官网右侧边栏专用  | 正常 |
@@ -19,10 +22,10 @@ edition: v2
 </div>
 
 <style>
-.iconfont{
+.now-page .iconfont{
   margin-right:20px;
 }
-.mark .iconfont{
+.now-page .mark .iconfont{
   margin-left:20px;
 }
 </style>

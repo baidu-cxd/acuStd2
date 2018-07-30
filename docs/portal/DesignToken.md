@@ -41,6 +41,8 @@ Design Token (设计变量) 是设计系统中的原子级单元, 它们是命�
 | @tips-color | <i class="color tips-color"></i> #f5a623   | 标准黄色，用于提示，比红色级别稍弱 |
 | @bg-color-dark | <i class="color bg-color-dark"></i> #0f1012  | 背景用最黑色，用于头图背景等情况 |
 | @bg-color-black | <i class="color bg-color-black"></i> #303030  | 解决方案页面内容板块深色背景 |
+| @bg-color-black-1 | <i class="color bg-color-black-1"></i> #434547  | 解决方案页面深色卡片背景 |
+| @bg-color-black-2 | <i class="color bg-color-black-2"></i> #565759  | 解决方案页面深色卡片内元素背景 |
 | @bg-color-light | <i class="color bg-color-light"></i> #f5f5f5  | 背景用标准亮灰色，用于页面内的板块划分 |
 | @border-color | <i class="color border-color"></i>#ebebeb   | 边框颜色 |
 | @thead-color | <i class="color thead-color"></i>#fbfbfb   | 表头用色 |
@@ -64,8 +66,8 @@ Design Token (设计变量) 是设计系统中的原子级单元, 它们是命�
 
 | Token | 值 | 描述 | 
 | ---   |--- |--- |  
-| @shadow-std | 0 2px 10px 0 rgba(0, 0, 0, 0.1)  | 一般的投影 |
-| @shadow-big | 0 2px 30px 0 rgba(0, 0, 0, 0.1)  | 比较重的投影 |
+| @shadow-std | 0 2px 10px 0 rgba(0, 0, 0, 0.05)  | 一般的投影 |
+| @shadow-big | 0 4px 12px 0 rgba(0, 0, 0, 0.2)  | 比较重的投影 |
 
 
 

@@ -177,7 +177,7 @@ export default {
       line-height 90px
       text-align center
       font-size 14px
-      color $textStd 
+      color #666
 
 .content .page-component-wrp.ani-base.list,.page-component-wrp.ani-base.list-2
   .wrp

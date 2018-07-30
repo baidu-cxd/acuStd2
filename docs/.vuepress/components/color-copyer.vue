@@ -73,7 +73,7 @@ export default {
       transition .8s transform $easeInOutStd
       &:hover
         cursor pointer
-      p
+      p,p:first-child
         position absolute
         left 50%
         top 50%

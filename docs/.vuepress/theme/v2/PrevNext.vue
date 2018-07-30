@@ -20,6 +20,7 @@
 @import '../styles/config.styl'
 @import './styles/v2.styl'
 .v2 .prev-next
+  display none
   background-color #ffc107
   height 120px
   width 100%
