@@ -15,6 +15,11 @@
       "icon": "http://yihan.gz.bcebos.com/icon16.png"
     },
     {
+      "text": "色彩实验室",
+      "link": "ColorLab", 
+      "icon": "http://yihan.gz.bcebos.com/icon16.png"
+    },
+    {
       "text": "Sketch 插件实验室",
       "link": "SketchPlugin", 
       "icon": "http://yihan.gz.bcebos.com/icon16.png"

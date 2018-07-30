@@ -84,12 +84,6 @@ export default {
   .item-head
     margin 0 0
     padding 20px 40px
-    input 
-      height 28px
-      width 300px
-      font-size 14px
-      padding 0 10px
-      color #666
     p.text-show-first
       margin 20px 0 0 0
       color #999
