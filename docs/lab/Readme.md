@@ -17,6 +17,18 @@ grid: true
 
 [立即使用](./LineHeight.html) <i class="iconfont icon-youjiantou" style="font-size:12px; color:#108cee;"></i>
 
+### Sketch 实验室
+
+Sketch 插件开发和研究
+
+[插件下载](./SketchPlugin.html) <i class="iconfont icon-youjiantou" style="font-size:12px; color:#108cee;"></i>
+
+### 颜色实验室
+
+自动生成一个颜色对应的 hover 和 active 对应色值
+
+[立即使用](./ColorLab.html) <i class="iconfont icon-youjiantou" style="font-size:12px; color:#108cee;"></i>
+
 ### Markdown 实验室
 
 优化 markdown 语法，支持更复杂的功能，更好的书写百度云产品文档

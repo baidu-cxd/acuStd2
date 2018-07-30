@@ -33,6 +33,7 @@ export default {
   .page-markdown-more
     .more-content
       padding 0
+      margin -10px 0 0 0 
     .control
       margin-top 20px
       width 160px
