@@ -35,7 +35,7 @@ export default {
       padding 0
       margin -10px 0 0 0 
     .control
-      margin-top 20px
+      margin-top 10px
       width 160px
       height 28px
       font-size 14px
@@ -54,6 +54,7 @@ export default {
         display inline-block
         transition $stdt 200ms
       &.not-more
+        margin-top 10px
         i 
           transform rotate(0) translateY(-1px)
       &.more

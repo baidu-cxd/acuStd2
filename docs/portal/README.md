@@ -49,9 +49,9 @@ edition: v2
 
 #### 我是工程师:
 
+- 了解垂直开发规范
 - 查阅 [Design Token](./DesignToken.html) 
 - 了解各个 [组件版本状态](./CMS.html)
-- 获得基本样式的参考
 
 ::: end :::
 
