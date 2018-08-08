@@ -1,15 +1,23 @@
 <template>
-    <div @click="runAni()" class="page-component-wrp ani-img" :style="{width: width, height: width}">
-        <img :src="img" class="animate">
+    <div @click="runAni()" class="page-component-wrp ani-img" 
+    :style="{width: width, height: width}">
+        <img :src="img"
+        :class="[isAnimate ? 'animate':'non-animate']">
     </div>
 </template>
 
 <script>
 export default {
     props: ['img','width'],
+    data() {
+      return {
+        isAnimate: false
+      }
+    },
     methods:{
       runAni(){
-         alert()
+         this.isAnimate = !this.isAnimate
+         console.log(this.isAnimate)
       },
     }
 }
@@ -23,8 +31,7 @@ export default {
     top 0
     margin 0
     &.animate
-      animation imganimate 4s steps(48) infinite ;
-      transition-timing-function: cubic-bezier(0, 3.33, 1, 1.01);
+      animation imganimate 1s steps(24) forwards ;
 @keyframes imganimate
   from {top: 0;}
   to {top: -4800px;}
