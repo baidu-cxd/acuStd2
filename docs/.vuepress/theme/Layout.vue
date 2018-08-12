@@ -38,6 +38,7 @@
     </div>
     <Footer/>
   </div>
+  <HomeV2 v-else/>
 </template>
 
 
@@ -45,6 +46,7 @@
 import Vue from 'vue'
 import nprogress from 'nprogress'
 import Home from './Home.vue'
+import HomeV2 from './HomeV2.vue'
 import Navbar from './Navbar.vue'
 import Page from './Page.vue'
 import Sidebar from './Sidebar.vue'
@@ -61,7 +63,7 @@ import Footer from './v2/Footer.vue'
 export default {
   props:{
   },
-  components: { Home, Page, Sidebar, Navbar ,Viewer, NavV2, PageV2, Hero, PrevNext, Footer, TransitionContent},
+  components: { Home, Page, Sidebar, Navbar ,Viewer, NavV2, PageV2, Hero, PrevNext, Footer, TransitionContent, HomeV2 },
   data () {
     return {
       isSidebarOpen: false,
@@ -73,9 +75,8 @@ export default {
       return dataIn.section
     },
     edition () {
-      const { frontmatter } = this.$page
-      if (frontmatter.edition === 'v2') return frontmatter.edition
-      return 'v1'
+      const { frontmatter } = this.$page;
+      return frontmatter.edition ? frontmatter.edition : 'v1';
     },
     shouldShowNavbar () {
       const { themeConfig } = this.$site

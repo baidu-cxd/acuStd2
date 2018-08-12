@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "clipboard": "^2.0.1",
+    "gsap": "^2.0.1",
     "gulp-less": "^3.5.0",
     "less-loader": "^4.1.0",
     "markdown-it": "^8.4.1",

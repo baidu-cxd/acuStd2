@@ -2098,6 +2098,10 @@ gray-matter@^4.0.1:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
+gsap@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-2.0.1.tgz#c784500e80dc7591131478f0787b67bacc9a8c52"
+
 gulp-less@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/gulp-less/-/gulp-less-3.5.0.tgz#8014f469ddfc6544d7dda50098def0371bbb4f78"
