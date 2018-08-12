@@ -3,26 +3,48 @@
         <!-- svg 背景 -->
         <svg id="background-svg" width="90%" viewBox="0 0 615 620" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g stroke="none" stroke-width="1" fill="#d3fdff" fill-rule="evenodd">
-            <path :d="path" stroke="none"></path>
+            <path :d="path" stroke="#d3fdff"></path>
         </g>
         </svg>
+        <!-- 大树小鸟 -->
+        <div class="tree-and-bird" :style="tbStyle">
+            <img :src="$bosLink('public/trunk.png')" alt="tree" id="main-img-tree">
+            <img :src="$bosLink('public/birds.png')" alt="birds" id="main-img-birds">
+            <div class="leaves">
+                <img :src="$bosLink('public/bigleaf01.png')" class="bigleaf bigleaf01">
+                <img :src="$bosLink('public/bigleaf02.png')" class="bigleaf bigleaf02">
+                <img :src="$bosLink('public/bigleaf03.png')" class="bigleaf bigleaf03">
+                <img :src="$withBase('./img/leaf01.png')" class="leaf leaf01">
+                <img :src="$withBase('./img/leaf02.png')" class="leaf leaf02">
+                <img :src="$withBase('./img/leaf03.png')" class="leaf leaf03 wave">
+                <img :src="$withBase('./img/leaf01.png')" class="leaf leaf04 wave">
+                <img :src="$withBase('./img/leaf04.png')" class="leaf leaf05 wave">
+                <img :src="$withBase('./img/leaf05.png')" class="leaf leaf06 wave">
+                <img :src="$withBase('./img/leaf05.png')" class="leaf leaf07 wave">
+            </div>
+        </div>
+        <!-- logo -->
+        <img :src="$bosLink('public/cxd.svg')" alt="cxd" class="logo">
         <!-- 文字介绍 -->
         <div class="warp" :style="warpStyle">
             <h1 class="title">{{ $page.frontmatter.mainText}}</h1>
-                <p class="description">
+            <p class="description">
                 {{ $page.frontmatter.subtitle || $description}}
-                </p>
+            </p>
         </div>
+        <!-- 下面三个介绍 -->
+        <Introduction :style="introStyle"/>
     </div>
 </template>
 
 <script>
 import {TweenLite} from 'gsap/TweenMax';
 import NavLink from './NavLink.vue';
+import Introduction from './HomeIntroduction.vue';
 
 export default {
     components: {
-        NavLink
+        NavLink, Introduction
     },
     mounted() {
         this.x = 20;
@@ -35,7 +57,11 @@ export default {
             x2: 0,
             y2: 0,
             flag: 1,
-            warpStyle: {}
+            warpStyle: {},
+            introStyle: {
+                opacity: 0
+            },
+            tbStyle: {}
         };
     },
     computed: {
@@ -52,13 +78,6 @@ export default {
                 L613.902344,618.917969 L613.902344,0.8515625
                 C315.779948,0.8515625 111.425781,0.8515625 0.83984375,0.8515625 Z`;
         }
-        // warpStyle() {
-        //     let x = document.body.scrollTop+document.documentElement.scrollTop;
-        //     return {
-        //         transform: `translateX(${x})`,
-        //         opacity: 1
-        //     };
-        // }
     },
     watch: {
         x(newValue) {
@@ -91,26 +110,113 @@ export default {
             let radio = scrollTop / totalScrollHeight;
             this.warpStyle.opacity = 1.2 - 2 * radio;
             this.warpStyle.transform = `translateY(-${150 * radio}px)`;
+            this.introStyle.opacity = radio * 2 - 0.9;
+            this.introStyle.transform = `translateY(${150 - 150 * radio}px)`;
+            this.tbStyle.transform = `translateY(${-300 * radio}px)`;
         }
     }
 };
 </script>
 
-<style lang="less" scoped>
-.home-pc {
+<style lang="stylus">
+@import './styles/leavesFalling.styl';
+.home-pc
+    font-family: Avenir;
     min-width: 1000px;
-    #background-svg {
+    min-height: 700px;
+    width: 100%;
+    overflow-x hidden;
+    #background-svg
         min-width: 1200px;
         position: absolute;
         right: 0;
-    }
-
-    .warp {
+    img.logo
+      width 120px
+      position fixed
+      top 80px
+      left 10%
+    .warp
         position: fixed;
-        width: 40%;
         height: 350px;
-        top: 30%;
+        top: 40%;
         left: 10%;
-    }
-}
+        .title
+            font-size: 64px;
+            margin: 0 0 30px 0;
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: #282828;
+        .description
+            z-index 100
+            line-height 2
+            width 760px
+            font-size 18px
+            color #314659
+
+    .tree-and-bird
+        position fixed
+        width: 100%;
+        height: 100%;
+        overflowX hidden
+        #main-img-tree,#main-img-birds
+            position absolute
+            top 0
+            width 100%
+            z-index 0
+    .leaves
+      .bigleaf
+        position absolute
+        top 0
+        width 100%
+        &.bigleaf01
+          z-index 20
+          animation bigWave 6s ease infinite alternate
+        &.bigleaf03
+          z-index 21
+          animation bigWave 4s linear infinite alternate
+        &.bigleaf02
+          z-index 22
+          animation bigWave 5s linear infinite alternate
+      .leaf
+        position absolute
+        top 0
+        transform rotate(-16deg)
+        &.leaf01
+          z-index 9
+          width 1.8%
+          animation leafsMoving01 8s linear infinite, leafsRotation01 4s linear infinite
+        &.leaf02
+          z-index 31
+          width 1.5%
+          animation leafsMoving02 7s linear infinite, leafsRotation02 3s linear infinite
+        &.leaf03
+          width 1.8%
+          animation leaveWave 4s ease infinite alternate
+          transform-origin 0 100%
+          top 20%
+          right 15.5%
+        &.leaf04
+          width 1.8%
+          animation leaveWave 3.5s 1s ease infinite alternate
+          transform-origin 0 100%
+          top 7%
+          right 29%
+        &.leaf05
+          width 1.9%
+          animation leaveWave 3s 0.8s ease infinite alternate
+          transform-origin 0 100%
+          top 16%
+          right 25%
+        &.leaf06
+          width 1.9%
+          animation leaveWave 3.8s 1s ease infinite alternate
+          transform-origin 100% 100%
+          top 16%
+          right 35%
+        &.leaf07
+          width 1.7%
+          animation leaveWave 3s 1s ease infinite alternate
+          transform-origin 100% 100%
+          top 21%
+          right 41%
 </style>
