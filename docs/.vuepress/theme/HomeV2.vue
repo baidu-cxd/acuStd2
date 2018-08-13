@@ -14,13 +14,13 @@
                 <img :src="$bosLink('public/bigleaf01.png')" class="bigleaf bigleaf01">
                 <img :src="$bosLink('public/bigleaf02.png')" class="bigleaf bigleaf02">
                 <img :src="$bosLink('public/bigleaf03.png')" class="bigleaf bigleaf03">
-                <img :src="$withBase('./img/leaf01.png')" class="leaf leaf01">
-                <img :src="$withBase('./img/leaf02.png')" class="leaf leaf02">
-                <img :src="$withBase('./img/leaf03.png')" class="leaf leaf03 wave">
-                <img :src="$withBase('./img/leaf01.png')" class="leaf leaf04 wave">
-                <img :src="$withBase('./img/leaf04.png')" class="leaf leaf05 wave">
-                <img :src="$withBase('./img/leaf05.png')" class="leaf leaf06 wave">
-                <img :src="$withBase('./img/leaf05.png')" class="leaf leaf07 wave">
+                <img :src="$bosLink('public/leaf01.png')" class="leaf leaf01">
+                <img :src="$bosLink('public/leaf02.png')" class="leaf leaf02">
+                <img :src="$bosLink('public/leaf03.png')" class="leaf leaf03 wave">
+                <img :src="$bosLink('public/leaf01.png')" class="leaf leaf04 wave">
+                <img :src="$bosLink('public/leaf04.png')" class="leaf leaf05 wave">
+                <img :src="$bosLink('public/leaf05.png')" class="leaf leaf06 wave">
+                <img :src="$bosLink('public/leaf05.png')" class="leaf leaf07 wave">
             </div>
         </div>
         <!-- logo -->
@@ -120,16 +120,16 @@ export default {
 
 <style lang="stylus">
 @import './styles/leavesFalling.styl';
+minWidth = 900px
 .home-pc
     font-family: Avenir;
-    min-width: 1000px;
-    min-height: 700px;
+    min-width: minWidth;
     width: 100%;
     overflow-x hidden;
     #background-svg
-        min-width: 1200px;
+        min-width: minWidth;
         position: absolute;
-        right: 0;
+        left: 10%;
     img.logo
       width 120px
       position fixed
@@ -155,68 +155,69 @@ export default {
 
     .tree-and-bird
         position fixed
-        width: 100%;
-        height: 100%;
-        overflowX hidden
-        #main-img-tree,#main-img-birds
+        width 100%
+        min-width minWidth
+
+        overflowY hidden
+        #main-img-tree, #main-img-birds
             position absolute
             top 0
             width 100%
             z-index 0
     .leaves
-      .bigleaf
-        position absolute
-        top 0
         width 100%
-        &.bigleaf01
-          z-index 20
-          animation bigWave 6s ease infinite alternate
-        &.bigleaf03
-          z-index 21
-          animation bigWave 4s linear infinite alternate
-        &.bigleaf02
-          z-index 22
-          animation bigWave 5s linear infinite alternate
-      .leaf
-        position absolute
-        top 0
-        transform rotate(-16deg)
-        &.leaf01
-          z-index 9
-          width 1.8%
-          animation leafsMoving01 8s linear infinite, leafsRotation01 4s linear infinite
-        &.leaf02
-          z-index 31
-          width 1.5%
-          animation leafsMoving02 7s linear infinite, leafsRotation02 3s linear infinite
-        &.leaf03
-          width 1.8%
-          animation leaveWave 4s ease infinite alternate
-          transform-origin 0 100%
-          top 20%
-          right 15.5%
-        &.leaf04
-          width 1.8%
-          animation leaveWave 3.5s 1s ease infinite alternate
-          transform-origin 0 100%
-          top 7%
-          right 29%
-        &.leaf05
-          width 1.9%
-          animation leaveWave 3s 0.8s ease infinite alternate
-          transform-origin 0 100%
-          top 16%
-          right 25%
-        &.leaf06
-          width 1.9%
-          animation leaveWave 3.8s 1s ease infinite alternate
-          transform-origin 100% 100%
-          top 16%
-          right 35%
-        &.leaf07
-          width 1.7%
-          animation leaveWave 3s 1s ease infinite alternate
-          transform-origin 100% 100%
-          top 21%
-          right 41%
+        height 100vw
+        .bigleaf
+            position absolute
+            top 0
+            width 100%
+            &.bigleaf01
+                z-index 20
+                animation bigWave 6s ease infinite alternate
+            &.bigleaf03
+                z-index 21
+                animation bigWave 4s linear infinite alternate
+            &.bigleaf02
+                z-index 22
+                animation bigWave 5s linear infinite alternate
+        .leaf
+            position absolute
+            &.leaf01
+                z-index 9
+                width 1.8%
+                animation leafsMoving01 8s linear infinite, leafsRotation01 4s linear infinite
+            &.leaf02
+                z-index 31
+                width 1.5%
+                animation leafsMoving02 7s linear infinite, leafsRotation02 3s linear infinite
+            &.leaf03
+                width 1.8%
+                animation leaveWave 4s ease infinite alternate
+                transform-origin 0 100%
+                top 20%
+                right 15.5%
+            &.leaf04
+                width 1.8%
+                animation leaveWave 3.5s 1s ease infinite alternate
+                transform-origin 0 100%
+                top 7%
+                right 29%
+            &.leaf05
+                width 1.9%
+                animation leaveWave 3s 0.8s ease infinite alternate
+                transform-origin 0 100%
+                top 16%
+                right 25%
+            &.leaf06
+                width 1.9%
+                animation leaveWave 3.8s 1s ease infinite alternate
+                transform-origin 100% 100%
+                top 16%
+                right 35%
+            &.leaf07
+                width 1.7%
+                animation leaveWave 3s 1s ease infinite alternate
+                transform-origin 100% 100%
+                top 21%
+                right 41%
 </style>

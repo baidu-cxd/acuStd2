@@ -25,21 +25,16 @@ makeLeafMoving($startX, $startY, $widthRatio, $heightRatio)
     {1% * i}
       if i <= 25
           a = leaveTrack(25 - i)
-          top 10% - (0.01% * (((a * 4 - 33.33)/2) ** 2)) * $heightRatio + $startY
-          left 0.01% * a * 4 * $widthRatio + $startX
+          transform translateY(10vh - (0.01vh * (((a * 4 - 33.33)/2) ** 2)) * $heightRatio + $startY) translateX(0.01vw * a * 4 * $widthRatio + $startX)
       else if i <= 50
           a = leaveTrack(i - 25)
-          top 10% - (0.01% * (((a * 4 - 66.66)/2) ** 2)) * $heightRatio + $startY + 8.33% * $heightRatio
-          left 0.01% * a * 4 * $widthRatio + $startX
+          transform translateY(10vh - (0.01vh * (((a * 4 - 66.66)/2) ** 2)) * $heightRatio + $startY + 8.33% * $heightRatio) translateX(0.01vw * a * 4 * $widthRatio + $startX)
       else if i <= 75
-          opacity (i - 75) / 25
           a = leaveTrack(75 - i)
-          top 10% - (0.01% * (((a * 4 - 33.33)/2) ** 2)) * $heightRatio + $startY + 8.33% * 2 * $heightRatio
-          left 0.01% * a * 4 * $widthRatio + $startX
+          transform translateY(10vh - (0.01vh * (((a * 4 - 33.33)/2) ** 2)) * $heightRatio + $startY + 8.33% * 2 * $heightRatio) translateX(0.01vw * a * 4 * $widthRatio + $startX)
       else
           a = leaveTrack(i - 75)
-          top 10% - (0.01% * (((a * 4 - 66.66)/2) ** 2)) * $heightRatio + $startY + 8.33% * 3 * $heightRatio
-          left 0.01% * a * 4 * $widthRatio + $startX
+          transform translateY(10vh - (0.01vh * (((a * 4 - 66.66)/2) ** 2)) * $heightRatio + $startY + 8.33% * 3 * $heightRatio) translateX(0.01vw * a * 4 * $widthRatio + $startX)
 
 @keyframes leafsMoving01
   // makeLeafMoving(10%, 10%, 50, 2)
