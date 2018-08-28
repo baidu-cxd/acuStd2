@@ -44,12 +44,20 @@ makeLeafMoving($startX, $startY, $widthRatio, $heightRatio)
 
 @keyframes leaveWave
   0%
-    transform rotate(-16deg)
+    transform rotate(-12deg)
+  25%
+    transform rotate(7deg)
+  75%
+    transform rotate(-12deg)
   100%
     transform rotate(12deg)
 
 @keyframes bigWave
   0%
-    transform translate(0, 0)
+    transform translate(0, 0) rotate(0deg)
+  25%
+    transform translate(0, 0px) rotate(0.5deg)
+  75%
+    transform translate(0, 0) rotate(0deg)
   100%
-    transform translate(1.5%, -5px)
+    transform translate(0, -2px) rotate(1deg)

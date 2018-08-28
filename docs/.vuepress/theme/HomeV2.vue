@@ -108,11 +108,11 @@ export default {
             let clientHeight = window.innerHeight;
             let totalScrollHeight = scrollHeight - clientHeight;
             let radio = scrollTop / totalScrollHeight;
-            this.warpStyle.opacity = 1.2 - 2 * radio;
+            this.warpStyle.opacity = 1 - 2 * radio;
             this.warpStyle.transform = `translateY(-${150 * radio}px)`;
-            this.introStyle.opacity = radio * 2 - 0.9;
+            this.introStyle.opacity = radio * 2 - 1;
             this.introStyle.transform = `translateY(${150 - 150 * radio}px)`;
-            this.tbStyle.transform = `translateY(${-300 * radio}px)`;
+            this.tbStyle.transform = `translateY(${-450 * radio}px)`;
         }
     }
 };
@@ -171,17 +171,19 @@ minWidth = 900px
             position absolute
             top 0
             width 100%
+            transform-origin 84% 60%
             &.bigleaf01
                 z-index 20
-                animation bigWave 6s ease infinite alternate
+                animation bigWave 4s 0.3s ease-in-out infinite alternate
             &.bigleaf03
                 z-index 21
-                animation bigWave 4s linear infinite alternate
+                animation bigWave 4s 0.5s ease-in-out infinite alternate
             &.bigleaf02
                 z-index 22
-                animation bigWave 5s linear infinite alternate
+                animation bigWave 4s ease-in-out infinite alternate
         .leaf
             position absolute
+            transform rotate(-12deg)
             &.leaf01
                 z-index 9
                 width 1.8%
@@ -198,25 +200,25 @@ minWidth = 900px
                 right 15.5%
             &.leaf04
                 width 1.8%
-                animation leaveWave 3.5s 1s ease infinite alternate
+                animation leaveWave 4s 0.3s ease infinite alternate
                 transform-origin 0 100%
                 top 7%
                 right 29%
             &.leaf05
                 width 1.9%
-                animation leaveWave 3s 0.8s ease infinite alternate
+                animation leaveWave 4s 1s ease infinite alternate
                 transform-origin 0 100%
                 top 16%
                 right 25%
             &.leaf06
                 width 1.9%
-                animation leaveWave 3.8s 1s ease infinite alternate
+                animation leaveWave 4s 0.2s ease infinite alternate
                 transform-origin 100% 100%
                 top 16%
                 right 35%
             &.leaf07
                 width 1.7%
-                animation leaveWave 3s 1s ease infinite alternate
+                animation leaveWave 4s 0.8s ease infinite alternate
                 transform-origin 100% 100%
                 top 21%
                 right 41%

@@ -97,15 +97,16 @@ export default {
         position absolute
         top 0
         width 100%
+        transform-origin 84% 60%
         &.bigleaf01
           z-index 20
-          animation bigWave 6s ease infinite alternate
+          animation bigWave 4s 0.3s ease-in-out infinite alternate
         &.bigleaf03
           z-index 21
-          animation bigWave 4s linear infinite alternate
+          animation bigWave 4s 0.5s ease-in-out infinite alternate
         &.bigleaf02
           z-index 22
-          animation bigWave 5s linear infinite alternate
+          animation bigWave 4s ease-in-out infinite alternate
       .leaf
         position absolute
         top 0
