@@ -18,7 +18,10 @@
     <div class="custom-layout" v-if="$page.frontmatter.layout">
       <component :is="$page.frontmatter.layout"/>
     </div>
-    <Home v-else-if="$page.frontmatter.home"/>
+    <div v-else-if="$page.frontmatter.home">
+      <home id="home"/>
+      <home-v2 id="home-v2"/>
+    </div>
     <Page v-else :sidebar-items="sidebarItems">
       <slot name="page-top" slot="top"/>
       <slot name="page-bottom" slot="bottom"/>
@@ -220,6 +223,20 @@ function updateMetaTags (meta, current) {
 
 </script>
 
+<style lang="stylus">
+@import './styles/config.styl'
+#home
+  display none
+#home-v2
+  display block
+@media (max-width: $MQMobile)
+  #home
+    display block
+  #home-v2
+    display none
+</style>
+
+
 <!-- 不要改变下面几个样式文件的引用顺序 -->
 <style src="./styles/reset.styl" lang="stylus"></style>
 <style src="./san-xui/iconfont.css"></style>
@@ -227,5 +244,3 @@ function updateMetaTags (meta, current) {
 <style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="./styles/theme.styl" lang="stylus"></style>
 <style src="./v2/styles/v2.styl" lang="stylus"></style>
-
-<!-- Hotjar Tracking Code for http://yunshe.design/ -->

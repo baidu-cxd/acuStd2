@@ -1,19 +1,26 @@
 <template>
     <div class="home-pc" @scroll.native="scroll">
         <!-- svg 背景 -->
-        <svg id="background-svg" width="90%" viewBox="0 0 615 620" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <g stroke="none" stroke-width="1" fill="#d3fdff" fill-rule="evenodd">
-            <path :d="path" stroke="#d3fdff"></path>
-        </g>
-        </svg>
+        <div class="svg-background">
+            <svg id="background-svg" viewBox="0 0 615 615" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g stroke-linejoin="arcs" stroke-width="10" fill="#d3fdff" fill-rule="evenodd">
+                    <path :d="path" stroke="#d3fdff"></path>
+                </g>
+            </svg>
+            <footer>
+                <span>
+                    Copyright ©2018 Cxd-Design
+                </span>
+            </footer>
+        </div>
         <!-- 大树小鸟 -->
         <div class="tree-and-bird" :style="tbStyle">
             <img :src="$bosLink('public/trunk.png')" alt="tree" id="main-img-tree">
-            <img :src="$bosLink('public/birds.png')" alt="birds" id="main-img-birds">
+            <img :src="$bosLink('public/birdss.png')" alt="birds" id="main-img-birds">
             <div class="leaves">
-                <img :src="$bosLink('public/bigleaf01.png')" class="bigleaf bigleaf01">
-                <img :src="$bosLink('public/bigleaf02.png')" class="bigleaf bigleaf02">
-                <img :src="$bosLink('public/bigleaf03.png')" class="bigleaf bigleaf03">
+                <img :src="$bosLink('public/bigleaf01s.png')" class="bigleaf bigleaf01">
+                <img :src="$bosLink('public/bigleaf02s.png')" class="bigleaf bigleaf02">
+                <img :src="$bosLink('public/bigleaf03s.png')" class="bigleaf bigleaf03">
                 <img :src="$bosLink('public/leaf01.png')" class="leaf leaf01">
                 <img :src="$bosLink('public/leaf02.png')" class="leaf leaf02">
                 <img :src="$bosLink('public/leaf03.png')" class="leaf leaf03 wave">
@@ -122,14 +129,19 @@ export default {
 @import './styles/leavesFalling.styl';
 minWidth = 900px
 .home-pc
+    height 90vw
     font-family: Avenir;
     min-width: minWidth;
     width: 100%;
-    overflow-x hidden;
-    #background-svg
-        min-width: minWidth;
+    overflow hidden
+    .svg-background
         position: absolute;
-        left: 10%;
+        left 0
+        width 100%
+    #background-svg
+        width 90%
+        margin-left 10%
+        min-width: minWidth;
     img.logo
       width 120px
       position fixed
@@ -157,8 +169,7 @@ minWidth = 900px
         position fixed
         width 100%
         min-width minWidth
-
-        overflowY hidden
+        overflow hidden
         #main-img-tree, #main-img-birds
             position absolute
             top 0
@@ -222,4 +233,16 @@ minWidth = 900px
                 transform-origin 100% 100%
                 top 21%
                 right 41%
+    footer
+        width 100%
+        height 40px
+        background-color #0f1012
+        color hsla(0,0%,100%,.5)
+        text-align center
+        position absolute
+        bottom -35px
+        z-index 100
+        span
+            vertical-align middle
+            line-height 40px
 </style>
