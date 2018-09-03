@@ -2,8 +2,7 @@ node_modules
 .vscode
 docs/.vuepress/dist
 docs/.vuepress/dist/
-yarn-error.log
-*.sh
+yarn-error.loggi
 docs/.vuepress/theme/san-xui/xui.css
 docs/.vuepress/theme/san-xui/xui.min.css
 .DS_Store
