@@ -39,7 +39,7 @@
                 {{ $page.frontmatter.subtitle || $description}}
             </p>
             <p class="action">
-                <a href="javascript:void(0)" class="nav-link action-button">
+                <a href="javascript:void(0)" @click="jump" class="nav-link action-button">
                     <span>开始使用</span>
                 </a>
             </p>
@@ -53,6 +53,7 @@
 import {TweenLite} from 'gsap/TweenMax';
 import NavLink from './NavLink.vue';
 import Introduction from './HomeIntroduction.vue';
+import jump from 'jump.js';
 
 export default {
     components: {
@@ -132,6 +133,12 @@ export default {
             this.introStyle.opacity = radio * 2 - 1;
             this.introStyle.transform = `translateY(${150 - 150 * radio}px)`;
             this.tbStyle.transform = `translateY(${-450 * radio}px)`;
+        },
+        jump() {
+            jump('footer', {
+                duration: 900,
+                offset: -1 * window.innerHeight + 40
+            });
         }
     }
 };
