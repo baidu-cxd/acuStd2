@@ -3,7 +3,7 @@
         <!-- svg 背景 -->
         <div class="svg-background">
             <svg id="background-svg" viewBox="0 0 615 615" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g stroke-linejoin="arcs" stroke-width="10" fill="#d3fdff" fill-rule="evenodd">
+                <g stroke-linejoin="arcs" stroke-width="0" fill="#d3fdff" fill-rule="evenodd">
                     <path :d="path" stroke="#d3fdff"></path>
                 </g>
             </svg>
@@ -37,6 +37,11 @@
             <h1 class="title">{{ $page.frontmatter.mainText}}</h1>
             <p class="description">
                 {{ $page.frontmatter.subtitle || $description}}
+            </p>
+            <p class="action">
+                <a href="javascript:void(0)" class="nav-link action-button">
+                    <span>开始使用</span>
+                </a>
             </p>
         </div>
         <!-- 下面三个介绍 -->
@@ -84,6 +89,13 @@ export default {
                 337.47526,529.384115 202.417969,618.917969
                 L613.902344,618.917969 L613.902344,0.8515625
                 C315.779948,0.8515625 111.425781,0.8515625 0.83984375,0.8515625 Z`;
+        },
+        actionLinkFirst() {
+            return {
+                // link: 'javascript:void(0)',
+                link: '/',
+                text: '开始使用'
+            };
         }
     },
     watch: {
@@ -126,6 +138,7 @@ export default {
 </script>
 
 <style lang="stylus">
+@import './styles/config.styl'
 @import './styles/leavesFalling.styl';
 minWidth = 900px
 .home-pc
@@ -149,6 +162,7 @@ minWidth = 900px
       left 10%
     .warp
         position: fixed;
+        z-index 999
         height: 350px;
         top: 40%;
         left: 10%;
@@ -233,6 +247,24 @@ minWidth = 900px
                 transform-origin 100% 100%
                 top 21%
                 right 41%
+    a.action-button
+        display inline-block
+        text-align center
+        font-size 16px
+        line-height 16px
+        font-weight 600
+        color $darkBlack
+        margin 60px 20px 0 0
+        padding 10px 0
+        border-radius 0
+        width 115px
+        transition background-color .1s ease
+        box-sizing border-box
+        border 1px solid $darkBlack
+        &:hover
+            background-color $darkBlack
+            color #fff
+            cursor pointer
     footer
         width 100%
         height 40px
