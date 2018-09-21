@@ -55,7 +55,7 @@ export default {
     height: 490px;
     position: fixed;
     right: 10%;
-    bottom: 10%;
+    bottom: 15%;
     display: flex;
     justify-content: space-around;
     min-width: 900px;
