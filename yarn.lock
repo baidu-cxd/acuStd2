@@ -2802,6 +2802,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+jump.js@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/jump.js/-/jump.js-1.0.2.tgz#e0641b47f40a38f2139c25fda0500bf28e43015a"
+
 keygrip@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/keygrip/-/keygrip-1.0.2.tgz#ad3297c557069dea8bcfe7a4fa491b75c5ddeb91"
@@ -3906,8 +3910,8 @@ path-key@^2.0.0:
   resolved "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
 
 path-parse@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.5.tgz#3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1"
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
 
 path-type@^1.0.0:
   version "1.1.0"
