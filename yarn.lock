@@ -2802,6 +2802,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+jump.js@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/jump.js/-/jump.js-1.0.2.tgz#e0641b47f40a38f2139c25fda0500bf28e43015a"
+
 keygrip@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/keygrip/-/keygrip-1.0.2.tgz#ad3297c557069dea8bcfe7a4fa491b75c5ddeb91"
@@ -4377,8 +4381,8 @@ q@^1.1.2:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
 
 qs@~6.3.0:
-  version "6.3.2"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.2.tgz#e75bd5f6e268122a2a0e0bda630b2550c166502c"
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.3.tgz#645c23bd6def4d552f258f0aadfeea6fd57f5a86"
 
 qs@~6.4.0:
   version "6.4.0"
